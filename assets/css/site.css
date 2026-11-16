@@ -291,6 +291,7 @@ a:active { color: var(--color-ink); }
 .work__meta { font-size: var(--text-sm); color: var(--color-muted); font-variant-numeric: lining-nums; }
 .work__title { font-weight: var(--weight-strong); font-size: var(--text-md); line-height: 1.35; margin-block: var(--space-2xs) var(--space-xs); max-width: 48ch; }
 .work a, .event a { white-space: nowrap; }
+@media (max-width: 30rem) { .event a { white-space: normal; } }
 .event { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); column-gap: var(--space-md); }
 .event__day {
   grid-row: span 4; align-self: start; display: grid; justify-items: center; padding: var(--space-xs) 0 var(--space-sm);

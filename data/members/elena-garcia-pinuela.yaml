@@ -60,6 +60,8 @@ links:
   url: https://produccioncientifica.usal.es/investigadores/1209537/detalle
 - type: scholar
   url: https://scholar.google.com/citations?user=pAjtLy0AAAAJ
+- type: researchgate
+  url: https://www.researchgate.net/profile/Elena-Garcia-Pinuela
 - type: dialnet
   url: https://dialnet.unirioja.es/servlet/autor?codigo=6509379
 selected: []

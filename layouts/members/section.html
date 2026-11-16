@@ -1,11 +1,25 @@
 {{ define "main" }}
 {{- $all := sort hugo.Data.members "order" -}}
-{{- $current := where $all "group" "ne" "antiguo" -}}
+{{- $groups := slice "direccion" "predoctoral" "asociada" -}}
+{{- $other := where (where $all "group" "ne" "antiguo") "group" "not in" $groups -}}
 {{- $former := where $all "group" "eq" "antiguo" -}}
   {{ partial "page-fold.html" (dict "title" .Title) }}
   <section class="band" aria-label="{{ .Title }}">
-    <div class="inner">
-      {{ partial "people.html" (dict "list" $current) }}
+    <div class="inner groups">
+      {{- range $groups }}
+      {{- $g := . }}
+      {{- with where $all "group" $g }}
+      <div>
+        <h2 class="band__title" id="g-{{ $g }}">{{ T (printf "group_%s" $g) }}</h2>
+        {{ partial "people.html" (dict "list" .) }}
+      </div>
+      {{- end }}
+      {{- end }}
+      {{- with $other }}
+      <div>
+        {{ partial "people.html" (dict "list" .) }}
+      </div>
+      {{- end }}
     </div>
   </section>
   {{- with $former }}

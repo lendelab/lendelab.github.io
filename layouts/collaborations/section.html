@@ -2,7 +2,7 @@
 {{- $foreign := ne site.Language.Lang "es" -}}
   {{ partial "page-fold.html" (dict "title" .Title) }}
   <section class="band" aria-label="{{ .Title }}">
-    <div class="inner">
+    <div class="inner halves">
       {{- range hugo.Data.collaborations }}
       {{- $x := partial "l.html" (dict "d" . "k" "text") }}
       <article class="partner">

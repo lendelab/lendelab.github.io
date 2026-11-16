@@ -1,0 +1,56 @@
+{{ define "main" }}
+{{- $l := index hugo.Data.lines .Params.line -}}
+{{- $t := partial "l.html" (dict "d" $l "k" "title") -}}
+{{- $x := partial "l.html" (dict "d" $l "k" "text") -}}
+{{- $topics := partial "l.html" (dict "d" $l "k" "topics") -}}
+{{- $members := where (sort hugo.Data.members "order") "lines" "intersect" (slice $l.slug) -}}
+{{- $members = where $members "group" "ne" "antiguo" -}}
+{{- $slugs := slice }}{{ range $members }}{{ $slugs = $slugs | append .slug }}{{ end -}}
+{{- $projects := slice }}{{ range sort hugo.Data.projects "start" "desc" }}{{ if in .lines $l.slug }}{{ $projects = $projects | append . }}{{ end }}{{ end -}}
+{{- $pubs := slice }}{{ with hugo.Data.publications }}{{ range .group }}{{ if intersect (.members | default slice) $slugs }}{{ $pubs = $pubs | append . }}{{ end }}{{ end }}{{ end -}}
+{{- $pubs = sort $pubs "year" "desc" -}}
+  {{ partial "page-fold.html" (dict "title" $t.v "lang" $t.lang) }}
+  <section class="band" aria-label="{{ $t.v }}">
+    <div class="inner two">
+      <div class="prose"{{ with $x.lang }} lang="{{ . }}"{{ end }}>
+        <p class="lede">{{ $x.v | markdownify }}</p>
+      </div>
+      {{- with $topics.v }}
+      <div class="block">
+        <h2 class="band__title">{{ T "topics" }}</h2>
+        <ul class="topics"{{ with $topics.lang }} lang="{{ . }}"{{ end }}>
+          {{- range . }}
+          <li>{{ . }}</li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- with $members }}
+  <section class="band band--alt" aria-labelledby="line-members">
+    <div class="inner">
+      <h2 class="band__title" id="line-members">{{ T "members_title" }}</h2>
+      {{ partial "people.html" (dict "list" .) }}
+    </div>
+  </section>
+  {{- end }}
+  {{- if or $projects $pubs }}
+  <section class="band" aria-label="{{ T "projects_title" }}">
+    <div class="inner stack">
+      {{- with $projects }}
+      <div class="block">
+        <h2 class="band__title">{{ T "projects_title" }}</h2>
+        {{ partial "project-rows.html" (dict "list" . "class" "rows--two") }}
+      </div>
+      {{- end }}
+      {{- with $pubs }}
+      <div class="block">
+        <h2 class="band__title">{{ T "publications_title" }}</h2>
+        {{ partial "by-year.html" (dict "works" . "h" "h3") }}
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+{{ end }}

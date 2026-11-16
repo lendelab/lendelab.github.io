@@ -1,0 +1,12 @@
+{{- $pp := site.GetPage "/projects" -}}
+<ul class="rows{{ with .class }} {{ . }}{{ end }}">
+  {{- range .list }}
+  {{- $t := partial "l.html" (dict "d" . "k" "title") }}
+  {{- $fun := partial "l.html" (dict "d" . "k" "funder") }}
+  <li>
+    <p class="row__name"><a href="{{ $pp.RelPermalink }}#{{ .slug }}">{{ with .acronym }}{{ . }}{{ else }}<span{{ with $t.lang }} lang="{{ . }}"{{ end }}>{{ $t.v }}</span>{{ end }}</a></p>
+    {{- if .acronym }}<p{{ with $t.lang }} lang="{{ . }}"{{ end }}>{{ $t.v }}</p>{{ end }}
+    <p class="row__meta"><span{{ with $fun.lang }} lang="{{ . }}"{{ end }}>{{ $fun.v }}</span>, {{ partial "daterange.html" (dict "start" .start "end" .end) }}</p>
+  </li>
+  {{- end }}
+</ul>

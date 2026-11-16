@@ -1,0 +1,19 @@
+{{ define "main" }}
+{{- $all := sort hugo.Data.members "order" -}}
+{{- $current := where $all "group" "ne" "antiguo" -}}
+{{- $former := where $all "group" "eq" "antiguo" -}}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  <section class="band" aria-label="{{ .Title }}">
+    <div class="inner">
+      {{ partial "people.html" (dict "list" $current) }}
+    </div>
+  </section>
+  {{- with $former }}
+  <section class="band band--alt" aria-labelledby="former">
+    <div class="inner">
+      <h2 class="band__title" id="former">{{ T "former_members" }}</h2>
+      {{ partial "people.html" (dict "list" .) }}
+    </div>
+  </section>
+  {{- end }}
+{{ end }}

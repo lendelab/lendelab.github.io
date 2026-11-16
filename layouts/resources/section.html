@@ -1,0 +1,29 @@
+{{ define "main" }}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  {{- $page := . }}
+  {{- range $i, $r := sort hugo.Data.resources "slug" }}
+  {{- $t := partial "l.html" (dict "d" $r "k" "title") }}
+  {{- $x := partial "l.html" (dict "d" $r "k" "text") }}
+  {{- $cite := cond (and (ne site.Language.Lang "es") $r.cite_en) $r.cite_en $r.cite }}
+  <section class="band{{ if eq (mod $i 2) 1 }} band--alt{{ end }}" id="{{ $r.slug }}" aria-labelledby="r-{{ $r.slug }}">
+    <div class="inner two">
+      <div class="block">
+        <h2 class="band__title" id="r-{{ $r.slug }}"{{ with $t.lang }} lang="{{ . }}"{{ end }}>{{ $t.v }}</h2>
+        <div class="prose"{{ with $x.lang }} lang="{{ . }}"{{ end }}><p>{{ $x.v | markdownify }}</p></div>
+        {{- with $cite }}
+        <h3 class="sub">{{ T "cite" }}</h3>
+        <p class="cite"{{ if and (ne site.Language.Lang "es") (not $r.cite_en) }} lang="es"{{ end }}>{{ . | markdownify }}</p>
+        {{- end }}
+      </div>
+      <dl class="facts facts--paper facts--wide">
+        {{- range $r.fields }}
+        {{- $lab := partial "l.html" (dict "d" . "k" "label") }}
+        {{- $val := .value }}{{ $vl := "" }}
+        {{- if ne site.Language.Lang "es" }}{{ if .value_en }}{{ $val = .value_en }}{{ else if not .url }}{{ $vl = "es" }}{{ end }}{{ end }}
+        <div><dt{{ with $lab.lang }} lang="{{ . }}"{{ end }}>{{ $lab.v }}</dt><dd{{ with $vl }} lang="{{ . }}"{{ end }}>{{ with .url }}<a href="{{ . }}">{{ $val | markdownify }}</a>{{ else }}{{ partial "upper-first.html" $val | markdownify }}{{ end }}</dd></div>
+        {{- end }}
+      </dl>
+    </div>
+  </section>
+  {{- end }}
+{{ end }}

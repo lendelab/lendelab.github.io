@@ -1,0 +1,376 @@
+- id: manual:rangel-vicente-2026-les-antroponymes-et-toponymes
+  type: presentation
+  year: 2026
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Les antroponymes et toponymes dans les dénominations d’institutions deviennent-ils des topoergonymes?
+  container: 60th Annual Meeting of the Canadian Society for the Study of Names
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-05775589v1
+  lang: fr
+- id: manual:barque-2026-varia
+  type: other
+  year: 2026
+  status: published
+  authors: []
+  editors:
+  - family: Barque
+    given: Lucie
+  - family: Rangel Vicente
+    given: Montserrat
+  - family: Tribout
+    given: Delphine
+  title: Varia
+  container: Lexique
+  volume: ''
+  issue: '30'
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://www.peren-revues.fr/lexique/2172
+  lang: fr
+- id: doi:10.1515/9783112222157-011
+  type: chapter
+  year: 2025
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  editors:
+  - family: García Manga
+    given: María del Carmen
+  - family: Rodríguez-Tapia
+    given: Sergio
+  title: Cuando la opacidad parcial se inmiscuye en los topónimos
+  container: La delimitación morfológica, sintáctica y pragmática de las unidades léxicas
+  volume: ''
+  issue: ''
+  pages: 205-226
+  publisher: De Gruyter
+  doi: 10.1515/9783112222157-011
+  url: ''
+  lang: es
+- id: manual:rangel-vicente-2025-sustainability-of-place-names
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: 'Sustainability of place names: A challenge in the morphological description from a synchronic perspective'
+  container: Onomastica Uralica
+  volume: '20'
+  issue: ''
+  pages: 113-127
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-05442579v1
+  lang: en
+- id: manual:hernandez-munoz-2025-toponimos-disponibles
+  type: presentation
+  year: 2025
+  status: published
+  authors:
+  - family: Hernández Muñoz
+    given: Natividad
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Topónimos disponibles
+  container: IV Jornadas Científicas sobre la Investigación en Disponibilidad Léxica
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-05308583v1
+  lang: es
+- id: doi:10.4000/corela.16256
+  type: article
+  year: 2023
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Une structuration graduelle et bipolaire de la catégorie du nom propre
+  container: Corela
+  volume: ''
+  issue: HS-40
+  pages: ''
+  publisher: ''
+  doi: 10.4000/corela.16256
+  url: ''
+  lang: fr
+- id: doi:10.4000/lexis.6824
+  type: article
+  year: 2022
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Configuration morpho-lexicale du nom propre et propension à la lexicalisation
+  container: Lexis
+  volume: '20'
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: 10.4000/lexis.6824
+  url: ''
+  lang: fr
+- id: manual:rangel-vicente-2022-une-structuration-graduelle-et
+  type: presentation
+  year: 2022
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Une structuration graduelle et bipolaire de la catégorie nom propre en français et en espagnol
+  container: Le nom propre, ses motivations et ses manifestations linguistiques
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-04248946v1
+  lang: fr
+- id: manual:rangel-vicente-2020-el-articulo-del-nombre
+  type: presentation
+  year: 2020
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: 'El artículo del nombre propio en el empleo referencial estándar: una determinación en la intersección de la (morfo)sintaxis y de la (pragma)semántica'
+  container: II Congreso Internacional Relaciones y límites entre la morfología, la sintaxis, la semántica y la pragmática del español
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-04248921v1
+  lang: es
+- id: manual:rangel-vicente-2020-la-morfologia-del-nombre
+  type: chapter
+  year: 2020
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  editors:
+  - family: Martínez Atienza de Dios
+    given: María
+  title: La morfología del nombre propio. Una descripción en la que la sintaxis y la semántica se inmiscuyen
+  container: 'Entre la morfología, la sintaxis y la semántica: límites e intersecciones'
+  volume: ''
+  issue: ''
+  pages: 210-233
+  publisher: Tirant lo Blanch
+  doi: ''
+  url: https://hal.science/hal-03218813v1
+  lang: es
+- id: doi:10.4000/cher.812
+  type: article
+  year: 2019
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Le nom propre, une catégorie exceptionnelle ?
+  container: ReCHERches. Culture et Histoire dans l'Espace Roman
+  volume: '23'
+  issue: ''
+  pages: 31-44
+  publisher: ''
+  doi: 10.4000/cher.812
+  url: ''
+  lang: fr
+- id: manual:rangel-vicente-2019-nombre-propio-y-motivacion
+  type: article
+  year: 2019
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Nombre propio y motivación. Una estructuración gradual y bipolar de la categoría
+  container: Moenia
+  volume: '25'
+  issue: ''
+  pages: 1-33
+  publisher: ''
+  doi: ''
+  url: https://hal.science/hal-02897436v1
+  lang: es
+- id: manual:rangel-vicente-2018-la-diversidad-formal-del
+  type: conference-paper
+  year: 2018
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: 'La diversidad formal del nombre propio: una estructuración prototípica'
+  container: XIII Congreso Internacional de Lingüística Xeral (CILX)
+  volume: ''
+  issue: ''
+  pages: 750-757
+  publisher: Universidade de Vigo
+  doi: ''
+  url: https://lilloa.hal.science/hal-02553340v1
+  lang: es
+- id: manual:rangel-vicente-2017-pour-une-structuration-prototypique
+  type: thesis
+  year: 2017
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Pour une structuration prototypique de la catégorie Np en français et en espagnol. Étude de la forme et du sens
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: Universitat de Barcelona
+  doi: ''
+  url: https://hdl.handle.net/2445/118983
+  lang: fr
+- id: manual:rangel-vicente-2016-pour-une-structuration-prototypique
+  type: conference-paper
+  year: 2016
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Pour une structuration prototypique de la catégorie nom propre en français
+  container: Names and their Environment
+  volume: '4'
+  issue: ''
+  pages: 119-134
+  publisher: University of Glasgow
+  doi: ''
+  url: https://lilloa.hal.science/hal-02553398v1
+  lang: fr
+- id: manual:rangel-vicente-2014-le-syndicalisme-de-transport
+  type: chapter
+  year: 2014
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  - family: Crochemore
+    given: Kévin
+  editors:
+  - family: Rolland-Lozachmeur
+    given: Ghislaine
+  title: Le syndicalisme de transport et l'Europe à travers l'analyse du discours
+  container: Les mots en force dans le discours. Les mots stratégiques. Tome 1
+  volume: ''
+  issue: ''
+  pages: 101-150
+  publisher: Université de Bretagne Occidentale
+  doi: ''
+  url: https://univ-brest.hal.science/hal-01825216v1
+  lang: fr
+- id: doi:10.4000/books.psn.2275
+  type: chapter
+  year: 2007
+  status: published
+  authors:
+  - family: Laurent
+    given: Bénédicte
+  - family: Rangel Vicente
+    given: Montserrat
+  title: La production de sens du nom propre prototypique et de son correspondant nom de marque et de produit
+  container: L'acte de nommer. Une dynamique entre langue et discours
+  volume: ''
+  issue: ''
+  pages: 69-85
+  publisher: Presses Sorbonne Nouvelle
+  doi: 10.4000/books.psn.2275
+  url: ''
+  lang: fr
+- id: doi:10.4000/corela.1212
+  type: article
+  year: 2005
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: La glose comme outil de désambiguïsation référentielle des noms propres purs
+  container: Corela
+  volume: ''
+  issue: HS-2
+  pages: ''
+  publisher: ''
+  doi: 10.4000/corela.1212
+  url: ''
+  lang: fr
+- id: manual:laurent-2004-l-anthroponyme-et-de
+  type: conference-paper
+  year: 2004
+  status: published
+  authors:
+  - family: Laurent
+    given: Bénédicte
+  - family: Rangel Vicente
+    given: Montserrat
+  title: 'L’anthroponyme et de nom de marque et de produit : comparaison du prototype du nom propre et d’un hybride'
+  container: Actes des VIIe Rencontres Jeunes Chercheurs de l’École Doctorale 268 «Langage et langues» de la Sorbonne Nouvelle
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-01825297v1
+  lang: fr
+- id: manual:rangel-vicente-2004-le-nom-propre-en
+  type: conference-paper
+  year: 2004
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  editors:
+  - family: Dufour
+    given: Françoise
+  - family: Dutilleul-Guerroudj
+    given: Élise
+  - family: Laurent
+    given: Bénédicte
+  title: 'Le nom propre en discours : statut et fonctionnement des informations référentielles'
+  container: 'La nomination : quelles problématiques, quelles orientations, quelles applications ?'
+  volume: ''
+  issue: ''
+  pages: 129-139
+  publisher: Publications de l'Université Paul-Valéry-Montpellier III
+  doi: ''
+  url: https://lilloa.hal.science/hal-02553286v1
+  lang: fr
+- id: manual:rangel-vicente-2003-nom-propre-et-dialogisme
+  type: conference-paper
+  year: 2003
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  editors:
+  - family: Cassanas
+    given: Armelle
+  - family: Demange
+    given: Aude
+  - family: Laurent
+    given: Bénédicte
+  - family: Lecler
+    given: Aude
+  title: 'Nom propre et dialogisme : la construction de la représentation de Napoléon Bonaparte en France et en Espagne'
+  container: Dialogisme et nomination
+  volume: ''
+  issue: ''
+  pages: 199-214
+  publisher: Publications de l'Université Paul-Valéry-Montpellier III
+  doi: ''
+  url: https://lilloa.hal.science/hal-02553313v1
+  lang: fr

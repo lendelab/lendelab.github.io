@@ -1,0 +1,11 @@
+{{- $m := .m -}}
+{{- $img := false -}}
+{{- with $m.photo }}{{ $img = resources.Get (strings.TrimPrefix "/" .) }}{{ end -}}
+{{- if $img -}}
+  {{- $w := math.Min 480 $img.Width | int -}}
+  {{- $big := $img.Fill (printf "%dx%d Center webp" $w $w) -}}
+  {{- $small := $img.Fill "240x240 Center webp" -}}
+<div class="{{ .class }}"><img src="{{ $big.RelPermalink }}" srcset="{{ $small.RelPermalink }} 240w, {{ $big.RelPermalink }} {{ $w }}w" sizes="{{ .sizes }}" alt="" width="{{ $w }}" height="{{ $w }}"{{ if not .eager }} loading="lazy"{{ end }} decoding="async"></div>
+{{- else -}}
+<div class="{{ .class }} {{ .class }}--initials{{ with .initialsClass }} {{ . }}{{ end }}" aria-hidden="true">{{ substr $m.given 0 1 }}{{ substr $m.family 0 1 }}</div>
+{{- end -}}

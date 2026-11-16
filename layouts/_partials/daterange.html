@@ -1,0 +1,7 @@
+{{- $es := eq site.Language.Lang "es" -}}
+{{- $a := time.AsTime .start -}}{{- $b := time.AsTime .end -}}
+{{- $sep := cond $es " a " " to " -}}
+{{- $long := cond $es "2 de January de 2006" "2 January 2006" -}}
+{{- $short := cond $es "2 de January" "2 January" -}}
+{{- $first := time.Format (cond (eq $a.Year $b.Year) $short $long) $a -}}
+{{- return (printf "%s%s%s" $first $sep (time.Format $long $b)) -}}

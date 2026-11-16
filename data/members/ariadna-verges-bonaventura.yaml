@@ -1,0 +1,62 @@
+slug: ariadna-verges-bonaventura
+order: 7
+group: predoctoral
+given: Ariadna
+family: Vergés Bonaventura
+citation_names:
+- Vergés Bonaventura, A.
+- Vergés Bonaventura, Ariadna
+orcid: 0009-0006-0125-0898
+email: ariadnaverges@usal.es
+photo: ''
+position_es: Investigadora predoctoral
+position_en: Predoctoral researcher
+funding: FPU
+affiliation_es: Departamento de Lengua Española, Universidad de Salamanca
+affiliation_en: Department of Spanish Language, Universidad de Salamanca
+bio_es: 'Ariadna Vergés Bonaventura es investigadora predoctoral en el Departamento de Lengua Española de la Universidad
+  de Salamanca, donde colabora en la docencia del Grado en Estudios Ingleses. En su tesis doctoral estudia la enseñanza
+  de idiomas a personas mayores como factor de desarrollo de la reserva cognitiva. Los primeros trabajos que presentó
+  se ocupaban ya de las personas mayores: en ellos estudió cómo se altera el componente léxico-semántico en el envejecimiento
+  sano y patológico. Se graduó en Filología Hispánica (2024) y obtuvo el Máster en Enseñanza del Español como Lengua
+  Extranjera (2025) en la Universidad de Salamanca, en ambos casos con premio extraordinario.'
+bio_en: Ariadna Vergés Bonaventura holds a predoctoral position in the Department of Spanish Language at the Universidad
+  de Salamanca, where she contributes to teaching on the degree in English Studies. Her thesis looks at the teaching
+  of foreign languages to older adults as a factor in the development of cognitive reserve. Older adults were already
+  the subject of the first work she presented, which examined how the lexical-semantic component is altered in healthy
+  and pathological aging. She received the Premio Extraordinario, the university’s award for an outstanding academic record, for both her BA in Hispanic Philology (2024) and her MA in Teaching Spanish as a Foreign Language (2025)
+  at the Universidad de Salamanca.
+lines:
+- marcadores
+- comunicacion
+thesis:
+  title_es: Enseñanza de idiomas para el desarrollo de la reserva cognitiva
+  title_en: ''
+  topic_only: false
+  programme_es: 'Español: investigación avanzada en lengua y literatura'
+  programme_en: ''
+  supervisors:
+  - olga-ivanova
+  start: 2025
+education:
+- degree_es: Grado en Filología Hispánica
+  degree_en: BA in Hispanic Philology
+  institution: Universidad de Salamanca
+  year: 2024
+  distinction_es: Premio extraordinario
+  distinction_en: Premio Extraordinario
+- degree_es: Máster en Enseñanza del Español como Lengua Extranjera
+  degree_en: MA in Teaching Spanish as a Foreign Language
+  institution: Universidad de Salamanca
+  year: 2025
+  distinction_es: Premio extraordinario
+  distinction_en: Premio Extraordinario
+links:
+- type: orcid
+  url: https://orcid.org/0009-0006-0125-0898
+- type: usal
+  url: https://produccioncientifica.usal.es/investigadores/2299811/detalle
+- type: dialnet
+  url: https://dialnet.unirioja.es/servlet/autor?codigo=7352959
+selected: []
+updated: null

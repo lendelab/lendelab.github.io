@@ -1,0 +1,12 @@
+{{- /* An outreach item's participants: names (members linked when .link), joined with commas or, when people_and is
+       set, with y/e or and before the last; then the note («con …», «(docente)»). */ -}}
+{{- $o := .o -}}
+{{- $s := string (partial "names.html" (dict "list" ($o.people | default slice) "link" .link "and" $o.people_and)) -}}
+{{- $n := partial "l.html" (dict "d" $o "k" "people_note") -}}
+{{- with $n.v -}}
+  {{- $sep := cond (hasPrefix . "(") " " ", " -}}
+  {{- $note := htmlEscape . -}}
+  {{- with $n.lang }}{{ $note = printf `<span lang="%s">%s</span>` . $note }}{{ end -}}
+  {{- $s = cond (eq $s "") $note (printf "%s%s%s" $s $sep $note) -}}
+{{- end -}}
+{{- return ($s | safeHTML) -}}

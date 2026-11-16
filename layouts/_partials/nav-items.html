@@ -1,0 +1,10 @@
+{{- $cur := . -}}
+{{- $items := slice -}}
+{{- range slice "group" "lines" "members" "projects" "publications" "resources" "collaborations" "outreach" "contact" -}}
+  {{- with site.GetPage (printf "/%s" .) -}}
+    {{- $state := "" -}}
+    {{- if eq .RelPermalink $cur.RelPermalink }}{{ $state = "page" }}{{ else if $cur.IsDescendant . }}{{ $state = "true" }}{{ end -}}
+    {{- $items = $items | append (dict "key" (path.Base .Path) "url" .RelPermalink "label" (T (printf "nav_%s" (path.Base .Path))) "current" $state) -}}
+  {{- end -}}
+{{- end -}}
+{{- return $items -}}

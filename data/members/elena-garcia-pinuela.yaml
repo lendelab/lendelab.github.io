@@ -1,0 +1,66 @@
+slug: elena-garcia-pinuela
+order: 2
+group: predoctoral
+given: Elena
+family: García Piñuela
+citation_names:
+- García Piñuela, E.
+- García Piñuela, Elena
+orcid: 0009-0008-4274-6835
+email: elenagarpin@usal.es
+photo: /img/members/elena-garcia-pinuela.jpg
+position_es: Investigadora predoctoral
+position_en: Predoctoral researcher
+funding: FPU
+affiliation_es: Departamento de Lengua Española, Universidad de Salamanca
+affiliation_en: Department of Spanish Language, Universidad de Salamanca
+bio_es: Elena García Piñuela es investigadora predoctoral en el Departamento de Lengua Española de la Universidad
+  de Salamanca, donde colabora en la docencia de los grados en Antropología y en Filología Hispánica. En su tesis
+  doctoral estudia la producción sintáctica en la enfermedad de Alzheimer. La sintaxis es también el objeto de los
+  trabajos que ha presentado hasta ahora, dedicados a la complejidad sintáctica en el envejecimiento sano, en la
+  enfermedad de Alzheimer y en la depresión mayor. Se graduó en Filología Hispánica en la Universidad de Salamanca
+  (2023) con premio extraordinario y cursó después el Máster en Formación del Profesorado.
+bio_en: Elena García Piñuela is a predoctoral researcher in the Department of Spanish Language at the Universidad
+  de Salamanca, where she contributes to teaching on the degrees in Anthropology and Hispanic Philology. Her doctoral
+  thesis examines syntactic production in Alzheimer’s disease. The work she has presented so far is also on syntax,
+  specifically on syntactic complexity in healthy aging, in Alzheimer’s disease and in major depression. She graduated
+  in Hispanic Philology from the Universidad de Salamanca in 2023 with the Premio Extraordinario, the university’s award for an outstanding academic record, and then took the Master’s in Teacher Training.
+lines:
+- marcadores
+- diagnostico-diferencial
+- evaluacion
+- comunicacion
+thesis:
+  title_es: Producción sintáctica en la enfermedad de Alzheimer
+  title_en: ''
+  topic_only: false
+  programme_es: 'Español: investigación avanzada en lengua y literatura'
+  programme_en: ''
+  supervisors:
+  - olga-ivanova
+  start: 2023
+education:
+- degree_es: Grado en Filología Hispánica
+  degree_en: BA in Hispanic Philology
+  institution: Universidad de Salamanca
+  year: 2023
+  distinction_es: Premio extraordinario
+  distinction_en: Premio Extraordinario
+- degree_es: Máster en Profesor de Educación Secundaria Obligatoria y Bachillerato, Formación Profesional y Enseñanza
+    de Idiomas
+  degree_en: Master’s in Teacher Training
+  institution: Universidad de Salamanca
+  year: 2024
+  distinction_es: ''
+  distinction_en: ''
+links:
+- type: orcid
+  url: https://orcid.org/0009-0008-4274-6835
+- type: usal
+  url: https://produccioncientifica.usal.es/investigadores/1209537/detalle
+- type: scholar
+  url: https://scholar.google.com/citations?user=pAjtLy0AAAAJ
+- type: dialnet
+  url: https://dialnet.unirioja.es/servlet/autor?codigo=6509379
+selected: []
+updated: null

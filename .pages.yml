@@ -1,0 +1,1737 @@
+media:
+  input: static/img/members
+  output: /img/members
+  categories:
+  - image
+content:
+- name: site
+  label: Sitio
+  type: file
+  path: data/site.yaml
+  format: yaml
+  fields:
+  - name: name
+    label: Nombre
+    type: string
+    required: true
+  - name: expansion_es
+    label: Desarrollo del nombre (es)
+    type: string
+  - name: expansion_en
+    label: Desarrollo del nombre (en)
+    type: string
+  - name: affiliation_es
+    label: Adscripción (es)
+    type: string
+    list: true
+  - name: affiliation_en
+    label: Adscripción (en)
+    type: string
+    list: true
+  - name: email
+    label: Correo de contacto
+    type: string
+    pattern:
+      regex: ^[^@\s]+@[^@\s]+\.[^@\s]+$
+      message: Dirección de correo no válida
+  - name: contact_name
+    label: Persona de contacto
+    type: string
+  - name: address_es
+    label: Dirección (es)
+    type: string
+  - name: address_en
+    label: Dirección (en)
+    type: string
+  - name: footer_es
+    label: Pie de página (es)
+    type: string
+    list: true
+  - name: footer_en
+    label: Pie de página (en)
+    type: string
+    list: true
+  - name: credit_es
+    label: Crédito (es)
+    type: string
+  - name: credit_en
+    label: Crédito (en)
+    type: string
+  - name: group
+    label: Descripción del grupo
+    type: object
+    fields:
+    - name: lede_es
+      label: Entradilla (es)
+      type: rich-text
+      options:
+        format: markdown
+    - name: lede_en
+      label: Entradilla (en)
+      type: rich-text
+      options:
+        format: markdown
+    - name: body_es
+      label: Párrafos (es)
+      type: rich-text
+      list: true
+      options:
+        format: markdown
+    - name: body_en
+      label: Párrafos (en)
+      type: rich-text
+      list: true
+      options:
+        format: markdown
+  - name: home
+    label: Página de inicio
+    type: object
+    fields:
+    - name: project
+      label: Proyecto destacado
+      type: reference
+      options:
+        collection: projects
+        search: acronym
+        value: '{slug}'
+        label: '{acronym} {title_es}'
+    - name: project_facts
+      label: Datos añadidos al proyecto destacado
+      type: object
+      list: true
+      fields:
+      - name: label_es
+        type: string
+      - name: label_en
+        type: string
+      - name: value_es
+        type: string
+      - name: value_en
+        type: string
+    - name: resource
+      label: Recurso destacado
+      type: reference
+      options:
+        collection: resources
+        search: title_es
+        value: '{slug}'
+        label: '{title_es}'
+    - name: resource_figure
+      label: Cifra
+      type: string
+    - name: resource_unit_es
+      label: Unidad de la cifra (es)
+      type: string
+    - name: resource_unit_en
+      label: Unidad de la cifra (en)
+      type: string
+    - name: resource_note_es
+      label: Nota (es)
+      type: string
+    - name: resource_note_en
+      label: Nota (en)
+      type: string
+    - name: resource_link_es
+      label: Campo del recurso enlazado (es)
+      type: string
+    - name: resource_link_en
+      label: Texto del enlace (en)
+      type: string
+  - name: contact
+    label: Contacto
+    type: object
+    fields:
+    - name: text_es
+      label: Texto con formulario (es)
+      type: rich-text
+      options:
+        format: markdown
+    - name: text_no_form_es
+      label: Texto sin formulario (es)
+      type: rich-text
+      options:
+        format: markdown
+    - name: text_en
+      label: Texto con formulario (en)
+      type: rich-text
+      options:
+        format: markdown
+    - name: text_no_form_en
+      label: Texto sin formulario (en)
+      type: rich-text
+      options:
+        format: markdown
+    - name: privacy_es
+      label: Protección de datos (es)
+      type: rich-text
+      options:
+        format: markdown
+    - name: privacy_en
+      label: Protección de datos (en)
+      type: rich-text
+      options:
+        format: markdown
+  - name: form_action
+    label: Dirección formResponse del formulario de Google
+    type: string
+  - name: entries
+    label: Identificadores de los campos del formulario
+    type: object
+    fields:
+    - name: nombre
+      type: string
+    - name: correo
+      type: string
+    - name: institucion
+      type: string
+    - name: asunto
+      type: string
+    - name: mensaje
+      type: string
+  - name: goatcounter
+    label: Código de GoatCounter
+    type: string
+- name: members
+  label: Miembros
+  type: collection
+  path: data/members
+  format: yaml
+  filename: '{fields.slug}.yaml'
+  view:
+    fields:
+    - given
+    - family
+    - group
+    - order
+    primary: family
+    sort:
+    - order
+    - family
+    default:
+      sort: order
+      order: asc
+  fields:
+  - name: slug
+    label: Identificador
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: 'Solo minúsculas, cifras y guiones'
+  - name: order
+    label: Orden
+    type: number
+    required: true
+  - name: group
+    label: Grupo
+    type: select
+    required: true
+    options:
+      values:
+      - direccion
+      - predoctoral
+      - asociada
+      - antiguo
+  - name: given
+    label: Nombre
+    type: string
+    required: true
+  - name: family
+    label: Apellidos
+    type: string
+    required: true
+  - name: citation_names
+    label: Formas de citación
+    type: string
+    list: true
+  - name: orcid
+    label: ORCID iD
+    type: string
+    pattern:
+      regex: ^\d{4}-\d{4}-\d{4}-\d{3}[\dX]$
+      message: Formato 0000-0000-0000-0000
+  - name: email
+    label: Correo electrónico
+    type: string
+  - name: photo
+    label: Foto
+    type: image
+  - name: position_es
+    label: Cargo (es)
+    type: string
+  - name: position_en
+    label: Cargo (en)
+    type: string
+  - name: funding
+    label: Financiación
+    type: string
+  - name: affiliation_es
+    label: Adscripción (es)
+    type: string
+  - name: affiliation_en
+    label: Adscripción (en)
+    type: string
+  - name: bio_es
+    label: Biografía (es)
+    type: rich-text
+    options:
+      format: markdown
+  - name: bio_en
+    label: Biografía (en)
+    type: rich-text
+    options:
+      format: markdown
+  - name: lines
+    label: Líneas
+    type: reference
+    list: true
+    options:
+      collection: lines
+      search: title_es
+      value: '{slug}'
+      label: '{title_es}'
+  - name: thesis
+    label: Tesis doctoral
+    type: object
+    fields:
+    - name: title_es
+      label: Título o tema (es)
+      type: string
+    - name: title_en
+      label: Título o tema (en)
+      type: string
+    - name: topic_only
+      label: 'Solo tema, sin título'
+      type: boolean
+    - name: programme_es
+      label: Programa (es)
+      type: string
+    - name: programme_en
+      label: Programa (en)
+      type: string
+    - name: supervisors
+      label: 'Dirección (identificador si es miembro; si no, nombre)'
+      type: string
+      list: true
+    - name: start
+      label: Año de inicio
+      type: number
+  - name: education
+    label: Formación
+    type: object
+    list: true
+    fields:
+    - name: degree_es
+      label: Título (es)
+      type: string
+    - name: degree_en
+      label: Título (en)
+      type: string
+    - name: institution
+      label: Institución
+      type: string
+    - name: year
+      label: Año
+      type: number
+    - name: distinction_es
+      label: Distinción (es)
+      type: string
+    - name: distinction_en
+      label: Distinción (en)
+      type: string
+  - name: links
+    label: Enlaces
+    type: object
+    list: true
+    fields:
+    - name: type
+      label: Tipo
+      type: select
+      options:
+        values:
+        - orcid
+        - scholar
+        - researchgate
+        - dialnet
+        - usal
+        - web
+        - github
+        - linkedin
+        - bluesky
+        - x
+        - cv
+    - name: url
+      label: Dirección
+      type: string
+  - name: selected
+    label: Publicaciones destacadas (identificadores)
+    type: string
+    list:
+      max: 3
+  - name: updated
+    label: Actualización (la fija git al publicar)
+    type: date
+    hidden: true
+- name: lines
+  label: Líneas
+  type: collection
+  path: data/lines
+  format: yaml
+  filename: '{fields.slug}.yaml'
+  view:
+    fields:
+    - title_es
+    - order
+    primary: title_es
+    default:
+      sort: order
+      order: asc
+  fields:
+  - name: slug
+    label: Identificador
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: 'Solo minúsculas, cifras y guiones'
+  - name: order
+    label: Orden
+    type: number
+    required: true
+  - name: title_es
+    label: Título (es)
+    type: string
+    required: true
+  - name: title_en
+    label: Título (en)
+    type: string
+  - name: text_es
+    label: Texto (es)
+    type: rich-text
+    options:
+      format: markdown
+  - name: text_en
+    label: Texto (en)
+    type: rich-text
+    options:
+      format: markdown
+  - name: topics_es
+    label: Temas de trabajo (es)
+    type: string
+    list: true
+  - name: topics_en
+    label: Temas de trabajo (en)
+    type: string
+    list: true
+- name: projects
+  label: Proyectos
+  type: collection
+  path: data/projects
+  format: yaml
+  filename: '{fields.slug}.yaml'
+  view:
+    fields:
+    - acronym
+    - title_es
+    - kind
+    - start
+    primary: title_es
+    default:
+      sort: start
+      order: desc
+  fields:
+  - name: slug
+    label: Identificador
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: 'Solo minúsculas, cifras y guiones'
+  - name: kind
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - dirigido
+      - participacion
+      - anterior
+  - name: title_es
+    label: Título (es)
+    type: string
+    required: true
+  - name: title_en
+    label: Título (en)
+    type: string
+  - name: acronym
+    label: Acrónimo
+    type: string
+  - name: reference
+    label: Referencia
+    type: string
+  - name: funder_es
+    label: Entidad financiadora (es)
+    type: string
+  - name: funder_en
+    label: Entidad financiadora (en)
+    type: string
+  - name: call_es
+    label: Convocatoria (es)
+    type: string
+  - name: call_en
+    label: Convocatoria (en)
+    type: string
+  - name: start
+    label: Inicio
+    type: date
+  - name: end
+    label: Fin
+    type: date
+  - name: amount_eur
+    label: Financiación (euros)
+    type: number
+  - name: pi
+    label: 'Investigador o investigadora principal (identificador si es miembro; si no, nombre)'
+    type: string
+  - name: pi_role_es
+    label: Etiqueta del cargo (es)
+    type: string
+  - name: pi_role_en
+    label: Etiqueta del cargo (en)
+    type: string
+  - name: members
+    label: Miembros del grupo
+    type: reference
+    list: true
+    options:
+      collection: members
+      search: given, family
+      value: '{slug}'
+      label: '{given} {family}'
+  - name: member_notes
+    label: Notas sobre miembros (entre paréntesis tras el nombre)
+    type: object
+    list: true
+    fields:
+    - name: member
+      label: Miembro
+      type: reference
+      options:
+        collection: members
+        search: given, family
+        value: '{slug}'
+        label: '{given} {family}'
+    - name: note_es
+      label: Nota (es)
+      type: string
+    - name: note_en
+      label: Nota (en)
+      type: string
+  - name: lines
+    label: Líneas
+    type: reference
+    list: true
+    options:
+      collection: lines
+      search: title_es
+      value: '{slug}'
+      label: '{title_es}'
+  - name: web
+    label: Web
+    type: string
+  - name: summary_es
+    label: Resumen (es)
+    type: rich-text
+    options:
+      format: markdown
+  - name: summary_en
+    label: Resumen (en)
+    type: rich-text
+    options:
+      format: markdown
+  - name: outputs_es
+    label: Productos (es)
+    type: string
+    list: true
+  - name: outputs_en
+    label: Productos (en)
+    type: string
+    list: true
+- name: resources
+  label: Recursos
+  type: collection
+  path: data/resources
+  format: yaml
+  filename: '{fields.slug}.yaml'
+  view:
+    fields:
+    - title_es
+    primary: title_es
+  fields:
+  - name: slug
+    label: Identificador
+    type: string
+    required: true
+    pattern:
+      regex: ^[a-z0-9-]+$
+      message: 'Solo minúsculas, cifras y guiones'
+  - name: title_es
+    label: Título (es)
+    type: string
+    required: true
+  - name: title_en
+    label: Título (en)
+    type: string
+  - name: text_es
+    label: Texto (es)
+    type: rich-text
+    options:
+      format: markdown
+  - name: text_en
+    label: Texto (en)
+    type: rich-text
+    options:
+      format: markdown
+  - name: fields
+    label: Datos
+    type: object
+    list: true
+    fields:
+    - name: label_es
+      label: Etiqueta (es)
+      type: string
+    - name: label_en
+      label: Etiqueta (en)
+      type: string
+    - name: value
+      label: Valor
+      type: string
+    - name: value_en
+      label: Valor (en)
+      type: string
+    - name: url
+      label: Enlace
+      type: string
+  - name: cite
+    label: Cómo citar (es)
+    type: text
+  - name: cite_en
+    label: Cómo citar (en)
+    type: text
+- name: collaborations
+  label: Colaboraciones
+  type: file
+  path: data/collaborations.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: name
+    label: Nombre
+    type: string
+    required: true
+  - name: name_en
+    label: Nombre (en)
+    type: string
+  - name: url
+    label: Web
+    type: string
+  - name: url_label_es
+    label: Texto del enlace (es); si se deja vacío, «Sitio web»
+    type: string
+  - name: url_label_en
+    label: Texto del enlace (en); si se deja vacío, «Website»
+    type: string
+  - name: more_urls
+    label: Otras webs
+    type: object
+    list: true
+    fields:
+    - name: url
+      label: Enlace
+      type: string
+    - name: label_es
+      label: Texto del enlace (es)
+      type: string
+    - name: label_en
+      label: Texto del enlace (en)
+      type: string
+  - name: text_es
+    label: Texto (es)
+    type: rich-text
+    options:
+      format: markdown
+  - name: text_en
+    label: Texto (en)
+    type: rich-text
+    options:
+      format: markdown
+- name: outreach
+  label: Divulgación
+  type: collection
+  path: data/outreach
+  format: yaml
+  filename: '{fields.date}-{primary}.yaml'
+  view:
+    fields:
+    - title
+    - date
+    - type_es
+    primary: title
+    default:
+      sort: date
+      order: desc
+  fields:
+  - name: date
+    label: 'Fecha (año sin día ni mes, el 31 de diciembre)'
+    type: date
+    required: true
+  - name: date_precision
+    label: Precisión de la fecha
+    type: select
+    options:
+      values:
+      - day
+      - month
+      - year
+  - name: date_label_es
+    label: Fecha tal como se muestra (es)
+    type: string
+  - name: date_label_en
+    label: Fecha tal como se muestra (en)
+    type: string
+  - name: upcoming
+    label: Próximamente
+    type: boolean
+  - name: type_es
+    label: Tipo (es)
+    type: string
+  - name: type_en
+    label: Tipo (en)
+    type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: venue
+    label: Lugar o medio (es)
+    type: string
+  - name: venue_en
+    label: Lugar o medio (en)
+    type: string
+  - name: people
+    label: 'Participantes (identificador si es miembro; si no, nombre)'
+    type: string
+    list: true
+  - name: people_note_es
+    label: Texto tras los participantes (es), p. ej. «con …» o «(docente)»
+    type: string
+  - name: people_note_en
+    label: Texto tras los participantes (en)
+    type: string
+  - name: people_and
+    label: Unir el último participante con «y»
+    type: boolean
+  - name: url
+    label: Enlace
+    type: string
+  - name: source_es
+    label: Fuente del enlace (es), p. ej. «La Gaceta de Salamanca»
+    type: string
+  - name: source_en
+    label: Fuente del enlace (en)
+    type: string
+  - name: text_es
+    label: Descripción (es)
+    type: rich-text
+    options:
+      format: markdown
+  - name: text_en
+    label: Descripción (en)
+    type: rich-text
+    options:
+      format: markdown
+  - name: sessions
+    label: Sesiones
+    type: object
+    list: true
+    fields:
+    - name: date
+      label: Fecha
+      type: date
+    - name: title
+      label: Título o lugar
+      type: string
+    - name: person
+      label: Persona (identificador si es miembro)
+      type: string
+- name: group-publications
+  label: Publicaciones del grupo
+  type: file
+  path: data/publications/group.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+  - name: members
+    label: Miembros
+    type: reference
+    list: true
+    options:
+      collection: members
+      search: given, family
+      value: '{slug}'
+      label: '{given} {family}'
+- name: extra-olga-ivanova
+  label: 'Publicaciones añadidas: Olga Ivanova'
+  type: file
+  path: data/publications/extra/olga-ivanova.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+- name: extra-elena-garcia-pinuela
+  label: 'Publicaciones añadidas: Elena García Piñuela'
+  type: file
+  path: data/publications/extra/elena-garcia-pinuela.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+- name: extra-jordi-just-alcaraz
+  label: 'Publicaciones añadidas: Jordi Just Alcaraz'
+  type: file
+  path: data/publications/extra/jordi-just-alcaraz.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+- name: extra-emma-machado-de-souza
+  label: 'Publicaciones añadidas: Emma Machado de Souza'
+  type: file
+  path: data/publications/extra/emma-machado-de-souza.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+- name: extra-soraya-mendez-sanz
+  label: 'Publicaciones añadidas: Soraya Méndez Sanz'
+  type: file
+  path: data/publications/extra/soraya-mendez-sanz.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+- name: extra-esther-ochoa-obeso
+  label: 'Publicaciones añadidas: Esther Ochoa Obeso'
+  type: file
+  path: data/publications/extra/esther-ochoa-obeso.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+- name: extra-ariadna-verges-bonaventura
+  label: 'Publicaciones añadidas: Ariadna Vergés Bonaventura'
+  type: file
+  path: data/publications/extra/ariadna-verges-bonaventura.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+- name: extra-montserrat-rangel-vicente
+  label: 'Publicaciones añadidas: Montserrat Rangel Vicente'
+  type: file
+  path: data/publications/extra/montserrat-rangel-vicente.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: 'Identificador (doi:…, orcid:… o manual:…)'
+    type: string
+    required: true
+  - name: type
+    label: Tipo
+    type: select
+    required: true
+    options:
+      values:
+      - article
+      - chapter
+      - book
+      - edited-book
+      - review
+      - conference-paper
+      - presentation
+      - poster
+      - dataset
+      - software
+      - report
+      - thesis
+      - other
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - published
+      - in_press
+      - forthcoming
+  - name: authors
+    label: Autoría
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: editors
+    label: Edición
+    type: object
+    list: true
+    fields:
+    - name: family
+      label: Apellidos
+      type: string
+    - name: given
+      label: Nombre
+      type: string
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: container
+    label: Revista o libro
+    type: string
+  - name: volume
+    label: Volumen
+    type: string
+  - name: issue
+    label: Número
+    type: string
+  - name: pages
+    label: Páginas
+    type: string
+  - name: publisher
+    label: Editorial
+    type: string
+  - name: doi
+    label: DOI
+    type: string
+  - name: url
+    label: Dirección
+    type: string
+  - name: lang
+    label: Lengua
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+- name: rejected-publications
+  label: Publicaciones descartadas
+  type: file
+  path: data/publications/rejected.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: id
+    label: Identificador
+    type: string
+    required: true
+  - name: title
+    label: Título
+    type: string
+  - name: reason
+    label: Motivo
+    type: text
+    required: true
+- name: theses
+  label: Tesis dirigidas fuera del grupo
+  type: file
+  path: data/theses.yaml
+  format: yaml
+  list: true
+  fields:
+  - name: author
+    label: Autor o autora
+    type: string
+    required: true
+  - name: title
+    label: Título
+    type: string
+    required: true
+  - name: lang
+    label: Lengua del título
+    type: select
+    options:
+      values:
+      - es
+      - en
+      - fr
+      - de
+      - it
+      - pt
+      - ca
+  - name: university
+    label: Universidad
+    type: string
+  - name: year
+    label: Año
+    type: number
+  - name: status
+    label: Estado
+    type: select
+    options:
+      values:
+      - defended
+      - in_progress
+  - name: supervisors
+    label: 'Dirección (identificador si es miembro; si no, nombre)'
+    type: string
+    list: true

@@ -1,0 +1,80 @@
+baseURL = "https://lendelab.github.io/"
+title = "LendeLab"
+defaultContentLanguage = "es"
+defaultContentLanguageInSubdir = false
+disableDefaultLanguageRedirect = true
+disableKinds = ["taxonomy", "term", "rss"]
+enableRobotsTXT = true
+timeZone = "Europe/Madrid"
+
+[params]
+  palette = "teal"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[sitemap]
+  changeFreq = "monthly"
+
+[imaging]
+  resampleFilter = "Lanczos"
+[imaging.webp]
+  quality = 82
+
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+[[module.mounts]]
+  source = "static/img/members"
+  target = "assets/img/members"
+[[module.mounts]]
+  source = "static"
+  target = "static"
+  files = ["! img/members/**"]
+[[module.mounts]]
+  source = "layouts"
+  target = "layouts"
+[[module.mounts]]
+  source = "i18n"
+  target = "i18n"
+[[module.mounts]]
+  source = "data"
+  target = "data"
+
+[languages.es]
+  contentDir = "content/es"
+  label = "Español"
+  locale = "es"
+  weight = 1
+  [languages.es.permalinks.section]
+    group = "/grupo/"
+    lines = "/lineas/"
+    members = "/miembros/"
+    projects = "/proyectos/"
+    publications = "/publicaciones/"
+    resources = "/recursos/"
+    collaborations = "/colaboraciones/"
+    outreach = "/divulgacion/"
+    contact = "/contacto/"
+  [languages.es.permalinks.page]
+    lines = "/lineas/:contentbasename/"
+    members = "/miembros/:contentbasename/"
+
+[languages.en]
+  contentDir = "content/en"
+  label = "English"
+  locale = "en"
+  weight = 2
+  [languages.en.permalinks.section]
+    group = "/group/"
+    lines = "/research-lines/"
+    members = "/members/"
+    projects = "/projects/"
+    publications = "/publications/"
+    resources = "/resources/"
+    collaborations = "/collaborations/"
+    outreach = "/outreach/"
+    contact = "/contact/"
+  [languages.en.permalinks.page]
+    lines = "/research-lines/:contentbasename/"
+    members = "/members/:contentbasename/"

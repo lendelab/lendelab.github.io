@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <header class="fold fold--page on-slab">
+    {{ partial "orn.html" . }}
+    <h1 class="fold__title fold__title--page">{{ T "notfound_title" }}</h1>
+  </header>
+  <section class="band">
+    <div class="inner two">
+      <div class="notfound">
+        <p class="lede">{{ T "notfound_text" }}</p>
+        <p><a class="more" href="{{ site.Home.RelPermalink }}">{{ T "notfound_home" }} {{ partial "arrow.html" . }}</a></p>
+      </div>
+      {{- range first 1 site.Home.Translations }}
+      <div class="notfound" lang="{{ .Language.Locale }}">
+        <h2 class="band__title">{{ T "notfound_alt_title" }}</h2>
+        <p>{{ T "notfound_alt_text" }}</p>
+        <p><a class="more" href="{{ .RelPermalink }}" hreflang="{{ .Language.Locale }}">{{ T "notfound_alt_home" }} {{ partial "arrow.html" . }}</a></p>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+{{ end }}

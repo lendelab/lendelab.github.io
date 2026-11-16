@@ -1,0 +1,23 @@
+date: 2026-12-31
+date_precision: year
+date_label_es: ''
+date_label_en: ''
+upcoming: false
+type_es: entrevista publicada en libro
+type_en: interview published in a book
+title: Conversaciones en torno al cerebro lingüístico
+venue: '*En primera persona: conversaciones con lingüistas en torno al lenguaje* (Zaragoza Lingüística); entrevista
+  de Sara Rodríguez Gascón'
+venue_en: '*En primera persona: conversaciones con lingüistas en torno al lenguaje* (Zaragoza Lingüística); interview
+  by Sara Rodríguez Gascón'
+people:
+- olga-ivanova
+people_note_es: ''
+people_note_en: ''
+people_and: false
+url: https://dialnet.unirioja.es/servlet/articulo?codigo=10945088
+source_es: Dialnet
+source_en: Dialnet
+text_es: Conversación con Olga Ivanova sobre el lenguaje y el cerebro, recogida en un volumen de entrevistas a lingüistas.
+text_en: A conversation with Olga Ivanova about language and the brain, included in a volume of interviews with
+  linguists.

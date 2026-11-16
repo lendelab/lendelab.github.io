@@ -1,0 +1,10 @@
+{{- $p := . -}}
+{{- $url := "" -}}{{- $lang := "" -}}
+{{- with $p.Translations }}{{ with index . 0 }}{{ $url = .RelPermalink }}{{ $lang = .Language }}{{ end }}{{ end -}}
+{{- if not $url -}}
+  {{- with $p.CurrentSection }}{{ with .Translations }}{{ with index . 0 }}{{ $url = .RelPermalink }}{{ $lang = .Language }}{{ end }}{{ end }}{{ end -}}
+{{- end -}}
+{{- if not $url -}}
+  {{- with site.Home.Translations }}{{ with index . 0 }}{{ $url = .RelPermalink }}{{ $lang = .Language }}{{ end }}{{ end -}}
+{{- end -}}
+{{- return (dict "url" $url "locale" $lang.Locale "code" (upper $lang.Lang) "name" (T "other_lang_name")) -}}

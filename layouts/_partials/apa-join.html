@@ -1,0 +1,19 @@
+{{- /* .names: formatted names; .last: family of the last person; .editors: true inside an "En/In" clause */ -}}
+{{- $names := .names -}}
+{{- $n := len $names -}}
+{{- $es := eq site.Language.Lang "es" -}}
+{{- $conj := "" -}}
+{{- if $es -}}
+  {{- $conj = cond (gt (len (findRE `^h?[iíIÍ]([^aeiouáéíóúAEIOUÁÉÍÓÚ]|$)` (lower .last))) 0) "e" "y" -}}
+  {{- $conj = printf " %s " $conj -}}
+{{- else -}}
+  {{- $conj = cond (and .editors (eq $n 2)) " & " ", & " -}}
+{{- end -}}
+{{- $s := "" -}}
+{{- if eq $n 1 -}}{{- $s = index $names 0 -}}
+{{- else if and (gt $n 20) (not .editors) -}}
+  {{- $s = printf "%s, . . . %s" (delimit (first 19 $names) ", ") (index $names (sub $n 1)) -}}
+{{- else if gt $n 1 -}}
+  {{- $s = printf "%s%s%s" (delimit (first (sub $n 1) $names) ", ") $conj (index $names (sub $n 1)) -}}
+{{- end -}}
+{{- return $s -}}

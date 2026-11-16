@@ -1,0 +1,76 @@
+slug: olga-ivanova
+order: 1
+group: direccion
+given: Olga
+family: Ivanova
+citation_names:
+- Ivanova, O.
+- Ivanova, Olga
+- Ivanova Ivanov, Olga
+orcid: 0000-0002-9657-5380
+email: olga.ivanova@usal.es
+photo: /img/members/olga-ivanova.jpg
+position_es: Directora. Profesora titular de universidad, Universidad de Salamanca
+position_en: Director. Associate professor, Universidad de Salamanca
+funding: ''
+affiliation_es: Departamento de Lengua Española, Universidad de Salamanca
+affiliation_en: Department of Spanish Language, Universidad de Salamanca
+bio_es: Olga Ivanova es profesora titular de Lingüística General en la Universidad de Salamanca y dirige LendeLab
+  desde 2024. Investiga los cambios del lenguaje en el envejecimiento y los distingue de los trastornos lingüísticos
+  propios de la enfermedad de Alzheimer, en busca de rasgos que sirvan como biomarcadores del deterioro cognitivo.
+  De ese trabajo procede el Corpus Quijote, que reúne muestras de habla de 361 personas mayores con y sin deterioro
+  cognitivo y está disponible en DementiaBank. Dirige también el proyecto FONEMA (Becas Leonardo de la Fundación
+  BBVA, 2025-2027), que elabora un corpus de biomarcadores fonéticos en español. Se doctoró en Filología Hispánica
+  en la Universidad de Salamanca (2011) y cursó después el Máster en Neurociencia de la Audición y el Lenguaje del
+  Instituto de Neurociencias de Castilla y León, con cuyo grupo Neurofisiología, Cognición y Conducta colabora.
+bio_en: 'Olga Ivanova is an associate professor of General Linguistics at the Universidad de Salamanca and has directed
+  LendeLab since 2024. She studies the changes that language undergoes in aging and distinguishes them from the
+  language disorders specific to Alzheimer’s disease, in search of features that can serve as biomarkers of cognitive
+  decline. The Corpus Quijote came out of that work: it holds speech samples from 361 older adults with and without
+  cognitive impairment and is available in DementiaBank. She also leads the FONEMA project (Becas Leonardo of the
+  Fundación BBVA, 2025–2027), which is building a corpus of phonetic biomarkers in Spanish. She received her PhD
+  in Hispanic Philology from the Universidad de Salamanca in 2011 and later took the Master’s in the Neuroscience
+  of Hearing and Language at the Instituto de Neurociencias de Castilla y León, whose Neurofisiología, Cognición
+  y Conducta group she collaborates with.'
+lines:
+- marcadores
+- diagnostico-diferencial
+- comunicacion
+thesis:
+  title_es: ''
+  title_en: ''
+  topic_only: false
+  programme_es: ''
+  programme_en: ''
+  supervisors: []
+  start: null
+education:
+- degree_es: Doctorado en Filología Hispánica
+  degree_en: PhD in Hispanic Philology
+  institution: Universidad de Salamanca
+  year: 2011
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: Máster en Neurociencia de la Audición y el Lenguaje
+  degree_en: Master’s in the Neuroscience of Hearing and Language
+  institution: Instituto de Neurociencias de Castilla y León
+  year: 2015
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: Licenciatura en Filología Hispánica e Inglesa
+  degree_en: Degree in Hispanic and English Philology
+  institution: Universidad Nacional Taras Shevchenko de Kiev
+  year: 2006
+  distinction_es: ''
+  distinction_en: ''
+links:
+- type: orcid
+  url: https://orcid.org/0000-0002-9657-5380
+- type: usal
+  url: https://produccioncientifica.usal.es/investigadores/57979/detalle
+- type: researchgate
+  url: https://www.researchgate.net/profile/Olga-Ivanova-14
+- type: dialnet
+  url: https://dialnet.unirioja.es/servlet/autor?codigo=5862980
+selected: []
+updated: null

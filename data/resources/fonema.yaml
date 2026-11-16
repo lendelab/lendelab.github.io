@@ -1,0 +1,41 @@
+slug: fonema
+title_es: Corpus y atlas FONEMA (en preparación)
+title_en: FONEMA corpus and atlas (in preparation)
+text_es: FONEMA prepara para el español un corpus de muestras de habla anotadas de personas con enfermedad de Alzheimer,
+  enfermedad de Parkinson, demencia frontotemporal y demencia con cuerpos de Lewy. Lo acompañará un atlas interactivo
+  que mostrará, para cada enfermedad, el perfil lingüístico y del habla junto con las alteraciones de los rasgos
+  fónicos asociadas a ella. Ambos recursos se publicarán en acceso abierto en <https://fonema.usal.es/>; la consulta
+  está prevista para enero de 2027.
+text_en: FONEMA is preparing a corpus of annotated speech samples in Spanish from people with Alzheimer’s disease,
+  Parkinson’s disease, frontotemporal dementia and dementia with Lewy bodies. It will be accompanied by an interactive
+  atlas showing, for each disease, the language and speech profile together with the changes in sound features associated
+  with it. Both resources will be published open access at https://fonema.usal.es/ and are expected to be available
+  in January 2027.
+fields:
+- label_es: Proyecto
+  label_en: Project
+  value: FONEMA (Fundación BBVA, Becas Leonardo 2025).
+  url: ''
+  value_en: FONEMA (Fundación BBVA, Becas Leonardo 2025).
+- label_es: Estado
+  label_en: Status
+  value: en preparación; consulta prevista para enero de 2027.
+  url: ''
+  value_en: in preparation; expected to be available in January 2027.
+- label_es: Acceso
+  label_en: Access
+  value: abierto.
+  url: ''
+  value_en: open.
+- label_es: Web
+  label_en: Website
+  value: fonema.usal.es
+  url: https://fonema.usal.es/
+  value_en: ''
+- label_es: Contacto
+  label_en: Contact
+  value: Olga Ivanova, investigadora principal ([olga.ivanova@usal.es](mailto:olga.ivanova@usal.es)).
+  url: ''
+  value_en: Olga Ivanova, principal investigator ([olga.ivanova@usal.es](mailto:olga.ivanova@usal.es)).
+cite: ''
+cite_en: ''

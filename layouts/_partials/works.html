@@ -1,0 +1,29 @@
+{{- /* ORCID works plus additions, deduplicated by DOI, then by normalised title and year; additions win;
+       newest first; presentations and posters go to talks. */ -}}
+{{- $slug := . -}}
+{{- $orcid := slice -}}{{- $extra := slice -}}
+{{- with hugo.Data.orcid }}{{ with index . $slug }}{{ with .works }}{{ $orcid = . }}{{ end }}{{ end }}{{ end -}}
+{{- with hugo.Data.publications }}{{ with .extra }}{{ with index . $slug }}{{ $extra = . }}{{ end }}{{ end }}{{ end -}}
+{{- $extraIds := slice -}}{{- range $extra }}{{ with .id }}{{ $extraIds = $extraIds | append . }}{{ end }}{{ end -}}
+{{- $byKey := dict -}}{{- $alias := dict -}}
+{{- range $src, $list := slice $orcid $extra -}}
+  {{- range $list -}}
+  {{- if not (and (eq $src 0) (in $extraIds .id)) -}}
+    {{- $doi := lower (replaceRE `^(https?://(dx\.)?doi\.org/|doi:)` "" (.doi | default "")) -}}
+    {{- $tkey := printf "t:%s|%v" (replaceRE `[^\p{L}\p{N}]+` "" (lower (.title | default ""))) .year -}}
+    {{- $key := cond (ne $doi "") (printf "d:%s" $doi) $tkey -}}
+    {{- $target := $key -}}
+    {{- if not (index $byKey $key) }}{{ with index $alias $tkey }}{{ $target = . }}{{ end }}{{ end -}}
+    {{- if or (eq $src 1) (not (index $byKey $target)) -}}
+      {{- $byKey = merge $byKey (dict $target .) -}}
+      {{- $alias = merge $alias (dict $tkey $target) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $all := slice -}}
+{{- range $k, $w := $byKey }}{{ $all = $all | append (dict "w" $w "s" (printf "%04d %s" (int (or $w.year 0)) (lower ($w.title | default "")))) }}{{ end -}}
+{{- $all = sort $all "s" "desc" -}}
+{{- $pubs := slice -}}{{- $talks := slice -}}
+{{- range $all }}{{ if in (slice "presentation" "poster") .w.type }}{{ $talks = $talks | append .w }}{{ else }}{{ $pubs = $pubs | append .w }}{{ end }}{{ end -}}
+{{- return (dict "pubs" $pubs "talks" $talks "all" ($pubs | append $talks)) -}}

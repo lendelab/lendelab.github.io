@@ -1,0 +1,173 @@
+{
+  "orcid": "0000-0003-4443-9739",
+  "fetched": "2026-11-14T19:37:19Z",
+  "works": [
+    {
+      "id": "doi:10.7146/kkf.v39i1.155907",
+      "type": "article",
+      "year": 2026,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Machado de Souza",
+          "given": "Emma"
+        }
+      ],
+      "title": "Hacking the Biomedical Discourse: Trans Digital Counterpublics and the Self-Governance of Health",
+      "container": "Kvinder, Køn & Forskning",
+      "volume": "",
+      "issue": "1",
+      "pages": "81-100",
+      "publisher": "",
+      "doi": "10.7146/kkf.v39i1.155907",
+      "url": "",
+      "lang": "en"
+    },
+    {
+      "id": "doi:10.5281/zenodo.20261936",
+      "type": "article",
+      "year": 2026,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Machado de Souza",
+          "given": "Emma"
+        }
+      ],
+      "title": "Naming, excluding, disciplining: contested parliamentary discourses on trans issues",
+      "container": "Language, Discourse & Society",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "publisher": "",
+      "doi": "10.5281/zenodo.20261936",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.20261936",
+      "lang": "en"
+    },
+    {
+      "id": "doi:10.5281/zenodo.19681416",
+      "type": "article",
+      "year": 2026,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Machado de Souza",
+          "given": "Emma"
+        }
+      ],
+      "title": "Reframing Neurodivergence: How Digital Neuroqueer Communities Resist Pathologizing Discourses and Generate Counter-hegemonic Narratives. A Critical Discourse Analysis of Neuroqueer Counter-Narratives",
+      "container": "Feral Feminisms Publishing",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "publisher": "",
+      "doi": "10.5281/zenodo.19681416",
+      "url": "https://zenodo.org/doi/10.5281/zenodo.19681416",
+      "lang": "en"
+    },
+    {
+      "id": "orcid:191458448",
+      "type": "chapter",
+      "year": 2025,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Machado de Souza",
+          "given": "Emma"
+        }
+      ],
+      "title": "¿Cómo hablamos cuando cuidamos? Claves del lenguaje inclusivo en la atención sanitaria",
+      "container": "Lengua mutante. Reflexiones sobre lenguaje inclusivo",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "publisher": "",
+      "doi": "",
+      "url": "https://editorialpiedepagina.com/product/lengua-mutante/",
+      "lang": "es"
+    },
+    {
+      "id": "doi:10.24197/mcreilq.2.2025.161-194",
+      "type": "article",
+      "year": 2025,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Machado de Souza",
+          "given": "Emma"
+        }
+      ],
+      "title": "La voz como herramienta de identidad y resistencia: Modulación vocal y autoafirmación en personas trans y no binarias",
+      "container": "MariCorners: Revista de Estudios Interdisciplinares LGTBIA+ y queer",
+      "volume": "2",
+      "issue": "2",
+      "pages": "161-194",
+      "publisher": "",
+      "doi": "10.24197/mcreilq.2.2025.161-194",
+      "url": "",
+      "lang": "es"
+    },
+    {
+      "id": "orcid:162476158",
+      "type": "chapter",
+      "year": 2023,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Machado de Souza",
+          "given": "Emma"
+        },
+        {
+          "family": "Ivanova",
+          "given": "Olga"
+        },
+        {
+          "family": "García-Meilán",
+          "given": "Juan José"
+        }
+      ],
+      "title": "La depresión y el habla: características fonéticas de hablantes de español con depresión",
+      "container": "Lingüística clínica en el ámbito hispánico: Un panorama de estudios",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "publisher": "",
+      "doi": "",
+      "url": "https://dialnet.unirioja.es/servlet/articulo?codigo=9316472",
+      "lang": "es"
+    },
+    {
+      "id": "doi:10.25267/pragmalinguistica.2023.i31.09",
+      "type": "article",
+      "year": 2023,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Ivanova",
+          "given": "Olga"
+        },
+        {
+          "family": "Machado de Souza",
+          "given": "Emma"
+        },
+        {
+          "family": "Méndez Sanz",
+          "given": "Soraya"
+        },
+        {
+          "family": "Ochoa Obeso",
+          "given": "Esther"
+        }
+      ],
+      "title": "La evaluación de la competencia pragmática en las enfermedades neurodegenerativas: retos teóricos y metodológicos",
+      "container": "Pragmalinguistica",
+      "volume": "",
+      "issue": "31",
+      "pages": "",
+      "publisher": "",
+      "doi": "10.25267/pragmalinguistica.2023.i31.09",
+      "url": "https://www.lens.org/047-533-399-085-613",
+      "lang": "es"
+    }
+  ]
+}

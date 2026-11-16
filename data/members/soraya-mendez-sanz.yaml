@@ -1,0 +1,61 @@
+slug: soraya-mendez-sanz
+order: 5
+group: predoctoral
+given: Soraya
+family: Méndez Sanz
+citation_names:
+- Méndez Sanz, S.
+- Méndez Sanz, Soraya
+orcid: 0000-0002-3804-6587
+email: soramensaz@usal.es
+photo: /img/members/soraya-mendez-sanz.jpg
+position_es: Investigadora predoctoral. Profesora asociada, Universidad Pontificia de Salamanca
+position_en: Predoctoral researcher. Associate lecturer, Universidad Pontificia de Salamanca
+funding: ''
+affiliation_es: Universidad de Salamanca
+affiliation_en: Universidad de Salamanca
+bio_es: Soraya Méndez Sanz es investigadora predoctoral en la Universidad de Salamanca y profesora asociada en la
+  Facultad de Ciencias de la Salud de la Universidad Pontificia de Salamanca, donde enseña en el Grado en Logopedia.
+  En su tesis doctoral estudia la competencia pragmática de las personas con enfermedad de Alzheimer como posible
+  indicador del deterioro cognitivo. Para medir esa competencia ha revisado los instrumentos de evaluación pragmática
+  disponibles con vistas a adaptarlos a la población con demencia. Es graduada en Estudios Franceses y en Logopedia.
+bio_en: Soraya Méndez Sanz combines predoctoral research at the Universidad de Salamanca with a post as associate
+  lecturer in the Faculty of Health Sciences of the Universidad Pontificia de Salamanca, where she teaches on the
+  degree in Speech-Language Pathology. Her doctoral research addresses the pragmatic competence of people with Alzheimer’s
+  disease as a possible indicator of cognitive decline. To measure that competence, she has reviewed the available
+  instruments for pragmatic assessment with a view to adapting them for people with dementia. She holds degrees
+  in French Studies and in Speech-Language Pathology.
+lines:
+- marcadores
+- evaluacion
+thesis:
+  title_es: Pragmática en la enfermedad de Alzheimer
+  title_en: ''
+  topic_only: false
+  programme_es: 'Español: investigación avanzada en lengua y literatura'
+  programme_en: ''
+  supervisors:
+  - olga-ivanova
+  start: null
+education:
+- degree_es: Grado en Estudios Franceses
+  degree_en: Degree in French Studies
+  institution: ''
+  year: null
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: Grado en Logopedia
+  degree_en: Degree in Speech-Language Pathology
+  institution: ''
+  year: null
+  distinction_es: ''
+  distinction_en: ''
+links:
+- type: orcid
+  url: https://orcid.org/0000-0002-3804-6587
+- type: usal
+  url: https://produccioncientifica.usal.es/investigadores/819253/detalle
+- type: dialnet
+  url: https://dialnet.unirioja.es/servlet/autor?codigo=6180619
+selected: []
+updated: null

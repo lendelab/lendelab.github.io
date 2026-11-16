@@ -1,0 +1,109 @@
+skip: Saltar al contenido
+menu: Menú
+nav_main: Principal
+nav_mobile: Principal (móvil)
+home_aria: LendeLab, inicio
+lang_name: Español
+other_lang_name: English
+nav_group: Grupo
+nav_lines: Líneas
+nav_members: Miembros
+nav_projects: Proyectos
+nav_publications: Publicaciones
+nav_resources: Recursos
+nav_collaborations: Colaboraciones
+nav_outreach: Divulgación
+nav_contact: Contacto
+lines_title: Líneas de investigación
+current_project: Proyecto en curso
+recent_publications: Publicaciones recientes
+funder: Entidad financiadora
+duration: Duración
+funding: Financiación
+reference: Referencia
+group_members: Miembros del grupo
+line_one: Línea
+line_many: Líneas
+web: Web
+kind_dirigido: Proyectos dirigidos por el grupo
+kind_participacion: Proyectos con participación del grupo
+kind_anterior: Proyectos anteriores a la creación del grupo
+topics: Temas de trabajo
+members_title: Miembros
+former_members: Antiguos miembros
+projects_title: Proyectos
+publications_title: Publicaciones
+bio: Biografía
+thesis: Tesis doctoral
+thesis_title: Título provisional
+thesis_topic: Tema
+programme: Programa de doctorado
+supervision: Dirección
+start: Inicio
+education: Formación
+current_projects: Proyectos en curso
+supervised: Tesis dirigidas
+in_progress: en curso, desde
+in_progress_nodate: en curso
+defended: defendida
+cosupervision: codirección con
+selected: Publicaciones seleccionadas
+talks: Comunicaciones
+outreach_title: Divulgación
+updated: Última actualización
+email: Correo electrónico
+link_orcid: ORCID
+link_scholar: Google Scholar
+link_researchgate: ResearchGate
+link_dialnet: Dialnet
+link_usal: Portal USAL
+link_web: Web
+link_github: GitHub
+link_linkedin: LinkedIn
+link_bluesky: Bluesky
+link_x: X
+link_cv: CV
+upcoming: Próximamente
+sessions: Sesiones
+pubs_empty: La lista de publicaciones del grupo está en preparación.
+pubs_empty_members: Las publicaciones de cada miembro figuran en su página.
+cite: Cómo citar
+address: Dirección
+form_name: Nombre y apellidos
+form_email: Correo electrónico
+form_institution: Institución
+form_optional: opcional
+form_subject: Asunto
+form_message: Mensaje
+form_send: Enviar
+form_sending: Enviando…
+form_sent: Mensaje enviado.
+form_failed: No se ha podido enviar el mensaje. Puede dirigirse directamente a
+form_required: Rellene este campo.
+form_bad_email: Escriba una dirección de correo válida.
+privacy: Protección de datos
+notfound_title: Página no encontrada
+notfound_text: La dirección no corresponde a ninguna página del sitio.
+notfound_home: Ir a la página de inicio
+apa_and: y
+apa_in: En
+apa_ed: Ed.
+apa_eds: Eds.
+apa_pp: pp.
+apa_nd: s. f.
+apa_in_press: en prensa
+apa_forthcoming: de próxima publicación
+apa_paper: Comunicación
+apa_poster: Póster
+apa_dataset: Conjunto de datos
+apa_software: Software
+apa_thesis: Tesis doctoral
+notfound_alt_title: Page not found
+notfound_alt_text: This address does not match any page on the site.
+notfound_alt_home: Go to the English home page
+aria_work: Proyecto en curso y recursos
+aria_pair: Publicaciones y divulgación
+aria_meet: Colaboraciones y contacto
+q_open: "«"
+q_close: "»"
+website: Sitio web

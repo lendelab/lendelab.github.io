@@ -1,0 +1,107 @@
+- id: doi:10.17605/osf.io/y9fkr
+  type: report
+  year: 2026
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: García Piñuela
+    given: Elena
+  - family: Machado de Souza
+    given: Emma
+  - family: Just Alcaraz
+    given: Jordi
+  - family: Vergés Bonaventura
+    given: Ariadna
+  - family: Méndez Sanz
+    given: Soraya
+  - family: Ochoa Obeso
+    given: Esther
+  title: Palabras que cuidan. Notas sobre la comunicación en/con la demencia
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: OSF
+  doi: 10.17605/osf.io/y9fkr
+  url: ''
+  lang: es
+- id: doi:10.25115/ibal.v9i9.11085
+  type: review
+  year: 2025
+  status: published
+  authors:
+  - family: García Piñuela
+    given: Elena
+  title: 'Review of Grammar in Action: Building comprehensive grammars of talk-in-interaction'
+  container: SABIR. International Bulletin of Applied Linguistics
+  volume: '9'
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: 10.25115/ibal.v9i9.11085
+  url: ''
+  lang: en
+- id: doi:10.14201/0aq0367
+  type: chapter
+  year: 2024
+  status: published
+  authors:
+  - family: García Piñuela
+    given: Elena
+  - family: Martín Vegas
+    given: R. A.
+  editors:
+  - family: López Esteban
+    given: Carmen
+  title: 'Conectando con el mundo laboral: análisis del paro juvenil a partir de la interrelación de textos'
+  container: 'La internacionalización a través de los Objetivos de Desarrollo Sostenible: del Máster Universitario en Profesor de Educación Secundaria Obligatoria y Bachillerato, Formación Profesional y Enseñanzas de Idiomas (MUPES)'
+  volume: ''
+  issue: ''
+  pages: 223-237
+  publisher: Ediciones Universidad de Salamanca
+  doi: 10.14201/0aq0367
+  url: https://eusal.es/omp/eusal/catalog/view/2615/6496/9705
+  lang: es
+- id: manual:ivanova-2023-is-syntactic-simplification-in
+  type: poster
+  year: 2023
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: García Piñuela
+    given: Elena
+  - family: García Meilán
+    given: Juan José
+  title: Is syntactic simplification in Alzheimer's disease driven by lexical-semantic impairment?
+  container: XVI International Symposium of Psycholinguistics
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://www.ehu.eus/documents/37180379/44894354/P_2.01.pdf
+  lang: en
+- id: doi:10.3389/flang.2023.1199107
+  type: article
+  year: 2023
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: Martínez-Nicolás
+    given: Israel
+  - family: García Piñuela
+    given: Elena
+  - family: Meilán
+    given: Juan José G.
+  title: 'Defying syntactic preservation in Alzheimer''s disease: what type of impairment predicts syntactic change in dementia (if it does) and why?'
+  container: Frontiers in Language Sciences
+  volume: '2'
+  issue: ''
+  pages: '1199107'
+  publisher: ''
+  doi: 10.3389/flang.2023.1199107
+  url: ''
+  lang: en

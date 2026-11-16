@@ -1,0 +1,23 @@
+date: 2025-12-29
+date_precision: day
+date_label_es: ''
+date_label_en: ''
+upcoming: false
+type_es: entrevista en revista académica
+type_en: interview in an academic journal
+title: Entrevista a Olga Ivanova (Universidad de Salamanca)
+venue: '*Hesperia. Anuario de Filología Hispánica*, 28(2), 11–20. https://doi.org/10.35869/hafh.v28i2.6455'
+venue_en: ''
+people:
+- olga-ivanova
+people_note_es: ''
+people_note_en: ''
+people_and: false
+url: https://revistas.uvigo.es/index.php/AFH/article/view/6455
+source_es: Hesperia
+source_en: Hesperia
+text_es: Repaso de la trayectoria de Olga Ivanova desde la sociolingüística urbana hasta la lingüística clínica,
+  con atención a la colaboración con Juan José García Meilán, a la inteligencia artificial en la lingüística clínica
+  y al proyecto FONEMA.
+text_en: An overview of Olga Ivanova’s career from urban sociolinguistics to clinical linguistics, covering her
+  collaboration with Juan José García Meilán, artificial intelligence in clinical linguistics and the FONEMA project.

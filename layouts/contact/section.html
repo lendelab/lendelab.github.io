@@ -1,0 +1,52 @@
+{{ define "main" }}
+{{- $s := hugo.Data.site -}}
+{{- $e := $s.entries | default dict -}}
+{{- $form := and $s.form_action $e.nombre $e.correo $e.asunto $e.mensaje -}}
+{{- $text := partial "l.html" (dict "d" $s.contact "k" (cond $form "text" "text_no_form")) -}}
+{{- $addr := partial "l.html" (dict "d" $s "k" "address") -}}
+{{- $priv := partial "l.html" (dict "d" $s.contact "k" "privacy") -}}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  <section class="band" aria-label="{{ .Title }}">
+    <div class="inner two">
+      <div class="block">
+        <p class="lede"{{ with $text.lang }} lang="{{ . }}"{{ end }}>{{ partial "contact-text.html" $text.v }}</p>
+        <dl class="facts facts--paper facts--wide">
+          <div><dt>{{ T "email" }}</dt><dd><a class="nowrap" href="mailto:{{ $s.email }}">{{ $s.email }}</a></dd></div>
+          <div><dt>{{ T "address" }}</dt><dd{{ with $addr.lang }} lang="{{ . }}"{{ end }}>{{ $addr.v }}</dd></div>
+        </dl>
+      </div>
+      {{- if $form }}
+      <form class="form" action="{{ $s.form_action }}" method="post" data-required="{{ T "form_required" }}" data-bad-email="{{ T "form_bad_email" }}" data-sending="{{ T "form_sending" }}" data-sent="{{ T "form_sent" }}" data-failed="{{ T "form_failed" }}" data-email="{{ $s.email }}" data-send="{{ T "form_send" }}">
+        {{- range slice (dict "k" "nombre" "label" "form_name" "type" "text" "ac" "name" "req" true) (dict "k" "correo" "label" "form_email" "type" "email" "ac" "email" "req" true) (dict "k" "institucion" "label" "form_institution" "type" "text" "ac" "organization" "req" false) (dict "k" "asunto" "label" "form_subject" "type" "text" "ac" "off" "req" true) (dict "k" "mensaje" "label" "form_message" "type" "textarea" "ac" "off" "req" true) }}
+        {{- $id := printf "f-%s" .k }}{{ $name := index $e .k }}
+        <div class="field">
+          <label for="{{ $id }}">{{ T .label }}{{ if not .req }} <span class="field__opt">({{ T "form_optional" }})</span>{{ end }}</label>
+          {{- if eq .type "textarea" }}
+          <textarea id="{{ $id }}" name="{{ $name }}" rows="8"{{ if .req }} required{{ end }} aria-describedby="{{ $id }}-err"></textarea>
+          {{- else }}
+          <input id="{{ $id }}" name="{{ $name }}" type="{{ .type }}" autocomplete="{{ .ac }}"{{ if .req }} required{{ end }}{{ if eq .type "email" }} inputmode="email" spellcheck="false"{{ end }} aria-describedby="{{ $id }}-err">
+          {{- end }}
+          <p class="field__err" id="{{ $id }}-err"></p>
+        </div>
+        {{- end }}
+        <button class="btn--fill" type="submit">{{ T "form_send" }}</button>
+        <p class="form__status" role="status" aria-live="polite"></p>
+        <p class="privacy"><a href="#proteccion-datos">{{ T "privacy" }}</a></p>
+      </form>
+      {{- end }}
+    </div>
+  </section>
+  <section class="band band--alt" id="proteccion-datos" aria-labelledby="privacy-t">
+    <div class="inner">
+      <h2 class="band__title" id="privacy-t">{{ T "privacy" }}</h2>
+      <p class="privacy"{{ with $priv.lang }} lang="{{ . }}"{{ end }}>{{ partial "contact-text.html" $priv.v }}</p>
+    </div>
+  </section>
+{{ end }}
+{{ define "scripts" }}
+{{- $s := hugo.Data.site -}}
+{{- if $s.form_action }}
+{{- $js := resources.Get "js/contact.js" | minify | fingerprint }}
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+{{- end }}
+{{ end }}

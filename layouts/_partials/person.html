@@ -1,0 +1,6 @@
+{{- $name := . -}}{{- $url := "" -}}{{- $slug := "" -}}
+{{- with index hugo.Data.members . -}}
+  {{- $name = printf "%s %s" .given .family -}}{{- $slug = .slug -}}
+  {{- with site.GetPage (printf "/members/%s" .slug) }}{{ $url = .RelPermalink }}{{ end -}}
+{{- end -}}
+{{- return (dict "name" $name "url" $url "slug" $slug) -}}

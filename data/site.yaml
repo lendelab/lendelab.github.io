@@ -1,0 +1,96 @@
+name: LendeLab
+expansion_es: Lenguaje en neurodegeneración
+expansion_en: ''
+affiliation_es:
+- Vector de investigación de la UIC LinGAP, Universidad de Salamanca
+affiliation_en:
+- Research vector of the UIC LinGAP, Universidad de Salamanca
+email: olga.ivanova@usal.es
+contact_name: Olga Ivanova
+address_es: Departamento de Lengua Española, Facultad de Filología, Universidad de Salamanca
+address_en: Department of Spanish Language, Faculty of Philology, Universidad de Salamanca
+footer_es:
+- © 2026 LendeLab
+- Vector de investigación de la UIC LinGAP, Universidad de Salamanca
+footer_en:
+- © 2026 LendeLab
+- Research vector of the UIC LinGAP, Universidad de Salamanca
+credit_es: 'Diseño y desarrollo del sitio web: Emma Machado de Souza'
+credit_en: 'Website design and development: Emma Machado de Souza'
+group:
+  lede_es: LendeLab (Lenguaje en neurodegeneración) es un grupo de investigación de la Universidad de Salamanca,
+    vector de la Unidad de Investigación Consolidada LinGAP, dirigido desde 2024 por Olga Ivanova. Estudia los cambios
+    del lenguaje y del habla en el envejecimiento y en las enfermedades neurodegenerativas, en particular en la
+    enfermedad de Alzheimer.
+  lede_en: LendeLab, short for Lenguaje en neurodegeneración (Language in Neurodegeneration), is a research group at the Universidad
+    de Salamanca and a vector of LinGAP, a Consolidated Research Unit; Olga
+    Ivanova has directed it since 2024. The group studies how language and speech change in aging and in neurodegenerative
+    diseases, Alzheimer’s disease in particular.
+  body_es:
+  - Se ocupa sobre todo de los rasgos lingüísticos que pueden funcionar como marcadores del deterioro cognitivo.
+    Las investigaciones del grupo abarcan la fonética y la prosodia, la sintaxis, la pragmática y el léxico. Se
+    apoyan en corpus orales de personas mayores con y sin deterioro cognitivo, entre ellos el Corpus Quijote (disponible
+    en DementiaBank) y el corpus de biomarcadores fonéticos en español que elabora el proyecto FONEMA.
+  - Como vector de LinGAP, LendeLab coordina la colaboración con instituciones que trabajan con hablantes con trastornos
+    del lenguaje y gestiona la investigación de la unidad en lingüística clínica.
+  body_en:
+  - It is concerned above all with the linguistic features that can act as markers of cognitive decline. The group’s
+    research covers phonetics and prosody, syntax, pragmatics and the lexicon. It draws on spoken corpora of older
+    adults with and without cognitive impairment, among them the Corpus Quijote (available in DementiaBank) and
+    the corpus of phonetic biomarkers in Spanish that the FONEMA project is compiling.
+  - As a vector of LinGAP, LendeLab coordinates collaboration with institutions that work with speakers who have
+    language disorders, and it manages the unit’s research in clinical linguistics.
+home:
+  project: fonema
+  project_facts:
+  - label_es: Corpus y atlas
+    label_en: Corpus and atlas
+    value_es: En preparación; consulta prevista para enero de 2027
+    value_en: In preparation; expected to be available in January 2027
+  resource: corpus-quijote
+  resource_figure: '361'
+  resource_unit_es: hablantes
+  resource_unit_en: speakers
+  resource_note_es: 197 sin deterioro cognitivo, 90 con deterioro cognitivo leve y 74 con enfermedad de Alzheimer.
+  resource_note_en: 197 without cognitive impairment, 90 with mild cognitive impairment and 74 with Alzheimer’s
+    disease.
+  resource_link_es: Página del corpus
+  resource_link_en: Corpus page
+contact:
+  text_es: Las propuestas de colaboración, las consultas sobre la investigación del grupo y las solicitudes de entrevista
+    pueden dirigirse a la directora, Olga Ivanova, en olga.ivanova@usal.es o a través del formulario de esta página.
+    Las solicitudes de acceso al Corpus Quijote se tramitan en DementiaBank, en las condiciones que se indican en
+    la página de recursos.
+  text_no_form_es: Las propuestas de colaboración, las consultas sobre la investigación del grupo y las solicitudes
+    de entrevista pueden dirigirse a la directora, Olga Ivanova, en olga.ivanova@usal.es. Las solicitudes de acceso
+    al Corpus Quijote se tramitan en DementiaBank, en las condiciones que se indican en la página de recursos.
+  text_en: Proposals for collaboration, questions about the group’s research and interview requests can be sent
+    to the director, Olga Ivanova, at olga.ivanova@usal.es or through the form on this page. Requests for access
+    to the Corpus Quijote are handled through DementiaBank, under the conditions given on the resources page.
+  privacy_es: La Universidad de Salamanca (C.I.F. Q3718001E) es la responsable del tratamiento de los datos personales
+    enviados mediante este formulario, que se utilizarán únicamente para responder a la consulta. Los derechos de
+    acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad pueden ejercerse a través
+    de la dirección electrónica del Delegado de Protección de Datos (dpd@usal.es), del Registro General de la Universidad
+    (presencial o mediante la sede electrónica) o de la dirección postal de la Secretaría General (C/ Patio de las
+    Escuelas Menores, n.º 1, 37008 Salamanca). La información completa sobre protección de datos en la Universidad
+    se encuentra en https://www.usal.es/proteccion_datos; la autoridad de control es la Agencia Española de Protección
+    de Datos.
+  privacy_en: The Universidad de Salamanca (C.I.F. tax identification number Q3718001E) is the controller of the
+    personal data submitted through this form, which will be used solely to answer the query. The rights of access,
+    rectification, erasure, objection, restriction of processing and portability may be exercised through the email
+    address of the Data Protection Officer (dpd@usal.es), through the University’s
+    General Registry (Registro General), in person or through its online office (sede electrónica), or through the
+    postal address of the General Secretariat (Secretaría General) (C/ Patio de las Escuelas Menores, n.º 1, 37008
+    Salamanca). Full information on data protection at the University is available at https://www.usal.es/proteccion_datos;
+    the supervisory authority is the Spanish Data Protection Agency (Agencia Española de Protección de Datos).
+  text_no_form_en: Proposals for collaboration, questions about the group’s research and interview requests can
+    be sent to the director, Olga Ivanova, at olga.ivanova@usal.es. Requests for access to the Corpus Quijote are
+    handled through DementiaBank, under the conditions given on the resources page.
+form_action: https://docs.google.com/forms/d/e/1FAIpQLSf-mwx7A_v2ue1mq4NKUu8kxvCNLAlnBS62b94pBxIwCzyCNg/formResponse
+entries:
+  nombre: entry.1792238120
+  correo: entry.868682268
+  institucion: entry.2069406411
+  asunto: entry.1418524654
+  mensaje: entry.1560457278
+goatcounter: ''

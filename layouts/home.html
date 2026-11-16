@@ -1,0 +1,151 @@
+{{ define "main" }}
+{{- $s := hugo.Data.site -}}
+{{- $h := $s.home -}}
+{{- $foreign := ne site.Language.Lang "es" -}}
+{{- $exp := partial "l.html" (dict "d" $s "k" "expansion") -}}
+{{- $words := split $exp.v " " -}}
+{{- $n := len $words -}}
+{{- $lastWord := replaceRE `^(neuro)(.+)$` "$1&shy;$2" (index $words (sub $n 1)) -}}
+  <header class="fold on-slab" id="top">
+    {{ partial "orn.html" . }}
+    <h1 class="fold__title"{{ with $exp.lang }} lang="{{ . }}"{{ end }}><span class="vh">LendeLab: </span><span>{{ delimit (first (sub $n 1) $words) " " }}</span><span>{{ $lastWord | safeHTML }}</span></h1>
+  </header>
+
+  {{- $lede := partial "l.html" (dict "d" $s.group "k" "lede") }}
+  {{- $body := partial "l.html" (dict "d" $s.group "k" "body") }}
+  <section class="band intro" id="grupo" aria-labelledby="grupo-t">
+    <div class="inner">
+      <h2 class="vh" id="grupo-t">{{ T "nav_group" }}</h2>
+      <p class="intro__lede"{{ with $lede.lang }} lang="{{ . }}"{{ end }}>{{ $lede.v | markdownify }}</p>
+      <div class="intro__body"{{ with $body.lang }} lang="{{ . }}"{{ end }}>
+        {{- range $body.v }}
+        <p>{{ . | markdownify }}</p>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--alt" id="lineas" aria-labelledby="lineas-t">
+    <div class="inner">
+      <h2 class="band__title" id="lineas-t">{{ T "lines_title" }}</h2>
+      {{ partial "line-tiles.html" (dict "h" "h3") }}
+    </div>
+  </section>
+
+  <section class="band" id="miembros" aria-labelledby="miembros-t">
+    <div class="inner">
+      <h2 class="band__title" id="miembros-t">{{ T "members_title" }}</h2>
+      {{ partial "people.html" (dict "list" (where (sort hugo.Data.members "order") "group" "ne" "antiguo")) }}
+    </div>
+  </section>
+
+  {{- $p := index hugo.Data.projects $h.project }}
+  {{- $r := index hugo.Data.resources $h.resource }}
+  <section class="band band--slab on-slab work" aria-label="{{ T "aria_work" }}">
+    <div class="inner">
+      {{- with $p }}
+      {{- $t := partial "l.html" (dict "d" . "k" "title") }}
+      {{- $sum := partial "l.html" (dict "d" . "k" "summary") }}
+      {{- $fun := partial "l.html" (dict "d" . "k" "funder") }}
+      {{- $call := partial "l.html" (dict "d" . "k" "call") }}
+      {{- $role := partial "l.html" (dict "d" . "k" "pi_role") }}
+      <article class="plate" id="proyectos" aria-labelledby="proyectos-t">
+        <h2 class="band__title" id="proyectos-t">{{ T "current_project" }}</h2>
+        <p class="plate__name">{{ .acronym }}</p>
+        <p class="plate__title"{{ with $t.lang }} lang="{{ . }}"{{ end }}>{{ $t.v }}</p>
+        <p class="plate__text"{{ with $sum.lang }} lang="{{ . }}"{{ end }}>{{ partial "first-sentence.html" $sum.v | markdownify }}</p>
+        <dl class="facts">
+          <div><dt>{{ T "funder" }}</dt><dd><span{{ with $fun.lang }} lang="{{ . }}"{{ end }}>{{ $fun.v }}</span>{{ with $call.v }}, <span{{ with $call.lang }} lang="{{ . }}"{{ end }}>{{ . }}</span>{{ end }}</dd></div>
+          <div><dt>{{ T "duration" }}</dt><dd>{{ partial "daterange.html" (dict "start" .start "end" .end) }}</dd></div>
+          <div><dt{{ with $role.lang }} lang="{{ . }}"{{ end }}>{{ $role.v }}</dt><dd>{{ (partial "person.html" .pi).name }}</dd></div>
+          {{- range $h.project_facts }}
+          {{- $fl := partial "l.html" (dict "d" . "k" "label") }}
+          {{- $fv := partial "l.html" (dict "d" . "k" "value") }}
+          <div><dt{{ with $fl.lang }} lang="{{ . }}"{{ end }}>{{ $fl.v }}</dt><dd{{ with $fv.lang }} lang="{{ . }}"{{ end }}>{{ $fv.v }}</dd></div>
+          {{- end }}
+        </dl>
+        {{- with .web }}
+        <p><a href="{{ . }}">{{ partial "shorturl.html" . }}</a></p>
+        {{- end }}
+      </article>
+      {{- end }}
+      {{- with $r }}
+      {{- $x := partial "l.html" (dict "d" . "k" "text") }}
+      {{- $unit := partial "l.html" (dict "d" $h "k" "resource_unit") }}
+      {{- $note := partial "l.html" (dict "d" $h "k" "resource_note") }}
+      {{- $link := partial "l.html" (dict "d" $h "k" "resource_link") }}
+      <article class="plate plate--raised" id="recursos" aria-labelledby="recursos-t">
+        <h2 class="band__title" id="recursos-t">{{ T "nav_resources" }}</h2>
+        <p class="figure"><span class="figure__n">{{ $h.resource_figure }}</span><span class="figure__unit"{{ with $unit.lang }} lang="{{ . }}"{{ end }}>{{ $unit.v }}</span></p>
+        <p{{ with $x.lang }} lang="{{ . }}"{{ end }}>{{ partial "first-sentence.html" $x.v | markdownify }}</p>
+        <p class="plate__text"{{ with $note.lang }} lang="{{ . }}"{{ end }}>{{ $note.v }}</p>
+        {{- range first 1 (where .fields "label_es" (index $h "resource_link_es")) }}
+        <p><a href="{{ .url }}"{{ with $link.lang }} lang="{{ . }}"{{ end }}>{{ $link.v }}</a></p>
+        {{- end }}
+      </article>
+      {{- end }}
+    </div>
+  </section>
+
+  {{- $group := slice }}{{ with hugo.Data.publications }}{{ with .group }}{{ $group = . }}{{ end }}{{ end }}
+  {{- $recent := first 3 (sort $group "year" "desc") }}
+  <section class="band pair" aria-label="{{ T "aria_pair" }}">
+    <div class="inner">
+      <div id="publicaciones">
+        <h2 class="band__title">{{ T "recent_publications" }}</h2>
+        {{- if $recent }}
+        <ol class="works">
+          {{- range $recent }}
+          {{- $names := slice }}{{ $last := "" }}{{ range .authors }}{{ $names = $names | append (partial "apa-name.html" (dict "p" .)) }}{{ $last = .family }}{{ end }}
+          {{- $who := partial "apa-join.html" (dict "names" $names "last" $last) }}
+          {{- if gt (len $names) 4 }}{{ $who = printf "%s <i>et al.</i>" (index $names 0) }}{{ end }}
+          {{- $lang := cond (and .lang (ne .lang site.Language.Lang)) .lang "" }}
+          <li class="work">
+            {{- $when := string .year }}{{ if eq .status "in_press" }}{{ $when = T "apa_in_press" }}{{ else if eq .status "forthcoming" }}{{ $when = T "apa_forthcoming" }}{{ end }}
+            <p class="work__meta">{{ $who | safeHTML }} ({{ $when }})</p>
+            <p class="work__title"{{ with $lang }} lang="{{ . }}"{{ end }}>{{ .title | markdownify }}</p>
+            {{- $href := cond (ne (.doi | default "") "") (printf "https://doi.org/%s" .doi) (.url | default "") }}
+            {{- $src := "" }}
+            {{- if .container }}{{ $src = printf "<i>%s</i>" (htmlEscape .container) }}{{ else if .publisher }}{{ $src = htmlEscape .publisher }}{{ else if $href }}{{ $src = partial "shorturl.html" $href }}{{ end }}
+            {{- with .volume }}{{ $src = printf "%s, %s" $src . }}{{ end }}{{ with .pages }}{{ $src = printf "%s, %s" $src (replaceRE `(\d)\s*-\s*(\d)` "$1–$2" .) }}{{ end }}
+            {{ if $href }}<a href="{{ $href }}"{{ with $lang }} lang="{{ . }}"{{ end }}>{{ $src | safeHTML }}</a>{{ else }}<p>{{ $src | safeHTML }}</p>{{ end }}
+          </li>
+          {{- end }}
+        </ol>
+        {{- else }}
+        <p class="empty">{{ T "pubs_empty" }}</p>
+        {{- end }}
+      </div>
+      <div id="divulgacion">
+        <h2 class="band__title">{{ T "outreach_title" }}</h2>
+        <ul class="events">
+          {{- range first 3 (partial "outreach-sorted.html" .) }}
+          {{ partial "event.html" (dict "o" .o "full" false) }}
+          {{- end }}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  {{- $contact := site.GetPage "/contact" }}
+  {{- $ct := partial "l.html" (dict "d" $s.contact "k" "text_no_form") }}
+  {{- $addr := partial "l.html" (dict "d" $s "k" "address") }}
+  <section class="band band--alt meet" aria-label="{{ T "aria_meet" }}">
+    <div class="inner">
+      <div id="colaboraciones">
+        <h2 class="band__title">{{ T "nav_collaborations" }}</h2>
+        <ul class="partners">
+          {{- range hugo.Data.collaborations }}
+          {{- $nm := cond (and $foreign .name_en) .name_en .name }}
+          <li>{{ $nm }}</li>
+          {{- end }}
+        </ul>
+      </div>
+      <div class="contact" id="contacto">
+        <h2 class="band__title">{{ T "nav_contact" }}</h2>
+        <p{{ with $ct.lang }} lang="{{ . }}"{{ end }}>{{ partial "contact-text.html" (partial "first-sentence.html" $ct.v) }}</p>
+        <p class="contact__addr"{{ with $addr.lang }} lang="{{ . }}"{{ end }}>{{ $addr.v }}</p>
+      </div>
+    </div>
+  </section>
+{{ end }}

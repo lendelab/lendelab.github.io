@@ -1,0 +1,3 @@
+{{- $s := . -}}
+{{- if $s }}{{ $s = printf "%s%s" (upper (substr $s 0 1)) (substr $s 1) }}{{ end -}}
+{{- return $s -}}

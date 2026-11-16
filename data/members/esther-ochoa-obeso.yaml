@@ -1,0 +1,69 @@
+slug: esther-ochoa-obeso
+order: 6
+group: predoctoral
+given: Esther
+family: Ochoa Obeso
+citation_names:
+- Ochoa Obeso, E.
+- Ochoa Obeso, Esther
+orcid: 0000-0002-9205-2902
+email: eotxoa@usal.es
+photo: /img/members/esther-ochoa-obeso.jpg
+position_es: Investigadora predoctoral
+position_en: Predoctoral researcher
+funding: Santander-USAL
+affiliation_es: Departamento de Psicología Básica, Psicobiología y Metodología de las Ciencias del Comportamiento,
+  Universidad de Salamanca
+affiliation_en: Department of Basic Psychology, Psychobiology and Methodology of Behavioral Sciences, Universidad
+  de Salamanca
+bio_es: Esther Ochoa Obeso es investigadora predoctoral en la Universidad de Salamanca, adscrita al Departamento
+  de Psicología Básica, Psicobiología y Metodología de las Ciencias del Comportamiento, donde ha colaborado en la
+  docencia del Grado en Psicología. Se ocupa de los marcadores del discurso y, en particular, del funcionamiento
+  de estas unidades en los trastornos del lenguaje. En su tesis doctoral los estudia en el habla de personas con
+  enfermedad de Alzheimer. Desde la misma perspectiva pragmática firmó en 2023, con Olga Ivanova, Emma Machado de
+  Souza y Soraya Méndez Sanz, un estudio sobre los retos de evaluar la competencia pragmática en las enfermedades
+  neurodegenerativas. Se graduó en Filología Hispánica (2018) y obtuvo el Máster en Enseñanza del Español como Lengua
+  Extranjera (2020) en la Universidad de Salamanca.
+bio_en: Esther Ochoa Obeso is a predoctoral researcher at the Universidad de Salamanca, attached to the Department
+  of Basic Psychology, Psychobiology and Methodology of Behavioral Sciences, where she has contributed to teaching
+  on the degree in Psychology. Her work is on discourse markers, and in particular on how these units function in
+  language disorders. In her doctoral thesis she studies them in the speech of people with Alzheimer’s disease.
+  From the same pragmatic perspective, in 2023 she co-authored a study on the challenges of assessing pragmatic
+  competence in neurodegenerative diseases with Olga Ivanova, Emma Machado de Souza and Soraya Méndez Sanz. She
+  took a BA in Hispanic Philology (2018) and an MA in Teaching Spanish as a Foreign Language (2020) at the Universidad
+  de Salamanca.
+lines:
+- marcadores
+- evaluacion
+thesis:
+  title_es: Marcadores discursivos en la enfermedad de Alzheimer
+  title_en: ''
+  topic_only: true
+  programme_es: 'Español: investigación avanzada en lengua y literatura'
+  programme_en: ''
+  supervisors:
+  - Juan José García Meilán
+  - olga-ivanova
+  start: 2021
+education:
+- degree_es: Grado en Filología Hispánica
+  degree_en: BA in Hispanic Philology
+  institution: Universidad de Salamanca
+  year: 2018
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: Máster Oficial en Enseñanza del Español como Lengua Extranjera
+  degree_en: MA in Teaching Spanish as a Foreign Language
+  institution: Universidad de Salamanca
+  year: 2020
+  distinction_es: ''
+  distinction_en: ''
+links:
+- type: orcid
+  url: https://orcid.org/0000-0002-9205-2902
+- type: usal
+  url: https://produccioncientifica.usal.es/investigadores/820919/detalle
+- type: dialnet
+  url: https://dialnet.unirioja.es/servlet/autor?codigo=6180620
+selected: []
+updated: null

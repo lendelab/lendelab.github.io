@@ -1,0 +1,45 @@
+{{- $items := partial "nav-items.html" . -}}
+{{- $other := partial "other-lang.html" . -}}
+{{- $home := site.Home.RelPermalink -}}
+<header class="mast on-slab is-settling" id="inicio">
+  <span class="mast__shade" aria-hidden="true"></span>
+  <span class="mast__bg" aria-hidden="true"></span>
+  <a class="mast__name" href="{{ $home }}" aria-label="{{ T "home_aria" }}"><span class="mark" aria-hidden="true"></span><span aria-hidden="true">LendeLab</span></a>
+  <nav class="mast__row" aria-label="{{ T "nav_main" }}">
+    <a class="mast__dock" href="{{ $home }}" aria-label="{{ T "home_aria" }}" inert><span class="mark" aria-hidden="true"></span></a>
+    <button class="mast__toggle" type="button" aria-expanded="false" aria-controls="mast-links">{{ T "menu" }}</button>
+    <ul class="mast__links" id="mast-links">
+      {{- range $items }}
+      <li><a href="{{ .url }}"{{ with .current }} aria-current="{{ . }}"{{ end }}>{{ .label }}</a></li>
+      {{- end }}
+    </ul>
+    <a class="mast__lang" href="{{ $other.url }}" lang="{{ $other.locale }}" hreflang="{{ $other.locale }}" aria-label="{{ $other.name }}">{{ $other.code }}</a>
+  </nav>
+  <div class="bar" inert>
+    <span class="bar__surface" aria-hidden="true"></span>
+    <div class="bar__inner">
+      <a class="bar__brand" href="{{ $home }}" aria-label="{{ T "home_aria" }}"><span class="mark" aria-hidden="true"></span><span class="bar__word" aria-hidden="true">LendeLab</span></a>
+      <nav class="bar__center" aria-label="{{ T "nav_main" }}">
+        <ul>
+          {{- range $items }}{{ if ne .key "contact" }}
+          <li><a class="bar__link" href="{{ .url }}"{{ with .current }} aria-current="{{ . }}"{{ end }}>{{ .label }}</a></li>
+          {{- end }}{{ end }}
+        </ul>
+      </nav>
+      <div class="bar__right">
+        <a class="bar__lang" href="{{ $other.url }}" lang="{{ $other.locale }}" hreflang="{{ $other.locale }}" aria-label="{{ $other.name }}">{{ $other.code }}</a>
+        {{- range $items }}{{ if eq .key "contact" }}
+        <a class="btn bar__cta" href="{{ .url }}"{{ with .current }} aria-current="{{ . }}"{{ end }}>{{ .label }}</a>
+        {{- end }}{{ end }}
+        <button class="btn bar__menu" type="button" aria-expanded="false" aria-controls="sheet">{{ T "menu" }}</button>
+      </div>
+    </div>
+  </div>
+  <nav class="sheet" id="sheet" aria-label="{{ T "nav_mobile" }}" hidden>
+    <ul>
+      {{- range $items }}
+      <li><a href="{{ .url }}"{{ with .current }} aria-current="{{ . }}"{{ end }}>{{ .label }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+</header>

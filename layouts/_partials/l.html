@@ -1,0 +1,8 @@
+{{- $lang := site.Language.Lang -}}
+{{- $v := index .d (printf "%s_%s" .k $lang) -}}
+{{- $fallback := "" -}}
+{{- if not $v -}}
+  {{- $v = index .d (printf "%s_es" .k) -}}
+  {{- if ne $lang "es" }}{{ $fallback = "es" }}{{ end -}}
+{{- end -}}
+{{- return (dict "v" $v "lang" $fallback) -}}

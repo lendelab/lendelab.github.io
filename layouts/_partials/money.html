@@ -1,0 +1,10 @@
+{{- $n := float . -}}
+{{- $prec := cond (eq $n (math.Floor $n)) 0 2 -}}
+{{- $nb := " " -}}
+{{- if eq site.Language.Lang "es" -}}
+  {{- $s := "" -}}
+  {{- if ge $n 10000.0 }}{{ $s = lang.FormatNumberCustom $prec $n (printf "- , %s" $nb) }}{{ else }}{{ $s = replace (printf (printf "%%.%df" $prec) $n) "." "," }}{{ end -}}
+  {{- return (printf "%s%s€" $s $nb) -}}
+{{- else -}}
+  {{- return (printf "€%s" (lang.FormatNumberCustom $prec $n "- . ,")) -}}
+{{- end -}}

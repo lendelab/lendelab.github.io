@@ -1,0 +1,79 @@
+slug: emma-machado-de-souza
+order: 4
+group: predoctoral
+given: Emma
+family: Machado de Souza
+citation_names:
+- Machado de Souza, E.
+- Machado de Souza, Emma
+- Machado, E.
+orcid: 0000-0003-4443-9739
+email: emmachado@usal.es
+photo: /img/members/emma-machado-de-souza.jpg
+position_es: Investigadora predoctoral
+position_en: Predoctoral researcher
+funding: JCyL
+affiliation_es: Departamento de Lengua Española, Universidad de Salamanca
+affiliation_en: Department of Spanish Language, Universidad de Salamanca
+bio_es: Emma Machado de Souza es investigadora predoctoral en el Departamento de Lengua Española de la Universidad
+  de Salamanca, donde colabora en la docencia de los grados en Audiología y en Filología Hispánica. En su tesis
+  doctoral estudia la producción y la percepción de las voces transfemeninas en español peninsular. En LendeLab
+  investiga el papel de la ansiedad y la depresión en la modulación del habla, cuestión que abordó ya en el trabajo
+  de fin de grado, dedicado a las características fonéticas del habla en la depresión mayor. Trabaja también sobre
+  las redes semánticas de hablantes con enfermedad de Alzheimer. Se graduó en Filología Hispánica en la Universidad
+  de Salamanca (2021) y obtuvo después, con premio extraordinario, el Máster en Enseñanza del Español como Lengua
+  Extranjera (2022).
+bio_en: A predoctoral researcher in the Department of Spanish Language at the Universidad de Salamanca, Emma Machado
+  de Souza contributes to teaching on the degrees in Audiology and Hispanic Philology. In her doctoral thesis she
+  studies the production and perception of transfeminine voices in Peninsular Spanish. Within LendeLab she investigates
+  the role of anxiety and depression in the modulation of speech, a question she had already addressed in her undergraduate
+  dissertation on the phonetic characteristics of speech in major depression. She also works on the semantic networks
+  of speakers with Alzheimer’s disease. After graduating in Hispanic Philology from the Universidad de Salamanca
+  (2021), she completed the MA in Teaching Spanish as a Foreign Language (2022), for which she was awarded the Premio Extraordinario, the university’s award for an outstanding academic record.
+lines:
+- marcadores
+- diagnostico-diferencial
+- comunicacion
+thesis:
+  title_es: Percepción y producción de voces transfemeninas en español peninsular
+  title_en: ''
+  topic_only: true
+  programme_es: 'Español: investigación avanzada en lengua y literatura'
+  programme_en: ''
+  supervisors:
+  - olga-ivanova
+  - Carmen Fernández Juncal
+  - Juan José García Meilán
+  start: 2023
+education:
+- degree_es: Grado en Filología Hispánica
+  degree_en: BA in Hispanic Philology
+  institution: Universidad de Salamanca
+  year: 2021
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: Máster Universitario en Enseñanza del Español como Lengua Extranjera
+  degree_en: MA in Teaching Spanish as a Foreign Language
+  institution: Universidad de Salamanca
+  year: 2022
+  distinction_es: Premio extraordinario
+  distinction_en: Premio Extraordinario
+links:
+- type: orcid
+  url: https://orcid.org/0000-0003-4443-9739
+- type: usal
+  url: https://produccioncientifica.usal.es/investigadores/818642/detalle
+- type: scholar
+  url: https://scholar.google.com/citations?user=K0BgiNYAAAAJ
+- type: researchgate
+  url: https://www.researchgate.net/profile/Emma-Machado-De-Souza
+- type: dialnet
+  url: https://dialnet.unirioja.es/servlet/autor?codigo=6180618
+- type: web
+  url: https://emmamachado.com/
+- type: github
+  url: https://github.com/emmachados
+- type: cv
+  url: https://emmamachado.com/cv/
+selected: []
+updated: null

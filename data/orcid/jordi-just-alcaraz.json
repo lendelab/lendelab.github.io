@@ -1,0 +1,73 @@
+{
+  "orcid": "0000-0002-7003-5466",
+  "fetched": "2026-11-14T19:33:16Z",
+  "works": [
+    {
+      "id": "doi:10.4995/rlyla.2026.23825",
+      "type": "review",
+      "year": 2026,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Just Alcaraz",
+          "given": "Jordi"
+        }
+      ],
+      "title": "Reseña del libro Lengua, dialectos y hablas. Crítica de la dialectoideología española, de J. C. Moreno Cabrera (2025). Madrid: Hojas Monfies",
+      "container": "Revista de Lingüística y Lenguas Aplicadas",
+      "volume": "21",
+      "issue": "",
+      "pages": "93-97",
+      "publisher": "",
+      "doi": "10.4995/rlyla.2026.23825",
+      "url": "",
+      "lang": "es"
+    },
+    {
+      "id": "doi:10.3989/loquens.2025.e120",
+      "type": "article",
+      "year": 2025,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Just Alcaraz",
+          "given": "Jordi"
+        },
+        {
+          "family": "Ivanova",
+          "given": "Olga"
+        }
+      ],
+      "title": "Prosodia rítmico-frecuencial en lingüística clínica: en búsqueda de biomarcadores fonéticos para Alzheimer y Depresión Mayor",
+      "container": "Loquens",
+      "volume": "12",
+      "issue": "",
+      "pages": "e120",
+      "publisher": "",
+      "doi": "10.3989/loquens.2025.e120",
+      "url": "",
+      "lang": "es"
+    },
+    {
+      "id": "doi:10.1344/efe-2023-32-87-110",
+      "type": "article",
+      "year": 2023,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Just Alcaraz",
+          "given": "Jordi"
+        }
+      ],
+      "title": "The long-term average spectrum in forensic phonetics: From collation to discrimination of speakers",
+      "container": "Journal of Experimental Phonetics",
+      "volume": "32",
+      "issue": "",
+      "pages": "87-110",
+      "publisher": "",
+      "doi": "10.1344/efe-2023-32-87-110",
+      "url": "",
+      "lang": "en"
+    }
+  ]
+}

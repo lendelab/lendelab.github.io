@@ -1,0 +1,19 @@
+{{- /* .works: WORK maps sorted newest first; .h: "h2" or "h3" */ -}}
+{{- $groups := slice -}}{{- $cur := -1 -}}{{- $bucket := slice -}}
+{{- range .works -}}
+  {{- $y := int (or .year 0) -}}
+  {{- if and (ne $y $cur) $bucket }}{{ $groups = $groups | append (dict "y" $cur "w" $bucket) }}{{ $bucket = slice }}{{ end -}}
+  {{- $cur = $y }}{{ $bucket = $bucket | append . -}}
+{{- end -}}
+{{- if $bucket }}{{ $groups = $groups | append (dict "y" $cur "w" $bucket) }}{{ end -}}
+<div class="years">
+{{- range $groups }}
+{{- $label := cond (gt .y 0) (string .y) (T "apa_nd") -}}
+{{ if eq $.h "h2" }}<h2 class="year">{{ $label }}</h2>{{ else }}<h3 class="year">{{ $label }}</h3>{{ end }}
+<ol class="cites">
+  {{- range .w }}
+  <li class="cite">{{ partial "apa.html" . }}</li>
+  {{- end }}
+</ol>
+{{- end -}}
+</div>

@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{- $foreign := ne site.Language.Lang "es" -}}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  <section class="band" aria-label="{{ .Title }}">
+    <div class="inner">
+      {{- range hugo.Data.collaborations }}
+      {{- $x := partial "l.html" (dict "d" . "k" "text") }}
+      <article class="partner">
+        <h2 class="partner__name">{{ cond (and $foreign .name_en) .name_en .name }}</h2>
+        <div class="prose"{{ with $x.lang }} lang="{{ . }}"{{ end }}>{{ $.Page.RenderString (dict "display" "block") $x.v }}</div>
+        {{- $lab := partial "l.html" (dict "d" . "k" "url_label") }}
+        {{- with .url }}
+        <p><a class="more" href="{{ . }}">{{ $lab.v | default (T "website") }} {{ partial "arrow.html" . }}</a></p>
+        {{- end }}
+        {{- range .more_urls }}{{ $lab := partial "l.html" (dict "d" . "k" "label") }}
+        <p><a class="more" href="{{ .url }}">{{ $lab.v | default (partial "shorturl.html" .url) }} {{ partial "arrow.html" . }}</a></p>
+        {{- end }}
+      </article>
+      {{- end }}
+    </div>
+  </section>
+{{ end }}

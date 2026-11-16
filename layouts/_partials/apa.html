@@ -1,0 +1,77 @@
+{{- $w := . -}}
+{{- $site := site.Language.Lang -}}
+{{- $type := $w.type | default "other" -}}
+{{- $authors := $w.authors | default slice -}}
+{{- $editors := $w.editors | default slice -}}
+{{- $suffix := "" -}}
+{{- if and (ne $type "chapter") (not $authors) $editors -}}
+  {{- $authors = $editors -}}
+  {{- $suffix = printf " (%s)" (cond (gt (len $editors) 1) (T "apa_eds") (T "apa_ed")) -}}
+{{- end -}}
+{{- $names := slice -}}{{- $last := "" -}}
+{{- range $authors }}{{ $names = $names | append (partial "apa-name.html" (dict "p" .)) }}{{ $last = .family }}{{ end -}}
+{{- $who := htmlEscape (partial "apa-join.html" (dict "names" $names "last" $last)) -}}
+{{- if $suffix }}{{ $who = printf "%s%s." $who $suffix }}{{ end -}}
+{{- $when := "" -}}
+{{- if eq $w.status "in_press" }}{{ $when = T "apa_in_press" }}{{ else if eq $w.status "forthcoming" }}{{ $when = T "apa_forthcoming" }}{{ else }}{{ $when = string (or $w.year (T "apa_nd")) }}{{ end -}}
+{{- $lang := "" }}{{ with $w.lang }}{{ if ne . $site }}{{ $lang = printf ` lang="%s"` . }}{{ end }}{{ end -}}
+{{- $raw := $w.title | default "" -}}
+{{- $md := replaceRE `^(\d+)\.(\s)` "$1\\.$2" (replaceRE `^([#>+*-]\s)` "\\$1" $raw) -}}
+{{- $title := string ($md | markdownify) -}}
+{{- $end := cond (gt (len (findRE `[.?!]$` $raw)) 0) "" "." -}}
+{{- $pages := replaceRE `(?i)\b(\d+|[ivxlcdm]+)\s*[-‐‑–—]\s*(\d+|[ivxlcdm]+)\b` "$1–$2" ($w.pages | default "") -}}
+{{- $cont := htmlEscape ($w.container | default "") -}}
+{{- $pub := htmlEscape ($w.publisher | default "") -}}
+{{- $body := "" -}}
+{{- $italicTypes := slice "book" "edited-book" "report" "thesis" "dataset" "software" "presentation" "poster" -}}
+{{- $chapterLike := or (eq $type "chapter") (and (eq $type "conference-paper") $pages $cont) -}}
+{{- if $chapterLike -}}
+  {{- $eds := slice -}}{{- $elast := "" -}}
+  {{- range $editors }}{{ $eds = $eds | append (partial "apa-name.html" (dict "p" . "order" "given")) }}{{ $elast = .family }}{{ end -}}
+  {{- $in := T "apa_in" -}}
+  {{- if $eds -}}
+    {{- $in = printf "%s %s (%s)," $in (htmlEscape (partial "apa-join.html" (dict "names" $eds "last" $elast "editors" true))) (cond (gt (len $eds) 1) (T "apa_eds") (T "apa_ed")) -}}
+  {{- end -}}
+  {{- $pp := "" }}{{ with $pages }}{{ $pp = printf " (%s %s)" (T "apa_pp") . }}{{ end -}}
+  {{- $body = printf `<span%s>%s</span>%s %s <i>%s</i>%s.` $lang $title $end $in $cont $pp -}}
+  {{- with $pub }}{{ $body = printf "%s %s." $body . }}{{ end -}}
+{{- else if or (in $italicTypes $type) (eq $type "conference-paper") (and (eq $type "other") (not $cont)) -}}
+  {{- $tag := "" -}}
+  {{- if in (slice "presentation" "conference-paper") $type }}{{ $tag = T "apa_paper" }}{{ end -}}
+  {{- if eq $type "poster" }}{{ $tag = T "apa_poster" }}{{ end -}}
+  {{- if eq $type "dataset" }}{{ $tag = T "apa_dataset" }}{{ end -}}
+  {{- if eq $type "software" }}{{ $tag = T "apa_software" }}{{ end -}}
+  {{- if eq $type "thesis" }}{{ $tag = T "apa_thesis" }}{{ with $pub }}{{ $tag = printf "%s, %s" $tag . }}{{ end }}{{ end -}}
+  {{- $body = printf `<i%s>%s</i>` $lang $title -}}
+  {{- if $tag }}{{ $body = printf "%s [%s]." $body $tag }}{{ else }}{{ $body = printf "%s%s" $body $end }}{{ end -}}
+  {{- if in (slice "presentation" "poster" "conference-paper") $type -}}
+    {{- with $cont }}{{ $body = printf "%s %s." $body . }}{{ end -}}
+  {{- else if ne $type "thesis" -}}
+    {{- with $pub }}{{ $body = printf "%s %s." $body . }}{{ end -}}
+  {{- end -}}
+{{- else -}}
+  {{- $body = printf `<span%s>%s</span>%s` $lang $title $end -}}
+  {{- if $cont -}}
+    {{- $src := printf "<i>%s</i>" $cont -}}
+    {{- with $w.volume }}{{ $src = printf "%s, <i>%s</i>" $src (htmlEscape .) }}{{ end -}}
+    {{- with $w.issue }}{{ $src = printf (cond (ne ($w.volume | default "") "") "%s(%s)" "%s, (%s)") $src (htmlEscape .) }}{{ end -}}
+    {{- with $pages }}{{ $src = printf "%s, %s" $src . }}{{ end -}}
+    {{- $body = printf "%s %s." $body $src -}}
+  {{- else -}}
+    {{- with $pub }}{{ $body = printf "%s %s." $body . }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- $link := "" -}}
+{{- with $w.doi -}}
+  {{- $d := replaceRE `^(https?://(dx\.)?doi\.org/|doi:)` "" . -}}
+  {{- $link = printf "https://doi.org/%s" $d -}}
+{{- else -}}{{- with $w.url }}{{ if not (strings.Contains . "scopus.com/inward/record") }}{{ $link = . }}{{ end }}{{ end -}}
+{{- end -}}
+{{- $out := "" -}}
+{{- if $who -}}
+  {{- $out = printf "%s (%s). %s" $who $when $body -}}
+{{- else -}}
+  {{- $out = printf "%s (%s)." $body $when -}}
+{{- end -}}
+{{- with $link }}{{ $out = printf `%s <a href="%s">%s</a>` $out . (htmlEscape .) }}{{ end -}}
+{{- return ($out | safeHTML) -}}

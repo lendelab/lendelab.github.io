@@ -1,0 +1,50 @@
+- id: doi:10.17605/osf.io/y9fkr
+  type: report
+  year: 2026
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: García Piñuela
+    given: Elena
+  - family: Machado de Souza
+    given: Emma
+  - family: Just Alcaraz
+    given: Jordi
+  - family: Vergés Bonaventura
+    given: Ariadna
+  - family: Méndez Sanz
+    given: Soraya
+  - family: Ochoa Obeso
+    given: Esther
+  title: Palabras que cuidan. Notas sobre la comunicación en/con la demencia
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: OSF
+  doi: 10.17605/osf.io/y9fkr
+  url: ''
+  lang: es
+- id: doi:10.25267/pragmalinguistica.2023.i31.09
+  type: article
+  year: 2023
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: Machado de Souza
+    given: Emma
+  - family: Méndez Sanz
+    given: Soraya
+  - family: Ochoa Obeso
+    given: Esther
+  title: 'La evaluación de la competencia pragmática en las enfermedades neurodegenerativas: retos teóricos y metodológicos'
+  container: Pragmalingüística
+  volume: ''
+  issue: '31'
+  pages: 193-220
+  publisher: ''
+  doi: 10.25267/pragmalinguistica.2023.i31.09
+  url: ''
+  lang: es

@@ -1,0 +1,42 @@
+date: 2025-10-01
+date_precision: day
+date_label_es: Del 1 de octubre al 10 de diciembre de 2025, los miércoles a las 18:45
+date_label_en: 1 October to 10 December 2025, Wednesdays at 18:45
+upcoming: false
+type_es: ciclo de talleres de divulgación (sesiones de 60 minutos)
+type_en: series of public workshops (60-minute sessions)
+title: Talleres de Lengua y Lingüística. Programa ZOES 2025
+venue: Asociación ZOES, C/ Valle Inclán 8, Barrio del Oeste, Salamanca
+venue_en: ''
+people:
+- esther-ochoa-obeso
+- olga-ivanova
+- elena-garcia-pinuela
+- emma-machado-de-souza
+- ariadna-verges-bonaventura
+people_note_es: con otros miembros de LinGAP
+people_note_en: with other members of LinGAP
+people_and: true
+url: https://lingap.usal.es/divulgacion/
+source_es: LinGAP
+source_en: LinGAP
+text_es: Ciclo semanal de talleres de lengua y lingüística organizado por LinGAP en la asociación vecinal ZOES;
+  cinco miembros de LendeLab impartieron una sesión cada uno.
+text_en: A weekly series of language and linguistics workshops organized by LinGAP at ZOES, a neighborhood association;
+  five LendeLab members gave one session each.
+sessions:
+- date: 2025-10-08
+  title: «El origen del lenguaje humano»
+  person: esther-ochoa-obeso
+- date: 2025-10-29
+  title: «Lenguas y cerebro»
+  person: olga-ivanova
+- date: 2025-11-05
+  title: «El lenguaje en el envejecimiento»
+  person: elena-garcia-pinuela
+- date: 2025-11-12
+  title: «Decir sin decir. Mecanismos para construir significados implícitos»
+  person: emma-machado-de-souza
+- date: 2025-12-10
+  title: «El aprendizaje de lenguas en adultos»
+  person: ariadna-verges-bonaventura

@@ -1,0 +1,21 @@
+{{- $fam := .p.family | default "" -}}
+{{- $giv := .p.given | default "" -}}
+{{- $ini := slice -}}
+{{- range split (replace $giv "." " ") " " -}}
+  {{- if and . (not (findRE `^\p{Ll}` .)) -}}
+    {{- if strings.Contains . "-" -}}
+      {{- $h := slice -}}{{- range split . "-" }}{{ if . }}{{ $h = $h | append (printf "%s." (substr . 0 1)) }}{{ end }}{{ end -}}
+      {{- $ini = $ini | append (delimit $h "-") -}}
+    {{- else -}}
+      {{- $ini = $ini | append (printf "%s." (substr . 0 1)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $i := delimit $ini " " -}}
+{{- if eq .order "given" -}}
+  {{- return (trim (printf "%s %s" $i $fam) " ") -}}
+{{- else if $i -}}
+  {{- return (printf "%s, %s" $fam $i) -}}
+{{- else -}}
+  {{- return $fam -}}
+{{- end -}}

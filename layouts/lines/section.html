@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  <section class="band band--alt" aria-label="{{ .Title }}">
+    <div class="inner">
+      {{ partial "line-tiles.html" (dict "h" "h2") }}
+    </div>
+  </section>
+{{ end }}

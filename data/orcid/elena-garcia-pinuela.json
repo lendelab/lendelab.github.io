@@ -1,0 +1,60 @@
+{
+  "orcid": "0009-0008-4274-6835",
+  "fetched": "2026-11-14T19:48:37Z",
+  "works": [
+    {
+      "id": "doi:10.14201/0aq0367",
+      "type": "edited-book",
+      "year": 2024,
+      "status": "published",
+      "authors": [
+        {
+          "family": "López Esteban",
+          "given": "Carmen"
+        }
+      ],
+      "title": "La internacionalización a través de los Objetivos de Desarrollo Sostenible",
+      "container": "",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "publisher": "Ediciones Universidad de Salamanca",
+      "doi": "10.14201/0aq0367",
+      "url": "",
+      "lang": "es"
+    },
+    {
+      "id": "doi:10.3389/flang.2023.1199107",
+      "type": "article",
+      "year": 2023,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Ivanova",
+          "given": "Olga"
+        },
+        {
+          "family": "Martínez-Nicolás",
+          "given": "Israel"
+        },
+        {
+          "family": "García Piñuela",
+          "given": "Elena"
+        },
+        {
+          "family": "Meilán",
+          "given": "Juan José G."
+        }
+      ],
+      "title": "Defying syntactic preservation in Alzheimer's disease: what type of impairment predicts syntactic change in dementia (if it does) and why?",
+      "container": "Frontiers in Language Sciences",
+      "volume": "2",
+      "issue": "",
+      "pages": "",
+      "publisher": "",
+      "doi": "10.3389/flang.2023.1199107",
+      "url": "",
+      "lang": "en"
+    }
+  ]
+}

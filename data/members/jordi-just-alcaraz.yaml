@@ -1,0 +1,75 @@
+slug: jordi-just-alcaraz
+order: 3
+group: predoctoral
+given: Jordi
+family: Just Alcaraz
+citation_names:
+- Just Alcaraz, J.
+- Just Alcaraz, Jordi
+orcid: 0000-0002-7003-5466
+email: jordijustalcaraz@usal.es
+photo: /img/members/jordi-just-alcaraz.jpg
+position_es: Investigador predoctoral
+position_en: Predoctoral researcher
+funding: USAL
+affiliation_es: Departamento de Lengua Española, Universidad de Salamanca
+affiliation_en: Department of Spanish Language, Universidad de Salamanca
+bio_es: Jordi Just Alcaraz es investigador predoctoral en el Departamento de Lengua Española de la Universidad de
+  Salamanca. En su tesis doctoral, vinculada al proyecto DEMEALEN, estudia el ritmo del habla en la enfermedad de
+  Alzheimer. El ritmo es también el tema del estudio que publicó en Loquens (2025), donde lo compara, junto con
+  la frecuencia fundamental, en el habla de personas con enfermedad de Alzheimer y con depresión mayor. Trabaja
+  además en fonética forense. Se graduó en Filología Hispánica (2024) y obtuvo el Máster en Investigación Lingüística
+  (2025) en la Universidad de Salamanca.
+bio_en: Jordi Just Alcaraz works as a predoctoral researcher in the Department of Spanish Language at the Universidad
+  de Salamanca. His doctoral thesis, linked to the DEMEALEN project, is on speech rhythm in Alzheimer’s disease.
+  Rhythm is also the topic of the study he published in Loquens (2025), which compares it, together with fundamental
+  frequency, in the speech of people with Alzheimer’s disease and of people with major depression. He also works
+  on forensic phonetics. He holds a BA in Hispanic Philology (2024) and an MA in Linguistic Research (2025) from
+  the Universidad de Salamanca.
+lines:
+- marcadores
+- diagnostico-diferencial
+- evaluacion
+thesis:
+  title_es: Ritmo en la enfermedad de Alzheimer
+  title_en: ''
+  topic_only: false
+  programme_es: 'Español: investigación avanzada en lengua y literatura'
+  programme_en: ''
+  supervisors:
+  - olga-ivanova
+  - Juan José García Meilán
+  - Victoria Marrero Aguiar
+  start: 2025
+education:
+- degree_es: Grado en Filología Hispánica
+  degree_en: BA in Hispanic Philology
+  institution: Universidad de Salamanca
+  year: 2024
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: Máster Universitario en Investigación Lingüística
+  degree_en: MA in Linguistic Research
+  institution: Universidad de Salamanca
+  year: 2025
+  distinction_es: ''
+  distinction_en: ''
+links:
+- type: orcid
+  url: https://orcid.org/0000-0002-7003-5466
+- type: usal
+  url: https://produccioncientifica.usal.es/investigadores/2338737/detalle
+- type: scholar
+  url: https://scholar.google.com/citations?user=fk0ngtIAAAAJ
+- type: researchgate
+  url: https://www.researchgate.net/profile/Jordi-Just-Alcaraz
+- type: web
+  url: https://alcarazjust.github.io/
+- type: github
+  url: https://github.com/AlcarazJust
+- type: bluesky
+  url: https://bsky.app/profile/alcarazjust.bsky.social
+- type: x
+  url: https://x.com/AlcarazJust
+selected: []
+updated: null

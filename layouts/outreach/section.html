@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  <section class="band" aria-label="{{ .Title }}">
+    <div class="inner">
+      {{- $year := "" }}{{ $open := false }}
+      {{- range partial "outreach-sorted.html" . }}
+      {{- $y := (time.AsTime .o.date).Format "2006" }}
+      {{- if ne $y $year }}
+      {{- if $open }}
+      </ul>
+      {{- end }}
+      <h2 class="yearhead">{{ $y }}</h2>
+      <ul class="events events--page">
+      {{- $year = $y }}{{ $open = true }}
+      {{- end }}
+        {{ partial "event.html" (dict "o" .o "full" true) }}
+      {{- end }}
+      {{- if $open }}
+      </ul>
+      {{- end }}
+    </div>
+  </section>
+{{ end }}

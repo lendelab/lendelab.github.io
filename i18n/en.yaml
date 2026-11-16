@@ -1,0 +1,109 @@
+skip: Skip to content
+menu: Menu
+nav_main: Main
+nav_mobile: Main (mobile)
+home_aria: LendeLab, home
+lang_name: English
+other_lang_name: Español
+nav_group: Group
+nav_lines: Research
+nav_members: Members
+nav_projects: Projects
+nav_publications: Publications
+nav_resources: Resources
+nav_collaborations: Collaborations
+nav_outreach: Outreach
+nav_contact: Contact
+lines_title: Research lines
+current_project: Current project
+recent_publications: Recent publications
+funder: Funder
+duration: Duration
+funding: Funding
+reference: Reference
+group_members: Group members
+line_one: Research line
+line_many: Research lines
+web: Website
+kind_dirigido: Projects led by the group
+kind_participacion: Projects in which the group participates
+kind_anterior: Projects before the group was founded
+topics: Topics
+members_title: Members
+former_members: Former members
+projects_title: Projects
+publications_title: Publications
+bio: Biography
+thesis: Doctoral thesis
+thesis_title: Provisional title
+thesis_topic: Topic
+programme: Doctoral program
+supervision: Supervisors
+start: Start
+education: Education
+current_projects: Current projects
+supervised: Theses supervised
+in_progress: in progress, since
+in_progress_nodate: in progress
+defended: defended
+cosupervision: co-supervised with
+selected: Selected publications
+talks: Presentations
+outreach_title: Outreach
+updated: Last updated
+email: Email
+link_orcid: ORCID
+link_scholar: Google Scholar
+link_researchgate: ResearchGate
+link_dialnet: Dialnet
+link_usal: USAL portal
+link_web: Website
+link_github: GitHub
+link_linkedin: LinkedIn
+link_bluesky: Bluesky
+link_x: X
+link_cv: CV
+upcoming: Upcoming
+sessions: Sessions
+pubs_empty: The group’s publication list is in preparation.
+pubs_empty_members: Each member’s publications are listed on their page.
+cite: How to cite
+address: Address
+form_name: Full name
+form_email: Email
+form_institution: Institution
+form_optional: optional
+form_subject: Subject
+form_message: Message
+form_send: Send
+form_sending: Sending…
+form_sent: Message sent.
+form_failed: The message could not be sent. Please write directly to
+form_required: Fill in this field.
+form_bad_email: Enter a valid email address.
+privacy: Data protection
+notfound_title: Page not found
+notfound_text: This address does not match any page on the site.
+notfound_home: Go to the home page
+apa_and: "&"
+apa_in: In
+apa_ed: Ed.
+apa_eds: Eds.
+apa_pp: pp.
+apa_nd: n.d.
+apa_in_press: in press
+apa_forthcoming: forthcoming
+apa_paper: Paper presentation
+apa_poster: Poster presentation
+apa_dataset: Data set
+apa_software: Computer software
+apa_thesis: Doctoral dissertation
+notfound_alt_title: Página no encontrada
+notfound_alt_text: La dirección no corresponde a ninguna página del sitio.
+notfound_alt_home: Ir a la página de inicio en español
+aria_work: Current project and resources
+aria_pair: Publications and outreach
+aria_meet: Collaborations and contact
+q_open: "“"
+q_close: "”"
+website: Website

@@ -1,0 +1,8 @@
+<ul class="lines__grid">
+  {{- range sort hugo.Data.lines "order" }}
+  {{- $t := partial "l.html" (dict "d" . "k" "title") }}
+  {{- $x := partial "l.html" (dict "d" . "k" "text") }}
+  {{- $p := site.GetPage (printf "/lines/%s" .slug) }}
+  <li><a class="line" href="{{ $p.RelPermalink }}"><div class="line__text"{{ with $t.lang }} lang="{{ . }}"{{ end }}>{{ if eq $.h "h2" }}<h2>{{ $t.v }}</h2>{{ else }}<h3>{{ $t.v }}</h3>{{ end }}<p>{{ partial "first-sentence.html" $x.v | markdownify }}</p></div><span class="line__go" aria-hidden="true">{{ partial "arrow.html" . }}</span></a></li>
+  {{- end }}
+</ul>

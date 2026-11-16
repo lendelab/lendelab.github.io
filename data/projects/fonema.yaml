@@ -1,0 +1,44 @@
+slug: fonema
+kind: dirigido
+title_es: Corpus de biomarcadores fonéticos de las enfermedades neurodegenerativas
+title_en: ''
+acronym: FONEMA
+reference: ''
+funder_es: Fundación BBVA
+funder_en: ''
+call_es: Becas Leonardo de Investigación Científica y Creación Cultural 2025
+call_en: ''
+start: 2025-07-31
+end: 2027-01-31
+amount_eur: 39132.8
+pi: olga-ivanova
+pi_role_es: Investigadora principal
+pi_role_en: Principal investigator
+members:
+- emma-machado-de-souza
+- elena-garcia-pinuela
+lines:
+- marcadores
+web: https://fonema.usal.es/
+summary_es: |
+  FONEMA combina métodos de la lingüística, la neurociencia y la psicología cognitiva para identificar los biomarcadores fonéticos de distintas enfermedades neurodegenerativas, es decir, los rasgos fónicos del habla que se asocian a cada una. Las grabaciones proceden de centros de día y de otras instituciones con las que se colabora al amparo de la Facultad de Psicología de la Universidad de Salamanca. Se completan con corpus internos que reúnen datos propios y de otros investigadores.
+
+  Productos previstos, ambos en acceso abierto:
+summary_en: |
+  FONEMA combines methods from linguistics, neuroscience and cognitive psychology to identify the phonetic biomarkers of different neurodegenerative diseases, that is, the sound features of speech associated with each of them. The recordings come from day centers and other institutions that collaborate with the project under the auspices of the Faculty of Psychology of the Universidad de Salamanca. They are supplemented by in-house corpora that bring together the team’s own data and data from other researchers.
+
+  Planned outputs, both open access:
+outputs_es:
+- Corpus anotado de biomarcadores del habla, elaborado específicamente para el español. Contendrá muestras de habla
+  de personas con enfermedad de Alzheimer, enfermedad de Parkinson, demencia frontotemporal y demencia con cuerpos
+  de Lewy, con la anotación de los rasgos fonoarticulatorios de cada muestra.
+- Atlas interactivo de los marcadores fonéticos de las enfermedades neurodegenerativas. Mostrará, para cada enfermedad,
+  el perfil lingüístico y del habla junto con las alteraciones de los rasgos fónicos asociadas a ella. La consulta
+  del atlas está prevista para enero de 2027 en https://fonema.usal.es/.
+outputs_en:
+- An annotated corpus of speech biomarkers, built specifically for Spanish. It will contain speech samples from
+  people with Alzheimer’s disease, Parkinson’s disease, frontotemporal dementia and dementia with Lewy bodies, with
+  each sample annotated for its phono-articulatory features.
+- An interactive atlas of the phonetic markers of neurodegenerative diseases. For each disease it will show the
+  language and speech profile together with the changes in sound features associated with it. The atlas is expected
+  to be available at https://fonema.usal.es/ in January 2027.

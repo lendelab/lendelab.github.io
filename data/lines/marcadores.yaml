@@ -1,0 +1,37 @@
+slug: marcadores
+order: 1
+title_es: Marcadores lingüísticos del deterioro cognitivo
+title_en: Linguistic markers of cognitive decline
+text_es: ¿Qué rasgos del habla y del lenguaje separan el envejecimiento sano del deterioro cognitivo leve y de la
+  enfermedad de Alzheimer? La pregunta tiene interés clínico porque los procesos neurodegenerativos alteran las
+  propiedades acústicas de los sonidos, la organización temporal y la planificación articulatoria del habla. Una
+  muestra breve, como la lectura en voz alta de un párrafo, puede aportar así indicios del deterioro en las primeras
+  fases. El análisis abarca desde la fonética y la prosodia hasta la sintaxis, el léxico y la pragmática. Los datos
+  proceden de corpus orales de personas mayores con y sin deterioro cognitivo, como el Corpus Quijote o el que elabora
+  el proyecto FONEMA.
+text_en: Which features of speech and language set healthy aging apart from mild cognitive impairment and from Alzheimer’s
+  disease? The question is of clinical interest because neurodegenerative processes alter the acoustic properties
+  of speech sounds, the temporal organization of speech and its articulatory planning. A short sample, such as a
+  paragraph read aloud, can therefore show signs of decline in its early stages. The analysis extends from phonetics
+  and prosody to syntax, the lexicon and pragmatics. The data come from spoken corpora of older adults with and
+  without cognitive impairment, such as the Corpus Quijote or the one the FONEMA project is building.
+topics_es:
+- Biomarcadores fonéticos de la enfermedad de Alzheimer y de otras enfermedades neurodegenerativas
+- Variación de los biomarcadores fonéticos de la demencia según la tipología de la lengua
+- Ritmo del habla en la enfermedad de Alzheimer
+- Producción y complejidad sintácticas en el envejecimiento sano y en la enfermedad de Alzheimer
+- Redes léxico-semánticas y accesibilidad léxica en el envejecimiento sano y patológico
+- 'Topónimos en pruebas de fluidez verbal: organización cognitiva y posible valor como marcadores de la progresión
+  de la enfermedad de Alzheimer'
+- Competencia pragmática y marcadores del discurso en el habla de personas con enfermedad de Alzheimer
+- Diseño y anotación de corpus orales del deterioro cognitivo
+topics_en:
+- Phonetic biomarkers of Alzheimer’s disease and other neurodegenerative diseases
+- Variation in the phonetic biomarkers of dementia according to language typology
+- Speech rhythm in Alzheimer’s disease
+- Syntactic production and complexity in healthy aging and in Alzheimer’s disease
+- Lexical-semantic networks and lexical accessibility in healthy and pathological aging
+- 'Toponyms in verbal fluency tests: their cognitive organization and possible value as markers of the progression
+  of Alzheimer’s disease'
+- Pragmatic competence and discourse markers in the speech of people with Alzheimer’s disease
+- Design and annotation of spoken corpora on cognitive decline

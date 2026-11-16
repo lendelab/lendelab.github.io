@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+<a class="skip" href="#main">{{ T "skip" }}</a>
+{{ partial "mast.html" . }}
+<main id="main">
+{{ block "main" . }}{{ end }}
+</main>
+{{ partial "foot.html" . }}
+{{ $nav := resources.Get "js/nav.js" | minify | fingerprint }}
+<script src="{{ $nav.RelPermalink }}" integrity="{{ $nav.Data.Integrity }}"></script>
+{{ block "scripts" . }}{{ end }}
+{{ with hugo.Data.site.goatcounter }}<img class="pixel" src="https://{{ . }}.goatcounter.com/count?p={{ $.RelPermalink | urlquery }}" alt="" width="1" height="1">{{ end }}
+</body>
+</html>

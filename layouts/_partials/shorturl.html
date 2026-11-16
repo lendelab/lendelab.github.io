@@ -1,0 +1,6 @@
+{{- $u := urls.Parse . -}}
+{{- $host := strings.TrimPrefix "www." $u.Host -}}
+{{- $path := strings.TrimSuffix "/" $u.Path -}}
+{{- $s := printf "%s%s" $host $path -}}
+{{- if gt (len $s) 28 }}{{ $s = $host }}{{ end -}}
+{{- return $s -}}

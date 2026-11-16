@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{- $s := hugo.Data.site -}}
+{{- $lede := partial "l.html" (dict "d" $s.group "k" "lede") -}}
+{{- $body := partial "l.html" (dict "d" $s.group "k" "body") -}}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  <section class="band intro" aria-label="{{ .Title }}">
+    <div class="inner">
+      <p class="intro__lede"{{ with $lede.lang }} lang="{{ . }}"{{ end }}>{{ $lede.v | markdownify }}</p>
+      <div class="intro__body"{{ with $body.lang }} lang="{{ . }}"{{ end }}>
+        {{- range $body.v }}
+        <p>{{ . | markdownify }}</p>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+  <section class="band band--alt" aria-labelledby="lineas-t">
+    <div class="inner">
+      <h2 class="band__title" id="lineas-t">{{ T "lines_title" }}</h2>
+      {{ partial "line-tiles.html" (dict "h" "h3") }}
+    </div>
+  </section>
+{{ end }}

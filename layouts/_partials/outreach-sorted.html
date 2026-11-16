@@ -1,0 +1,9 @@
+{{- $rows := slice -}}
+{{- range $k, $o := hugo.Data.outreach -}}
+  {{- $d := time.AsTime $o.date -}}
+  {{- $key := $d.Format "2006-01-02" -}}
+  {{- if eq $o.date_precision "month" }}{{ $key = printf "%s-00" ($d.Format "2006-01") }}{{ end -}}
+  {{- if eq $o.date_precision "year" }}{{ $key = printf "%s-00-00" ($d.Format "2006") }}{{ end -}}
+  {{- $rows = $rows | append (dict "k" (printf "%s %s" $key $k) "o" $o "id" $k) -}}
+{{- end -}}
+{{- return (sort $rows "k" "desc") -}}

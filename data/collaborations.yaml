@@ -1,0 +1,55 @@
+- name: CRE Alzheimer (Imserso), Salamanca
+  name_en: ''
+  url: https://crealzheimer.imserso.es/
+  more_urls: []
+  text_es: |-
+    Centro de Referencia Estatal de Atención a Personas con Enfermedad de Alzheimer y otras Demencias.
+
+    El CRE Alzheimer colaboró en la investigación de la que procede el Corpus Quijote y coordinó en 2025 el curso en línea «Alteraciones del lenguaje y dificultades de comunicación en demencia», impartido por Olga Ivanova. En 2026, el blog del centro publicó un artículo divulgativo de Jordi Just Alcaraz y Olga Ivanova sobre el diagnóstico diferencial de la enfermedad de Alzheimer y la depresión mayor a partir del habla.
+  text_en: |-
+    Centro de Referencia Estatal de Atención a Personas con Enfermedad de Alzheimer y otras Demencias [State Reference Center for the Care of People with Alzheimer’s Disease and Other Dementias].
+
+    The CRE Alzheimer collaborated on the research from which the Corpus Quijote derives, and in 2025 it coordinated the online course “Alteraciones del lenguaje y dificultades de comunicación en demencia”, taught by Olga Ivanova. In 2026 the center’s blog published an article for the general public by Jordi Just Alcaraz and Olga Ivanova on the differential diagnosis of Alzheimer’s disease and major depression from speech.
+- name: Instituto de Neurociencias de Castilla y León (INCYL) y grupo Neurofisiología, Cognición y Conducta
+  name_en: Instituto de Neurociencias de Castilla y León (INCYL) and the Neurofisiología, Cognición y Conducta group
+  url: https://institutoneurociencias.org/
+  more_urls: []
+  text_es: LendeLab colabora con el grupo de investigación Neurofisiología, Cognición y Conducta del INCYL, dirigido
+    por Juan José García Meilán. La colaboración comprende el proyecto DEMEALEN, del que García Meilán es investigador
+    principal, la codirección de tres tesis doctorales de LendeLab y el Corpus Quijote, que procede del trabajo
+    conjunto con este equipo.
+  text_en: LendeLab collaborates with the INCYL research group Neurofisiología, Cognición y Conducta, led by Juan
+    José García Meilán. The collaboration covers the DEMEALEN project, of which García Meilán is principal investigator;
+    the co-supervision of three LendeLab doctoral theses; and the Corpus Quijote, which came out of joint work with
+    this team.
+- name: Université de Lille, laboratorio Savoirs, Textes, Langage (UMR 8163 STL)
+  name_en: Université de Lille, Savoirs, Textes, Langage laboratory (UMR 8163 STL)
+  url: https://www.univ-lille.fr/
+  url_label_es: Université de Lille
+  url_label_en: Université de Lille
+  more_urls:
+  - url: https://stl.univ-lille.fr/
+    label_es: Laboratorio STL
+    label_en: STL laboratory
+  text_es: Montserrat Rangel Vicente, <span lang="fr">maîtresse de conférences</span> de lingüística española en
+    la Université de Lille y miembro del laboratorio Savoirs, Textes, Langage (UMR 8163, CNRS), es investigadora
+    asociada de LendeLab y estudia si los topónimos pueden servir como marcadores de la progresión de la enfermedad
+    de Alzheimer. En mayo de 2025, durante una estancia de investigación en la Universidad de Salamanca, presentó
+    en el seminario del grupo su trabajo sobre el tratamiento cognitivo de los topónimos.
+  text_en: Montserrat Rangel Vicente, <span lang="fr">maîtresse de conférences</span> in Spanish linguistics at
+    the Université de Lille and a member of the Savoirs, Textes, Langage laboratory (UMR 8163, CNRS), is an associate
+    researcher of LendeLab and studies whether toponyms can serve as markers of the progression of Alzheimer’s disease.
+    In May 2025, during a research stay at the Universidad de Salamanca, she presented her work on the cognitive
+    processing of toponyms at the group’s seminar.
+- name: Universität Heidelberg
+  name_en: ''
+  url: https://www.uni-heidelberg.de/
+  more_urls: []
+  text_es: 'Olga Ivanova ha impartido docencia en la Universität Heidelberg y ha realizado varias estancias de investigación
+    en el grupo de Óscar Loureda, con ayudas de los programas Santander Universidades, DAAD y José Castillejo. Dos
+    obras colectivas coordinadas por Loureda incluyen capítulos de miembros de LendeLab: el *Manual de lingüística
+    del hablar* (2021) y el volumen de próxima publicación *Métodos experimentales para la lingüística hispánica*.'
+  text_en: 'Olga Ivanova has taught at the Universität Heidelberg and has made several research stays in Óscar Loureda’s
+    group, funded by the Santander Universidades, DAAD and José Castillejo programs. Two collective volumes edited
+    by Loureda include chapters by LendeLab members: the *Manual de lingüística del hablar* (2021) and the forthcoming
+    *Métodos experimentales para la lingüística hispánica*.'

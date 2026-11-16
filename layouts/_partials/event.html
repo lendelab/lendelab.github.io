@@ -1,0 +1,47 @@
+{{- $o := .o -}}
+{{- $full := .full -}}
+{{- $es := eq site.Language.Lang "es" -}}
+{{- $foreign := ne site.Language.Lang "es" -}}
+{{- $d := time.AsTime $o.date -}}
+{{- $p := $o.date_precision | default "day" -}}
+{{- $label := partial "l.html" (dict "d" $o "k" "date_label") -}}
+{{- $when := $label.v | default (partial "date.html" (dict "d" $d "p" $p)) -}}
+{{- if not $label.v }}{{ $label = dict "v" "" "lang" "" }}{{ end -}}
+{{- $soon := and $o.upcoming (ge $d.Unix (now.AddDate 0 0 -1).Unix) -}}
+{{- $abbr := time.Format "Jan" $d }}{{ if $es }}{{ $abbr = printf "%s." $abbr }}{{ end -}}
+{{- $type := partial "l.html" (dict "d" $o "k" "type") -}}
+{{- $venue := partial "l.html" (dict "d" $o "k" "venue") -}}
+{{- if not $venue.v }}{{ $venue = dict "v" $o.venue "lang" (cond $foreign "es" "") }}{{ end -}}
+{{- $text := partial "l.html" (dict "d" $o "k" "text") -}}
+<li class="event">
+  {{- if eq $p "year" }}
+  <p class="event__day event__day--year" aria-hidden="true"><b>{{ $d.Format "2006" }}</b></p>
+  {{- else if eq $p "month" }}
+  <p class="event__day" aria-hidden="true"><b>{{ $abbr }}</b><span>{{ $d.Format "2006" }}</span></p>
+  {{- else }}
+  <p class="event__day" aria-hidden="true"><b>{{ $d.Day }}</b><span>{{ $abbr }}</span></p>
+  {{- end }}
+  <p class="event__when"><time datetime="{{ $d.Format (cond (eq $p "year") "2006" (cond (eq $p "month") "2006-01" "2006-01-02")) }}"{{ with $label.lang }} lang="{{ . }}"{{ end }}>{{ $when }}</time>{{ if $soon }} <span class="event__soon">{{ T "upcoming" }}</span>{{ end }}</p>
+  {{- if $full }}
+  <h3 class="event__title"{{ if $foreign }} lang="es"{{ end }}>{{ $o.title }}</h3>
+  {{- else }}
+  <p class="event__title"{{ if $foreign }} lang="es"{{ end }}>{{ $o.title }}</p>
+  {{- end }}
+  <p class="event__meta"><span{{ with $type.lang }} lang="{{ . }}"{{ end }}>{{ partial "upper-first.html" $type.v }}</span>
+    {{- if and $full $venue.v }}<br><span{{ with $venue.lang }} lang="{{ . }}"{{ end }}>{{ $venue.v | markdownify }}</span>{{ end }}
+    {{- with partial "people-line.html" (dict "o" $o "link" $full) }}<br>{{ . }}{{ end }}</p>
+  {{- if and $full $o.sessions }}
+  <ul class="event__sessions" aria-label="{{ T "sessions" }}">
+    {{- range $o.sessions }}
+    <li>{{ time.Format (cond $es "2 de January" "2 January") .date }}: <span{{ if $foreign }} lang="es"{{ end }}>{{ .title }}</span>{{ with .person }}, {{ partial "names.html" (dict "list" (slice .) "link" true) }}{{ end }}.</li>
+    {{- end }}
+  </ul>
+  {{- end }}
+  {{- if and $full $text.v }}
+  <p class="event__text"{{ with $text.lang }} lang="{{ . }}"{{ end }}>{{ $text.v | markdownify }}</p>
+  {{- end }}
+  {{- with $o.url }}
+  {{- $src := partial "l.html" (dict "d" $o "k" "source") }}
+  <p><a class="event__link" href="{{ . }}"{{ with $src.lang }} lang="{{ . }}"{{ end }}>{{ with $src.v }}{{ . }}{{ else }}{{ replaceRE `([./])` "$1<wbr>" (partial "shorturl.html" $o.url | htmlEscape) | safeHTML }}{{ end }}</a></p>
+  {{- end }}
+</li>

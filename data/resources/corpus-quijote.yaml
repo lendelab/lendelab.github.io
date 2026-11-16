@@ -1,0 +1,80 @@
+slug: corpus-quijote
+title_es: Corpus Quijote
+title_en: Corpus Quijote
+text_es: 'El Corpus Quijote reúne muestras de lectura estandarizada: 361 hablantes nativos de español peninsular
+  leyeron en voz alta el mismo texto, el primer párrafo del *Quijote*, en las mismas condiciones de grabación. De
+  ellos, 197 no presentaban deterioro cognitivo, 90 tenían deterioro cognitivo leve y 74, enfermedad de Alzheimer.
+  Las grabaciones se hicieron en la Universidad de Salamanca, cuyo Comité de Bioética aprobó el protocolo. El diseño
+  del corpus se describe en el artículo de referencia que figura más abajo; las normas de TalkBank exigen citarlo
+  en cualquier uso de los datos.'
+text_en: 'The Corpus Quijote is a collection of standardized reading samples: 361 native speakers of Peninsular
+  Spanish read the same text aloud, the first paragraph of the *Quijote*, under the same recording conditions. Of
+  these speakers, 197 had no cognitive impairment, 90 had mild cognitive impairment and 74 had Alzheimer’s disease.
+  The recordings were made at the Universidad de Salamanca, whose Bioethics Committee approved
+  the protocol. The design of the corpus is described in the reference article given below, which TalkBank’s rules
+  require to be cited whenever the data are used.'
+fields:
+- label_es: Nombre en DementiaBank
+  label_en: Name in DementiaBank
+  value: <span lang="en">Spanish Ivanova Corpus</span>
+  url: ''
+  value_en: ''
+- label_es: DOI
+  label_en: DOI
+  value: 10.21415/1RQE-0T23
+  url: https://doi.org/10.21415/1RQE-0T23
+  value_en: ''
+- label_es: Página del corpus
+  label_en: Corpus page
+  value: talkbank.org/dementia/access/Spanish/Ivanova.html
+  url: https://talkbank.org/dementia/access/Spanish/Ivanova.html
+  value_en: ''
+- label_es: Participantes
+  label_en: Participants
+  value: 361 hablantes, 248 mujeres y 113 hombres; 197 sin deterioro cognitivo, 90 con deterioro cognitivo leve
+    y 74 con enfermedad de Alzheimer.
+  url: ''
+  value_en: 361 speakers, 248 women and 113 men; 197 without cognitive impairment, 90 with mild cognitive impairment
+    and 74 with Alzheimer’s disease.
+- label_es: Tarea
+  label_en: Task
+  value: lectura en voz alta del primer párrafo del *Quijote* (126 sílabas), de entre 25 y 45 s de duración.
+  url: ''
+  value_en: reading aloud the first paragraph of the *Quijote* (126 syllables), lasting between 25 and 45 s.
+- label_es: Condiciones de grabación
+  label_en: Recording conditions
+  value: texto presentado en una pantalla a 48 puntos, en una sala insonorizada; micrófono con respuesta de 20 Hz
+    a 20 kHz, situado a entre 8 y 14 cm de la boca; grabación monofónica.
+  url: ''
+  value_en: text presented on a screen in 48-point type, in a soundproofed room; microphone with a frequency response
+    of 20 Hz to 20 kHz, placed between 8 and 14 cm from the mouth; mono recording.
+- label_es: Contenido
+  label_en: Contents
+  value: grabaciones de audio y datos de edad, sexo, escolarización y puntuación en el MMSE de cada participante.
+  url: ''
+  value_en: audio recordings, with each participant’s age, sex, schooling and MMSE score.
+- label_es: Hoja de metadatos, de acceso libre
+  label_en: Metadata sheet, freely available
+  value: talkbank.org/dementia/access/0docs/Ivanova-meta.xlsx
+  url: https://talkbank.org/dementia/access/0docs/Ivanova-meta.xlsx
+  value_en: ''
+- label_es: Acceso
+  label_en: Access
+  value: a través de DementiaBank, con contraseña y solo para miembros del consorcio. El alumnado, incluidos los
+    doctorandos, debe solicitar el acceso a través de la persona que dirige el trabajo.
+  url: ''
+  value_en: through DementiaBank, with a password and for consortium members only. Students, doctoral students included,
+    must request access through the person who supervises their work.
+- label_es: Licencia
+  label_en: License
+  value: CC BY-NC-SA 4.0. Los datos no pueden incorporarse a productos comerciales, entre ellos los grandes modelos
+    de lenguaje.
+  url: ''
+  value_en: CC BY-NC-SA 4.0. The data may not be incorporated into commercial products, large language models among
+    them.
+cite: Ivanova, O., Meilán, J. J. G., Martínez-Sánchez, F., Martínez-Nicolás, I., Llorente, T. E. y Carcavilla González,
+  N. (2022). <span lang="en">Discriminating speech traits of Alzheimer’s disease assessed through a corpus of reading
+  task for Spanish language. *Computer Speech & Language*</span>, 73, 101341. https://doi.org/10.1016/j.csl.2021.101341
+cite_en: Ivanova, O., Meilán, J. J. G., Martínez-Sánchez, F., Martínez-Nicolás, I., Llorente, T. E., & Carcavilla
+  González, N. (2022). Discriminating speech traits of Alzheimer’s disease assessed through a corpus of reading
+  task for Spanish language. *Computer Speech & Language*, 73, 101341. https://doi.org/10.1016/j.csl.2021.101341

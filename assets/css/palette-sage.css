@@ -1,0 +1,17 @@
+/* sage palette, switched on with palette = "sage" in hugo.toml */
+:root {
+  --color-paper: oklch(97.5% 0.008 120);
+  --color-paper-2: oklch(94% 0.014 150);
+  --color-rule: oklch(85% 0.012 150);
+  --color-muted: oklch(42% 0.014 195);
+  --color-ink: oklch(20% 0.016 205);
+  --color-accent: oklch(45% 0.09 188);
+  --color-focus: oklch(50% 0.13 188);
+  --color-accent-ink: oklch(97.5% 0.008 120);
+  --color-slab: oklch(84% 0.055 168);
+  --color-slab-2: oklch(79% 0.06 168);
+  --color-slab-ink: oklch(22% 0.03 195);
+  --color-slab-muted: oklch(34% 0.03 195);
+  --color-accent-slab: oklch(35% 0.085 188);
+  --color-focus-slab: oklch(38% 0.12 188);
+}

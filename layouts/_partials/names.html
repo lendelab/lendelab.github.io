@@ -1,0 +1,18 @@
+{{- /* .list: names or member slugs; .link: link members; .and: join the last name with y/e (es) or and (en) */ -}}
+{{- $out := slice -}}{{- $last := "" -}}
+{{- range .list -}}
+  {{- $p := partial "person.html" . -}}
+  {{- $last = $p.name -}}
+  {{- if and $.link $p.url -}}
+    {{- $out = $out | append (printf `<a href="%s">%s</a>` $p.url (htmlEscape $p.name)) -}}
+  {{- else -}}
+    {{- $out = $out | append (htmlEscape $p.name) -}}
+  {{- end -}}
+{{- end -}}
+{{- $n := len $out -}}
+{{- if and .and (gt $n 1) -}}
+  {{- $conj := "and" -}}
+  {{- if eq site.Language.Lang "es" }}{{ $conj = cond (gt (len (findRE `^h?[iíIÍ]([^aeiouáéíóúAEIOUÁÉÍÓÚ]|$)` (lower $last))) 0) "e" "y" }}{{ end -}}
+  {{- return (printf "%s %s %s" (delimit (first (sub $n 1) $out) ", ") $conj (index $out (sub $n 1)) | safeHTML) -}}
+{{- end -}}
+{{- return (delimit $out ", " | safeHTML) -}}

@@ -1,0 +1,8 @@
+{{- $d := time.AsTime .d -}}
+{{- $p := .p | default "day" -}}
+{{- $es := eq site.Language.Lang "es" -}}
+{{- $s := "" -}}
+{{- if eq $p "year" }}{{ $s = $d.Format "2006" -}}
+{{- else if eq $p "month" }}{{ $s = time.Format (cond $es "January de 2006" "January 2006") $d -}}
+{{- else }}{{ $s = time.Format (cond $es "2 de January de 2006" "2 January 2006") $d }}{{ end -}}
+{{- return $s -}}

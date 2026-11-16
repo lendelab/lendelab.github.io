@@ -1,0 +1,44 @@
+- id: doi:10.17605/osf.io/y9fkr
+  type: report
+  year: 2026
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: García Piñuela
+    given: Elena
+  - family: Machado de Souza
+    given: Emma
+  - family: Just Alcaraz
+    given: Jordi
+  - family: Vergés Bonaventura
+    given: Ariadna
+  - family: Méndez Sanz
+    given: Soraya
+  - family: Ochoa Obeso
+    given: Esther
+  title: Palabras que cuidan. Notas sobre la comunicación en/con la demencia
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: OSF
+  doi: 10.17605/osf.io/y9fkr
+  url: ''
+  lang: es
+- id: doi:10.37536/lym.1.18.2026.4230
+  type: review
+  year: 2026
+  status: published
+  authors:
+  - family: Vergés Bonaventura
+    given: Ariadna
+  title: '[Reseña del libro *Second language anxiety: Affective or linguistic variable?*, de R. L. Sparks]'
+  container: Lengua y migración
+  volume: '18'
+  issue: '1'
+  pages: 163-168
+  publisher: ''
+  doi: 10.37536/lym.1.18.2026.4230
+  url: ''
+  lang: en

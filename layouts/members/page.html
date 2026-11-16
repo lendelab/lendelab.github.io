@@ -1,0 +1,225 @@
+{{ define "main" }}
+{{- $m := index hugo.Data.members .Params.member -}}
+{{- $slug := $m.slug -}}
+{{- $es := eq site.Language.Lang "es" -}}
+{{- $foreign := not $es -}}
+{{- $today := now.Format "2006-01-02" -}}
+{{- $role := partial "role.html" $m -}}
+{{- $aff := partial "l.html" (dict "d" $m "k" "affiliation") -}}
+{{- $bio := partial "l.html" (dict "d" $m "k" "bio") -}}
+
+{{- /* blocks, computed first so that empty bands are not rendered */ -}}
+{{- $th := $m.thesis | default dict -}}
+{{- $thTitle := partial "l.html" (dict "d" $th "k" "title") -}}
+{{- $thProg := partial "l.html" (dict "d" $th "k" "programme") -}}
+{{- $edu := slice }}{{ range $i, $e := $m.education }}{{ $edu = $edu | append (dict "e" $e "k" (printf "%04d %03d" (int (or $e.year 0)) (sub 999 $i))) }}{{ end -}}
+{{- $edu = sort $edu "k" "desc" -}}
+{{- $projects := slice -}}
+{{- range sort hugo.Data.projects "start" "desc" -}}
+  {{- $end := (time.AsTime .end).Format "2006-01-02" -}}
+  {{- if and (or (in .members $slug) (eq .pi $slug)) (ge $end $today) }}{{ $projects = $projects | append . }}{{ end -}}
+{{- end -}}
+{{- $sup := slice -}}
+{{- range sort hugo.Data.members "order" -}}
+  {{- $t := .thesis | default dict -}}
+  {{- if and $t.title_es (in $t.supervisors $slug) -}}
+    {{- $sup = $sup | append (dict "author" .slug "t" $t "status" "in_progress" "co" (complement (slice $slug) $t.supervisors) "k" (printf "1 %04d %s" (int (or $t.start 0)) .slug)) -}}
+  {{- end -}}
+{{- end -}}
+{{- range hugo.Data.theses -}}
+  {{- if in .supervisors $slug -}}
+    {{- $sup = $sup | append (dict "author" .author "t" . "status" .status "co" (complement (slice $slug) .supervisors) "k" (printf "0 %04d %s" (int (or .year 0)) .author)) -}}
+  {{- end -}}
+{{- end -}}
+{{- $sup = sort $sup "k" "desc" -}}
+{{- $works := partial "works.html" $slug -}}
+{{- $selected := slice -}}
+{{- $pool := $works.all }}{{ with hugo.Data.publications }}{{ with .group }}{{ $pool = $pool | append . }}{{ end }}{{ end -}}
+{{- range $m.selected }}{{ $id := . }}{{ with first 1 (where $pool "id" $id) }}{{ $selected = $selected | append (index . 0) }}{{ end }}{{ end -}}
+{{- $outreach := slice -}}
+{{- range partial "outreach-sorted.html" . -}}
+  {{- $o := .o -}}{{- $hit := in ($o.people | default slice) $slug -}}
+  {{- range $o.sessions }}{{ if eq .person $slug }}{{ $hit = true }}{{ end }}{{ end -}}
+  {{- if $hit }}{{ $outreach = $outreach | append $o }}{{ end -}}
+{{- end -}}
+{{- $updated := $m.updated -}}
+{{- with hugo.Data.updated }}{{ with index . $slug }}{{ $updated = . }}{{ end }}{{ end -}}
+
+{{- $bands := slice "A" -}}
+{{- if or $projects $sup }}{{ $bands = $bands | append "B" }}{{ end -}}
+{{- if or $selected $works.pubs $works.talks }}{{ $bands = $bands | append "C" }}{{ end -}}
+{{- if $outreach }}{{ $bands = $bands | append "D" }}{{ end -}}
+{{- $last := index $bands (sub (len $bands) 1) -}}
+{{- $alt := dict }}{{ range $i, $b := $bands }}{{ $alt = merge $alt (dict $b (cond (eq (mod $i 2) 1) " band--alt" "")) }}{{ end -}}
+{{- $upd := "" -}}
+{{- with $updated }}{{ $upd = printf `<p class="updated">%s: <time datetime="%s">%s</time></p>` (T "updated") ((time.AsTime .).Format "2006-01-02") (partial "date.html" (dict "d" .)) }}{{ end -}}
+
+  <header class="fold fold--page on-slab">
+    {{ partial "orn.html" . }}
+    <div class="who">
+      {{ partial "photo.html" (dict "m" $m "class" "who__photo" "sizes" "13rem" "eager" true) }}
+      <div class="who__text">
+        <h1 class="who__name">{{ $m.given }} {{ $m.family }}</h1>
+        <p class="who__role"{{ with $role.lang }} lang="{{ . }}"{{ end }}>{{ $role.v }}</p>
+        {{- with $aff.v }}
+        <p class="who__aff"{{ with $aff.lang }} lang="{{ . }}"{{ end }}>{{ . }}</p>
+        {{- end }}
+        <ul class="icons">
+          {{- with $m.email }}
+          <li><a href="mailto:{{ . }}">{{ partial "icon.html" "email" }}{{ T "email" }}<span class="vh">: {{ . }}</span></a></li>
+          {{- end }}
+          {{- range $m.links }}
+          <li><a href="{{ .url }}">{{ partial "icon.html" .type }}{{ T (printf "link_%s" .type) }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <section class="band{{ index $alt "A" }}" aria-label="{{ T "bio" }}">
+    <div class="inner stack">
+      <div class="block">
+        <h2 class="band__title">{{ T "bio" }}</h2>
+        <div class="prose"{{ with $bio.lang }} lang="{{ . }}"{{ end }}><p>{{ $bio.v | markdownify }}</p></div>
+      </div>
+      <div class="blocks">
+        {{- with $m.lines }}
+        <div class="block">
+          <h2 class="band__title">{{ T "lines_title" }}</h2>
+          <ul class="linklist">
+            {{- range . }}{{ with index hugo.Data.lines . }}
+            {{- $lt := partial "l.html" (dict "d" . "k" "title") }}
+            <li><a href="{{ (site.GetPage (printf "/lines/%s" .slug)).RelPermalink }}"{{ with $lt.lang }} lang="{{ . }}"{{ end }}>{{ $lt.v }}</a></li>
+            {{- end }}{{ end }}
+          </ul>
+        </div>
+        {{- end }}
+        {{- with $thTitle.v }}
+        <div class="block">
+          <h2 class="band__title">{{ T "thesis" }}</h2>
+          <dl class="facts facts--paper facts--wide">
+            <div><dt>{{ cond $th.topic_only (T "thesis_topic") (T "thesis_title") }}</dt><dd{{ with $thTitle.lang }} lang="{{ . }}"{{ end }}>{{ if $th.topic_only }}{{ . }}{{ else }}{{ T "q_open" }}{{ . }}{{ T "q_close" }}{{ end }}</dd></div>
+            {{- with $thProg.v }}
+            <div><dt>{{ T "programme" }}</dt><dd{{ with $thProg.lang }} lang="{{ . }}"{{ end }}>{{ . }}</dd></div>
+            {{- end }}
+            {{- with $th.supervisors }}
+            <div><dt>{{ T "supervision" }}</dt><dd>{{ partial "names.html" (dict "list" . "link" true) }}</dd></div>
+            {{- end }}
+            {{- with $th.start }}
+            <div><dt>{{ T "start" }}</dt><dd>{{ . }}</dd></div>
+            {{- end }}
+          </dl>
+        </div>
+        {{- end }}
+        {{- with $edu }}
+        <div class="block">
+          <h2 class="band__title">{{ T "education" }}</h2>
+          <ul class="rows">
+            {{- range . }}{{ $e := .e }}
+            {{- $dg := partial "l.html" (dict "d" $e "k" "degree") }}
+            {{- $ds := partial "l.html" (dict "d" $e "k" "distinction") }}
+            {{- $meta := slice }}{{ with $e.institution }}{{ $meta = $meta | append . }}{{ end }}{{ with $e.year }}{{ $meta = $meta | append (string .) }}{{ end }}
+            <li>
+              <p class="row__name"{{ with $dg.lang }} lang="{{ . }}"{{ end }}>{{ $dg.v }}</p>
+              {{- if or $meta $ds.v }}
+              <p class="row__meta">{{ delimit $meta ", " }}{{ with $ds.v }}{{ if $meta }}. {{ end }}<span{{ with $ds.lang }} lang="{{ . }}"{{ end }}>{{ . }}</span>{{ end }}</p>
+              {{- end }}
+            </li>
+            {{- end }}
+          </ul>
+        </div>
+        {{- end }}
+      </div>
+      {{- if eq $last "A" }}{{ $upd | safeHTML }}{{ end }}
+    </div>
+  </section>
+
+  {{- if in $bands "B" }}
+  <section class="band{{ index $alt "B" }}" aria-label="{{ T "current_projects" }}">
+    <div class="inner stack">
+      {{- with $projects }}
+      <div class="block">
+        <h2 class="band__title">{{ T "current_projects" }}</h2>
+        {{ partial "project-rows.html" (dict "list" . "class" "rows--two") }}
+      </div>
+      {{- end }}
+      {{- with $sup }}
+      <div class="block">
+        <h2 class="band__title">{{ T "supervised" }}</h2>
+        <ul class="rows rows--two">
+          {{- range . }}
+          {{- $t := .t }}
+          {{- $who := partial "person.html" .author }}
+          {{- $title := "" }}{{ $tl := "" }}
+          {{- if eq .status "in_progress" }}{{ $x := partial "l.html" (dict "d" $t "k" "title") }}{{ $title = $x.v }}{{ $tl = $x.lang }}{{ else }}{{ $title = $t.title }}{{ if and $t.lang (ne $t.lang site.Language.Lang) }}{{ $tl = $t.lang }}{{ end }}{{ end }}
+          {{- $meta := "" }}
+          {{- if eq .status "in_progress" }}{{ $meta = cond (gt (int (or $t.start 0)) 0) (printf "%s %v" (T "in_progress") $t.start) (T "in_progress_nodate") }}
+          {{- else }}{{ $meta = printf "%s, %v, %s" $t.university $t.year (T "defended") }}{{ end }}
+          {{- with .co }}{{ $meta = printf "%s; %s %s" $meta (T "cosupervision") (partial "names.html" (dict "list" . "link" false "and" true)) }}{{ end }}
+          <li>
+            <p class="row__name">{{ if $who.url }}<a href="{{ $who.url }}">{{ $who.name }}</a>{{ else }}{{ $who.name }}{{ end }}</p>
+            <p{{ with $tl }} lang="{{ . }}"{{ end }}>{{ if $t.topic_only }}{{ $title }}{{ else }}{{ T "q_open" }}{{ $title }}{{ T "q_close" }}{{ end }}</p>
+            <p class="row__meta">{{ partial "upper-first.html" $meta }}.</p>
+          </li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- end }}
+      {{- if eq $last "B" }}{{ $upd | safeHTML }}{{ end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- if in $bands "C" }}
+  <section class="band{{ index $alt "C" }}" aria-label="{{ T "publications_title" }}">
+    <div class="inner stack">
+      {{- with $selected }}
+      <div class="block">
+        <h2 class="band__title">{{ T "selected" }}</h2>
+        <ol class="cites">
+          {{- range . }}
+          <li class="cite">{{ partial "apa.html" . }}</li>
+          {{- end }}
+        </ol>
+      </div>
+      {{- end }}
+      {{- with $works.pubs }}
+      <div class="block">
+        <h2 class="band__title">{{ T "publications_title" }}</h2>
+        {{ partial "by-year.html" (dict "works" . "h" "h3") }}
+      </div>
+      {{- end }}
+      {{- with $works.talks }}
+      <div class="block">
+        <h2 class="band__title">{{ T "talks" }}</h2>
+        {{ partial "by-year.html" (dict "works" . "h" "h3") }}
+      </div>
+      {{- end }}
+      {{- if eq $last "C" }}{{ $upd | safeHTML }}{{ end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- if in $bands "D" }}
+  <section class="band{{ index $alt "D" }}" aria-labelledby="m-outreach">
+    <div class="inner stack">
+      <div class="block">
+        <h2 class="band__title" id="m-outreach">{{ T "outreach_title" }}</h2>
+        <ul class="rows">
+          {{- range $outreach }}
+          {{- $label := partial "l.html" (dict "d" . "k" "date_label") }}
+          {{- $when := $label.v | default (partial "date.html" (dict "d" .date "p" .date_precision)) }}
+          {{- if not $label.v }}{{ $label = dict "v" "" "lang" "" }}{{ end }}
+          {{- $type := partial "l.html" (dict "d" . "k" "type") }}
+          <li>
+            <p class="row__name"{{ if $foreign }} lang="es"{{ end }}>{{ with .url }}<a href="{{ . }}">{{ end }}{{ .title }}{{ if .url }}</a>{{ end }}</p>
+            <p class="row__meta"><span{{ with $type.lang }} lang="{{ . }}"{{ end }}>{{ partial "upper-first.html" $type.v }}</span>, <span{{ with $label.lang }} lang="{{ . }}"{{ end }}>{{ $when }}</span></p>
+          </li>
+          {{- end }}
+        </ul>
+      </div>
+      {{- if eq $last "D" }}{{ $upd | safeHTML }}{{ end }}
+    </div>
+  </section>
+  {{- end }}
+{{ end }}

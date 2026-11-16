@@ -1,0 +1,6 @@
+{{- $s := hugo.Data.site -}}
+{{- $text := (partial "l.html" (dict "d" $s.group "k" "lede")).v -}}
+{{- with .Params.member }}{{ with index hugo.Data.members . }}{{ $text = (partial "l.html" (dict "d" . "k" "bio")).v }}{{ end }}{{ end -}}
+{{- with .Params.line }}{{ with index hugo.Data.lines . }}{{ $text = (partial "l.html" (dict "d" . "k" "text")).v }}{{ end }}{{ end -}}
+{{- $text = $text | markdownify | plainify | htmlUnescape -}}
+{{- partial "first-sentence.html" $text -}}

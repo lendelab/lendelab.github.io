@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  {{- $page := . }}
+  {{- range slice (dict "k" "dirigido" "cls" "" "paper" true) (dict "k" "participacion" "cls" " band--alt" "paper" true) (dict "k" "anterior" "cls" "" "paper" true) }}
+  {{- $kind := .k }}{{ $paper := .paper }}{{ $cls := .cls }}
+  {{- with where (sort hugo.Data.projects "start" "desc") "kind" $kind }}
+  <section class="band{{ $cls }}" aria-labelledby="k-{{ $kind }}">
+    <div class="inner">
+      <h2 class="band__title" id="k-{{ $kind }}">{{ T (printf "kind_%s" $kind) }}</h2>
+      {{- range . }}
+      {{ partial "project.html" (dict "p" . "paper" $paper "page" $page) }}
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+  {{- end }}
+{{ end }}

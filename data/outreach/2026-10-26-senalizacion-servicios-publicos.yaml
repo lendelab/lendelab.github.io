@@ -1,0 +1,28 @@
+date: 2026-10-26
+date_precision: day
+date_label_es: 26 y 29 de octubre de 2026
+date_label_en: 26 and 29 October 2026
+upcoming: false
+type_es: charla divulgativa (dos sesiones)
+type_en: public talk (two sessions)
+title: La señalización de los servicios públicos y las personas mayores
+venue: Salamanca
+venue_en: ''
+people:
+- montserrat-rangel-vicente
+people_note_es: ''
+people_note_en: ''
+people_and: false
+url: https://pro.univ-lille.fr/montserrat-rangel-vicente/publications
+source_es: Université de Lille
+source_en: Université de Lille
+text_es: Dos sesiones de una misma charla pública sobre la señalización de los servicios públicos y las personas
+  mayores.
+text_en: Two sessions of the same public talk on the signage of public services and older people.
+sessions:
+- date: 2026-10-26
+  title: FAMASA, Federación de personas mayores de Salamanca
+  person: ''
+- date: 2026-10-29
+  title: Centro Municipal Integrado Julián Sánchez El Charro
+  person: ''

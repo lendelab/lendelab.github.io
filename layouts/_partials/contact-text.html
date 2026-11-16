@@ -1,0 +1,10 @@
+{{- $t := htmlEscape . -}}
+{{- $email := hugo.Data.site.email -}}
+{{- $t = replace $t $email (printf `<a class="nowrap" href="mailto:%s">%s</a>` $email $email) -}}
+{{- $t = replace $t "dpd@usal.es" `<a class="nowrap" href="mailto:dpd@usal.es">dpd@usal.es</a>` -}}
+{{- $t = replace $t "https://www.usal.es/proteccion_datos" `<a href="https://www.usal.es/proteccion_datos">https://www.usal.es/proteccion_datos</a>` -}}
+{{- with site.GetPage "/resources" -}}
+  {{- $t = replace $t "página de recursos" (printf `<a href="%s">página de recursos</a>` .RelPermalink) -}}
+  {{- $t = replace $t "resources page" (printf `<a href="%s">resources page</a>` .RelPermalink) -}}
+{{- end -}}
+{{- return ($t | safeHTML) -}}

@@ -1,0 +1,64 @@
+{{- $p := .p -}}
+{{- $paper := .paper -}}
+{{- $foreign := ne site.Language.Lang "es" -}}
+{{- $t := partial "l.html" (dict "d" $p "k" "title") -}}
+{{- $sum := partial "l.html" (dict "d" $p "k" "summary") -}}
+{{- $out := partial "l.html" (dict "d" $p "k" "outputs") -}}
+{{- $fun := partial "l.html" (dict "d" $p "k" "funder") -}}
+{{- $call := partial "l.html" (dict "d" $p "k" "call") -}}
+{{- $role := partial "l.html" (dict "d" $p "k" "pi_role") -}}
+<article class="project{{ if $paper }} project--paper{{ end }}" id="{{ $p.slug }}">
+  <div class="two">
+    <div class="block">
+      <header class="project__head">
+        {{- if $p.acronym }}
+        <h3 class="project__name">{{ $p.acronym }}</h3>
+        <p class="project__title"{{ with $t.lang }} lang="{{ . }}"{{ end }}>{{ $t.v }}</p>
+        {{- else }}
+        <h3 class="project__title"{{ with $t.lang }} lang="{{ . }}"{{ end }}>{{ $t.v }}</h3>
+        {{- end }}
+      </header>
+      {{- with $sum.v }}
+      <div class="prose"{{ with $sum.lang }} lang="{{ . }}"{{ end }}>{{ $.page.RenderString (dict "display" "block") . }}</div>
+      {{- end }}
+      {{- with $out.v }}
+      <ul class="outputs"{{ with $out.lang }} lang="{{ . }}"{{ end }}>
+        {{- range . }}
+        <li>{{ . | markdownify }}</li>
+        {{- end }}
+      </ul>
+      {{- end }}
+    </div>
+    <dl class="facts facts--wide{{ if $paper }} facts--paper{{ end }}">
+      {{- with $p.reference }}
+      <div><dt>{{ T "reference" }}</dt><dd>{{ . }}</dd></div>
+      {{- end }}
+      {{- with $fun.v }}
+      <div><dt>{{ T "funder" }}</dt><dd><span{{ with $fun.lang }} lang="{{ . }}"{{ end }}>{{ . }}</span>{{ with $call.v }}, <span{{ with $call.lang }} lang="{{ . }}"{{ end }}>{{ . }}</span>{{ end }}</dd></div>
+      {{- end }}
+      {{- if and $p.start $p.end }}
+      <div><dt>{{ T "duration" }}</dt><dd>{{ partial "daterange.html" (dict "start" $p.start "end" $p.end) }}</dd></div>
+      {{- end }}
+      {{- with $p.amount_eur }}
+      <div><dt>{{ T "funding" }}</dt><dd>{{ partial "money.html" . }}</dd></div>
+      {{- end }}
+      {{- with $p.pi }}
+      <div><dt{{ with $role.lang }} lang="{{ . }}"{{ end }}>{{ $role.v }}</dt><dd>{{ partial "names.html" (dict "list" (slice .) "link" true) }}</dd></div>
+      {{- end }}
+      {{- with $p.members }}
+      {{- $notes := dict }}{{ range $p.member_notes }}{{ $m := .member }}{{ $nt := partial "l.html" (dict "d" . "k" "note") }}{{ with $nt.v }}{{ $notes = merge $notes (dict $m (dict "v" . "lang" $nt.lang)) }}{{ end }}{{ end }}
+      {{- $items := slice }}
+      {{- range . }}{{ $one := string (partial "names.html" (dict "list" (slice .) "link" true)) }}{{ with index $notes . }}{{ $one = printf `%s (<span%s>%s</span>)` $one (cond (ne .lang "") (printf ` lang="%s"` .lang) "") (htmlEscape .v) }}{{ end }}{{ $items = $items | append $one }}{{ end }}
+      <div><dt>{{ T "group_members" }}</dt><dd>{{ delimit $items (cond (gt (len $notes) 0) "; " ", ") | safeHTML }}</dd></div>
+      {{- end }}
+      {{- with $p.lines }}
+      <div><dt>{{ cond (gt (len .) 1) (T "line_many") (T "line_one") }}</dt><dd>
+        {{- $ls := slice }}{{ range . }}{{ with index hugo.Data.lines . }}{{ $lt := partial "l.html" (dict "d" . "k" "title") }}{{ with site.GetPage (printf "/lines/%s" .slug) }}{{ $ls = $ls | append (printf `<a href="%s">%s</a>` .RelPermalink (htmlEscape $lt.v)) }}{{ end }}{{ end }}{{ end }}
+        {{- delimit $ls "; " | safeHTML }}</dd></div>
+      {{- end }}
+      {{- with $p.web }}
+      <div><dt>{{ T "web" }}</dt><dd><a href="{{ . }}">{{ partial "shorturl.html" . }}</a></dd></div>
+      {{- end }}
+    </dl>
+  </div>
+</article>

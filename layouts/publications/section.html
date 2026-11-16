@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{- $group := slice }}{{ with hugo.Data.publications }}{{ with .group }}{{ $group = . }}{{ end }}{{ end -}}
+  {{ partial "page-fold.html" (dict "title" .Title) }}
+  <section class="band" aria-label="{{ .Title }}">
+    <div class="inner">
+      {{- with $group }}
+      {{ partial "by-year.html" (dict "works" (sort . "year" "desc") "h" "h2") }}
+      {{- else }}
+      <div class="prose">
+        <p class="lede">{{ T "pubs_empty" }}</p>
+        <p><a href="{{ (site.GetPage "/members").RelPermalink }}">{{ T "pubs_empty_members" }}</a></p>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+{{ end }}

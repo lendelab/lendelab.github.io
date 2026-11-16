@@ -1,0 +1,73 @@
+slug: montserrat-rangel-vicente
+order: 8
+group: asociada
+given: Montserrat
+family: Rangel Vicente
+citation_names:
+- Rangel Vicente, M.
+- Rangel Vicente, Montserrat
+- Rangel, M.
+orcid: 0000-0001-6891-7921
+email: montserrat.rangel-vicente@univ-lille.fr
+photo: /img/members/montserrat-rangel-vicente.jpg
+position_es: Investigadora asociada. <span lang="fr">Maîtresse de conférences</span>, Université de Lille
+position_en: Associate researcher. <span lang="fr">Maîtresse de conférences</span>, Université de Lille
+funding: ''
+affiliation_es: Laboratorio Savoirs, Textes, Langage (UMR 8163, CNRS), Université de Lille
+affiliation_en: Savoirs, Textes, Langage laboratory (UMR 8163, CNRS), Université de Lille
+bio_es: 'Montserrat Rangel Vicente es <span lang="fr">maîtresse de conférences</span> de lingüística española en
+  la Université de Lille y miembro del laboratorio Savoirs, Textes, Langage (UMR 8163, CNRS). La categoría del nombre
+  propio, que estudia desde la morfosemántica y la lexicología, articula la mayor parte de los trabajos que ha publicado.
+  En LendeLab aplica ese interés a los topónimos: analiza mediante pruebas de fluidez verbal cómo se organizan en
+  el léxico mental y si pueden servir como marcadores de la progresión de la enfermedad de Alzheimer. Se doctoró
+  en Filología en la Universitat de Barcelona (2017).'
+bio_en: 'Montserrat Rangel Vicente is <span lang="fr">maîtresse de conférences</span> in Spanish linguistics at
+  the Université de Lille and a member of the Savoirs, Textes, Langage laboratory (UMR 8163, CNRS). Most of her
+  published work is organized around the category of the proper name, which she approaches from morphosemantics
+  and lexicology. At LendeLab she applies that interest to toponyms: through verbal fluency tests she analyzes how
+  they are organized in the mental lexicon and whether they can serve as markers of the progression of Alzheimer’s
+  disease. She holds a PhD in Philology from the Universitat de Barcelona (2017).'
+lines:
+- marcadores
+thesis:
+  title_es: ''
+  title_en: ''
+  topic_only: false
+  programme_es: ''
+  programme_en: ''
+  supervisors: []
+  start: null
+education:
+- degree_es: Doctorado en Filología
+  degree_en: PhD in Philology
+  institution: Universitat de Barcelona
+  year: 2017
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: DEA en Ciencias del Lenguaje
+  degree_en: DEA in Language Sciences
+  institution: Université Sorbonne Nouvelle-Paris 3
+  year: 2003
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: Maîtrise en Ciencias del Lenguaje
+  degree_en: Maîtrise in Language Sciences
+  institution: Université Paul-Valéry Montpellier 3
+  year: 2002
+  distinction_es: ''
+  distinction_en: ''
+- degree_es: Licenciatura en Filología Francesa
+  degree_en: Degree in French Philology
+  institution: Universitat de Barcelona
+  year: null
+  distinction_es: ''
+  distinction_en: ''
+links:
+- type: orcid
+  url: https://orcid.org/0000-0001-6891-7921
+- type: researchgate
+  url: https://www.researchgate.net/profile/Montserrat-Rangel-Vicente
+- type: web
+  url: https://pro.univ-lille.fr/montserrat-rangel-vicente
+selected: []
+updated: null

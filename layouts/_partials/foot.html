@@ -1,0 +1,22 @@
+{{- $s := hugo.Data.site -}}
+{{- $exp := partial "l.html" (dict "d" $s "k" "expansion") -}}
+{{- $lines := partial "l.html" (dict "d" $s "k" "footer") -}}
+{{- $credit := partial "l.html" (dict "d" $s "k" "credit") -}}
+{{- $other := partial "other-lang.html" . -}}
+{{- $contact := site.GetPage "/contact" -}}
+<footer class="foot on-slab">
+  <div class="foot__mast">
+    <span class="mark" aria-hidden="true"></span>
+    <div>
+      <p class="foot__word">LendeLab</p>
+      <p class="foot__tag"{{ with $exp.lang }} lang="{{ . }}"{{ end }}>{{ $exp.v }}</p>
+    </div>
+  </div>
+  <div class="foot__credits">
+    {{- range $lines.v }}
+    <p{{ with $lines.lang }} lang="{{ . }}"{{ end }}>{{ . }}</p>
+    {{- end }}
+    <p{{ with $credit.lang }} lang="{{ . }}"{{ end }}>{{ $credit.v }}</p>
+    <p class="foot__links"><a href="{{ $contact.RelPermalink }}">{{ T "nav_contact" }}</a><a href="{{ $contact.RelPermalink }}#proteccion-datos">{{ T "privacy" }}</a><a href="{{ $other.url }}" lang="{{ $other.locale }}" hreflang="{{ $other.locale }}" aria-label="{{ $other.name }}">{{ $other.code }}</a></p>
+  </div>
+</footer>

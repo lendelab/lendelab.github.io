@@ -1,0 +1,4 @@
+{{- $p := partial "l.html" (dict "d" . "k" "position") -}}
+{{- $s := $p.v -}}
+{{- with .funding }}{{ $s = printf `%s <span class="nowrap">(%s)</span>` $s (htmlEscape .) }}{{ end -}}
+{{- return (dict "v" (printf "%s." $s | safeHTML) "lang" $p.lang) -}}

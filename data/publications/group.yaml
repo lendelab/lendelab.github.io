@@ -1,0 +1,354 @@
+- id: manual:machado-de-souza-2027-la-magnetoencefalografia-meg
+  type: chapter
+  year: 2027
+  status: forthcoming
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  - family: Ivanova
+    given: Olga
+  title: La magnetoencefalografía (MEG)
+  container: Métodos experimentales para la lingüística hispánica
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: Routledge
+  doi: ''
+  url: https://www.routledge.com/Metodos-experimentales-para-la-linguistica-hispanica/LouredaLamas-CruzRubio-Ivanova-GelorminiLezama-Teucher-HernandezPerez/p/book/9781041066408
+  lang: es
+  editors:
+  - family: Loureda Lamas
+    given: Óscar
+  - family: Cruz Rubio
+    given: A.
+  - family: Ivanova
+    given: Olga
+  - family: Gelormini Lezama
+    given: C.
+  - family: Teucher
+    given: M.
+  - family: Hernández Pérez
+    given: C.
+  members:
+  - emma-machado-de-souza
+  - olga-ivanova
+- id: doi:10.1177/13872877261461253
+  type: article
+  year: 2026
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  title: 'Language as a central axis for studying Alzheimer''s disease: From pathogenesis and clinical practice to scientific theory'
+  container: Journal of Alzheimer’s Disease
+  volume: '112'
+  issue: '4'
+  pages: 1764-1767
+  publisher: ''
+  doi: 10.1177/13872877261461253
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova
+- id: doi:10.17605/osf.io/y9fkr
+  type: report
+  year: 2026
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: García Piñuela
+    given: Elena
+  - family: Machado de Souza
+    given: Emma
+  - family: Just Alcaraz
+    given: Jordi
+  - family: Vergés Bonaventura
+    given: Ariadna
+  - family: Méndez Sanz
+    given: Soraya
+  - family: Ochoa Obeso
+    given: Esther
+  title: Palabras que cuidan. Notas sobre la comunicación en/con la demencia
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: OSF
+  doi: 10.17605/osf.io/y9fkr
+  url: ''
+  lang: es
+  members:
+  - ariadna-verges-bonaventura
+  - elena-garcia-pinuela
+  - emma-machado-de-souza
+  - esther-ochoa-obeso
+  - jordi-just-alcaraz
+  - olga-ivanova
+  - soraya-mendez-sanz
+- id: doi:10.37536/lym.1.18.2026.4230
+  type: review
+  year: 2026
+  status: published
+  authors:
+  - family: Vergés Bonaventura
+    given: Ariadna
+  title: '[Reseña del libro *Second language anxiety: Affective or linguistic variable?*, de R. L. Sparks]'
+  container: Lengua y migración
+  volume: '18'
+  issue: '1'
+  pages: 163-168
+  publisher: ''
+  doi: 10.37536/lym.1.18.2026.4230
+  url: ''
+  lang: en
+  members:
+  - ariadna-verges-bonaventura
+- id: doi:10.15460/jlar.2025.3.2.1652
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  title: 'Aging mind, two languages: What can bilingualism in aging tell us about language and communication?'
+  container: Journal of Language and Aging Research
+  volume: '3'
+  issue: '2'
+  pages: 99-105
+  publisher: ''
+  doi: 10.15460/jlar.2025.3.2.1652
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova
+- id: doi:10.1515/9783111293776-011
+  type: chapter
+  year: 2025
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  editors:
+  - family: Benítez-Burraco
+    given: Antonio
+  - family: Fernández López
+    given: Isabel
+  - family: Fernández Pérez
+    given: Milagros
+  - family: Ivanova
+    given: Olga
+  title: Approaching language and aging from a biolinguistic perspective
+  container: 'Biolinguistics at the cutting edge: Promises, achievements, and challenges'
+  volume: ''
+  issue: ''
+  pages: 307-330
+  publisher: De Gruyter Mouton
+  doi: 10.1515/9783111293776-011
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova
+- id: doi:10.1515/9783111293776
+  type: edited-book
+  year: 2025
+  status: published
+  authors: []
+  editors:
+  - family: Benítez-Burraco
+    given: Antonio
+  - family: Fernández López
+    given: Isabel
+  - family: Fernández Pérez
+    given: Milagros
+  - family: Ivanova
+    given: Olga
+  title: 'Biolinguistics at the cutting edge: Promises, achievements, and challenges'
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: De Gruyter Mouton
+  doi: 10.1515/9783111293776
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova
+- id: doi:10.15460/jlar.2025.3.2.1774
+  type: review
+  year: 2025
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: 'Book review: Dementia and language [Reseña del libro *Dementia and language: The lived experience in interaction*, de P. Muntigl, C. Plejert y D. Jones]'
+  container: Journal of Language and Aging Research
+  volume: '3'
+  issue: '2'
+  pages: 225-238
+  publisher: ''
+  doi: 10.15460/jlar.2025.3.2.1774
+  url: ''
+  lang: en
+  members:
+  - emma-machado-de-souza
+- id: manual:ivanova-2025-los-biomarcadores-fonicos-de
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  title: Los biomarcadores fónicos de la enfermedad de Alzheimer desde la perspectiva tipológica
+  container: Archiletras científica
+  volume: ''
+  issue: '14'
+  pages: 157-168
+  publisher: ''
+  doi: ''
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: doi:10.3989/loquens.2025.e120
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Just Alcaraz
+    given: Jordi
+  - family: Ivanova
+    given: Olga
+  title: 'Prosodia rítmico-frecuencial en lingüística clínica: en búsqueda de biomarcadores fonéticos para Alzheimer y depresión mayor'
+  container: Loquens
+  volume: '12'
+  issue: ''
+  pages: e120
+  publisher: ''
+  doi: 10.3989/loquens.2025.e120
+  url: ''
+  lang: es
+  members:
+  - jordi-just-alcaraz
+  - olga-ivanova
+- id: doi:10.1098/rstb.2023.0494
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  title: Understanding Theory of Mind–pragmatics relationship through the spectrum of neurodegenerative diseases
+  container: 'Philosophical Transactions of the Royal Society B: Biological Sciences'
+  volume: '380'
+  issue: '1932'
+  pages: '20230494'
+  publisher: ''
+  doi: 10.1098/rstb.2023.0494
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova
+- id: doi:10.16993/bcl.i
+  type: chapter
+  year: 2024
+  status: published
+  authors:
+  - family: Penas Ibáñez
+    given: María Azucena
+  - family: Ivanova
+    given: Olga
+  title: El léxico de las emociones y el discurso fraseológico. Aspectos cognitivos y uso en hablantes con enfermedad de Alzheimer
+  container: 'Léxico y semántica: nuevas aportaciones teóricas y aplicadas'
+  volume: ''
+  issue: ''
+  pages: 211-240
+  publisher: Stockholm University Press
+  doi: 10.16993/bcl.i
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+  editors:
+  - family: Österberg
+    given: R.
+  - family: El-Madkouri Maataoui
+    given: M.
+- id: doi:10.1111/1460-6984.13003
+  type: article
+  year: 2024
+  status: published
+  authors:
+  - family: Benítez-Burraco
+    given: Antonio
+  - family: Ivanova
+    given: Olga
+  title: 'Language in healthy and pathological ageing: Methodological milestones and challenges'
+  container: International Journal of Language & Communication Disorders
+  volume: '59'
+  issue: '1'
+  pages: 4-12
+  publisher: ''
+  doi: 10.1111/1460-6984.13003
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova
+- id: doi:10.7557/1.13.1.7604
+  type: article
+  year: 2024
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  title: Lenguas naturales, sistemas cognitivos humanos, y los límites del cerebro lingüístico
+  container: Borealis – An International Journal of Hispanic Linguistics
+  volume: '13'
+  issue: '1'
+  pages: xxxvii-xl
+  publisher: ''
+  doi: 10.7557/1.13.1.7604
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: doi:10.7557/1.13.1.7542
+  type: article
+  year: 2024
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  title: ¿Son las categorías léxicas tan discretas como parece? Lo que confirman y lo que descartan las evidencias desde los trastornos del lenguaje
+  container: Borealis – An International Journal of Hispanic Linguistics
+  volume: '13'
+  issue: '1'
+  pages: xvii-xxxii
+  publisher: ''
+  doi: 10.7557/1.13.1.7542
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: doi:10.1111/1460-6984.12888
+  type: article
+  year: 2024
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: Martínez-Nicolás
+    given: Israel
+  - family: Meilán
+    given: Juan José García
+  title: 'Speech changes in old age: Methodological considerations for speech-based discrimination of healthy ageing and Alzheimer''s disease'
+  container: International Journal of Language & Communication Disorders
+  volume: '59'
+  issue: '1'
+  pages: 13-37
+  publisher: ''
+  doi: 10.1111/1460-6984.12888
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova

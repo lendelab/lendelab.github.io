@@ -1,0 +1,27 @@
+{
+  "orcid": "0000-0001-6891-7921",
+  "fetched": "2026-11-14T19:33:37Z",
+  "works": [
+    {
+      "id": "doi:10.48075/odal.v7i1.36731",
+      "type": "article",
+      "year": 2026,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Rangel Vicente",
+          "given": "Montserrat"
+        }
+      ],
+      "title": "Los topoergónimos institucionales en el paisaje lingüístico de Salamanca",
+      "container": "Onomástica desde América Latina",
+      "volume": "7",
+      "issue": "1",
+      "pages": "1-49",
+      "publisher": "",
+      "doi": "10.48075/odal.v7i1.36731",
+      "url": "",
+      "lang": "es"
+    }
+  ]
+}

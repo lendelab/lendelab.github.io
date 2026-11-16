@@ -1,0 +1,7 @@
+<ul class="people__grid">
+  {{- range .list }}
+  {{- $role := partial "role.html" . }}
+  {{- $p := site.GetPage (printf "/members/%s" .slug) }}
+  <li class="person">{{ partial "photo.html" (dict "m" . "class" "person__photo" "sizes" "(min-width: 64rem) 18rem, (min-width: 40rem) 30vw, 46vw") }}<p class="person__name"><a class="person__link" href="{{ $p.RelPermalink }}">{{ .given }} {{ .family }}</a></p><p class="person__role"{{ with $role.lang }} lang="{{ . }}"{{ end }}>{{ $role.v }}</p></li>
+  {{- end }}
+</ul>

@@ -1,0 +1,27 @@
+{
+  "orcid": "0009-0006-0125-0898",
+  "fetched": "2026-11-14T19:37:15Z",
+  "works": [
+    {
+      "id": "doi:10.37536/lym.1.18.2026.4230",
+      "type": "review",
+      "year": 2026,
+      "status": "published",
+      "authors": [
+        {
+          "family": "Vergés Bonaventura",
+          "given": "Ariadna"
+        }
+      ],
+      "title": "Second Language Anxiety. Affective or Linguistic Variable? Review by Ariadna Vergés Bonaventura",
+      "container": "Lengua y migración",
+      "volume": "1",
+      "issue": "18",
+      "pages": "163-168",
+      "publisher": "",
+      "doi": "10.37536/lym.1.18.2026.4230",
+      "url": "",
+      "lang": "en"
+    }
+  ]
+}

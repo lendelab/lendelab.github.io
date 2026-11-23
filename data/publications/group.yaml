@@ -352,3 +352,576 @@
   lang: en
   members:
   - olga-ivanova
+- id: manual:machado-de-souza-2027-la-feminizacion-vocal-en
+  type: article
+  year: 2027
+  status: in_press
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: 'La feminización vocal en español: lagunas de validación en los protocolos clínicos'
+  container: Philologia Hispalensis
+  volume: '41'
+  issue: '1'
+  pages: 55-76
+  publisher: ''
+  doi: ''
+  url: ''
+  lang: es
+  members:
+  - emma-machado-de-souza
+- id: doi:10.7146/kkf.v39i1.155907
+  type: article
+  year: 2026
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: 'Hacking the Biomedical Discourse: Trans Digital Counterpublics and the Self-Governance of Health'
+  container: Kvinder, Køn & Forskning
+  volume: ''
+  issue: '1'
+  pages: 81-100
+  publisher: ''
+  doi: 10.7146/kkf.v39i1.155907
+  url: ''
+  lang: en
+  members:
+  - emma-machado-de-souza
+- id: doi:10.14201/0aq0397257278
+  type: chapter
+  year: 2026
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: Fernández Juncal
+    given: Carmen
+  title: 'La enseñanza de la pragmática: actos de habla directivos y disculpas en ELE'
+  container: Puntos clave en la enseñanza de ELE. Estudios en homenaje al profesor Juan Felipe García Santos
+  volume: ''
+  issue: ''
+  pages: 257-278
+  publisher: Ediciones Universidad de Salamanca
+  doi: 10.14201/0aq0397257278
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: doi:10.25267/pragmalinguistica.2026.i.34.05
+  type: article
+  year: 2026
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: de Santiago Guervós
+    given: Javier
+  title: Leer textos difíciles. Un estudio de procesamiento y comprensión de textos especializados en hablantes nativos de español
+  container: Pragmalingüística
+  volume: ''
+  issue: '34'
+  pages: ''
+  publisher: ''
+  doi: 10.25267/pragmalinguistica.2026.i.34.05
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: manual:rangel-vicente-2026-les-antroponymes-et-toponymes
+  type: presentation
+  year: 2026
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Les antroponymes et toponymes dans les dénominations d’institutions deviennent-ils des topoergonymes?
+  container: 60th Annual Meeting of the Canadian Society for the Study of Names
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-05775589v1
+  lang: fr
+  members:
+  - montserrat-rangel-vicente
+- id: doi:10.48075/odal.v7i1.36731
+  type: article
+  year: 2026
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Los topoergónimos institucionales en el paisaje lingüístico de Salamanca
+  container: Onomástica desde América Latina
+  volume: '7'
+  issue: '1'
+  pages: 1-49
+  publisher: ''
+  doi: 10.48075/odal.v7i1.36731
+  url: ''
+  lang: es
+  members:
+  - montserrat-rangel-vicente
+- id: doi:10.5281/zenodo.23482888
+  type: software
+  year: 2026
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: Marcadores de Paula
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: Zenodo
+  doi: 10.5281/zenodo.23482888
+  url: ''
+  lang: es
+  members:
+  - emma-machado-de-souza
+- id: doi:10.5281/zenodo.20261936
+  type: article
+  year: 2026
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: 'Naming, excluding, disciplining: Contested parliamentary discourses on trans issues'
+  container: Language, Discourse & Society
+  volume: '14'
+  issue: '1'
+  pages: 11-29
+  publisher: ''
+  doi: 10.5281/zenodo.20261936
+  url: https://zenodo.org/doi/10.5281/zenodo.20261936
+  lang: en
+  members:
+  - emma-machado-de-souza
+- id: doi:10.5281/zenodo.23100641
+  type: software
+  year: 2026
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: openphon
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: Zenodo
+  doi: 10.5281/zenodo.23100641
+  url: ''
+  lang: en
+  members:
+  - emma-machado-de-souza
+- id: doi:10.17605/osf.io/9846b
+  type: dataset
+  year: 2026
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: 'Prosody as a repertoire: gendered voice beyond pitch in transfeminine Peninsular Spanish (data and analysis code)'
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: OSF
+  doi: 10.17605/osf.io/9846b
+  url: ''
+  lang: en
+  members:
+  - emma-machado-de-souza
+- id: doi:10.5281/zenodo.19681416
+  type: article
+  year: 2026
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: 'Reframing neurodivergence: How digital neuroqueer communities resist pathologizing discourses and generate counter-hegemonic narratives. A critical discourse analysis of neuroqueer counter-narratives'
+  container: Feral Feminisms
+  volume: '17'
+  issue: ''
+  pages: 46-64
+  publisher: ''
+  doi: 10.5281/zenodo.19681416
+  url: https://zenodo.org/doi/10.5281/zenodo.19681416
+  lang: en
+  members:
+  - emma-machado-de-souza
+- id: doi:10.4995/rlyla.2026.23825
+  type: review
+  year: 2026
+  status: published
+  authors:
+  - family: Just Alcaraz
+    given: Jordi
+  title: 'Reseña del libro Lengua, dialectos y hablas. Crítica de la dialectoideología española, de J. C. Moreno Cabrera (2025). Madrid: Hojas Monfies'
+  container: Revista de Lingüística y Lenguas Aplicadas
+  volume: '21'
+  issue: ''
+  pages: 93-97
+  publisher: ''
+  doi: 10.4995/rlyla.2026.23825
+  url: ''
+  lang: es
+  members:
+  - jordi-just-alcaraz
+- id: manual:barque-2026-varia
+  type: other
+  year: 2026
+  status: published
+  authors: []
+  editors:
+  - family: Barque
+    given: Lucie
+  - family: Rangel Vicente
+    given: Montserrat
+  - family: Tribout
+    given: Delphine
+  title: Varia
+  container: Lexique
+  volume: ''
+  issue: '30'
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://www.peren-revues.fr/lexique/2172
+  lang: fr
+  members:
+  - montserrat-rangel-vicente
+- id: doi:10.17605/osf.io/da4ke
+  type: dataset
+  year: 2026
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: 'Voices that violate expectations: Online gender categorization and processing cost for transgender and cisgender voices'
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: OSF
+  doi: 10.17605/osf.io/da4ke
+  url: ''
+  lang: en
+  members:
+  - emma-machado-de-souza
+- id: doi:10.1344/phonica2025.21.9
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  title: Bases neurocognitivas del desarrollo fónico en las lenguas extranjeras
+  container: Phonica
+  volume: '21'
+  issue: ''
+  pages: 1-15
+  publisher: ''
+  doi: 10.1344/phonica2025.21.9
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: orcid:191458448
+  type: chapter
+  year: 2025
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: ¿Cómo hablamos cuando cuidamos? Claves del lenguaje inclusivo en la atención sanitaria
+  container: Lengua mutante. Reflexiones sobre lenguaje inclusivo
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://editorialpiedepagina.com/product/lengua-mutante/
+  lang: es
+  members:
+  - emma-machado-de-souza
+- id: doi:10.1515/9783112222157-011
+  type: chapter
+  year: 2025
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  editors:
+  - family: García Manga
+    given: María del Carmen
+  - family: Rodríguez-Tapia
+    given: Sergio
+  title: Cuando la opacidad parcial se inmiscuye en los topónimos
+  container: La delimitación morfológica, sintáctica y pragmática de las unidades léxicas
+  volume: ''
+  issue: ''
+  pages: 205-226
+  publisher: De Gruyter
+  doi: 10.1515/9783112222157-011
+  url: ''
+  lang: es
+  members:
+  - montserrat-rangel-vicente
+- id: doi:10.25115/ibal.v7i.10635
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Álvarez-Mosquera
+    given: Pedro
+  - family: Fernández Juncal
+    given: Carmen
+  - family: Ivanova
+    given: Olga
+  title: El retrato lingüístico como instrumento de medición y evaluación del repertorio lingüístico personal
+  container: SABIR. International Bulletin of Applied Linguistics
+  volume: '7'
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: 10.25115/ibal.v7i.10635
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: doi:10.1002/9781394349135.ch56
+  type: chapter
+  year: 2025
+  status: published
+  authors:
+  - family: Borrego Nieto
+    given: Julio
+  - family: Bartol Hernández
+    given: José Antonio
+  - family: Ivanova
+    given: Olga
+  editors:
+  - family: Díaz Campos
+    given: Manuel
+  - family: Hernández Campoy
+    given: Juan Manuel
+  title: La variación gramático-léxica del español asturiano y leonés
+  container: Enciclopedia concisa de los dialectos del español en el mundo
+  volume: '2'
+  issue: ''
+  pages: 552-562
+  publisher: Wiley
+  doi: 10.1002/9781394349135.ch56
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: doi:10.24197/mcreilq.2.2025.161-194
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Machado de Souza
+    given: Emma
+  title: 'La voz como herramienta de identidad y resistencia: Modulación vocal y autoafirmación en personas trans y no binarias'
+  container: 'MariCorners: Revista de Estudios Interdisciplinares LGTBIA+ y queer'
+  volume: '2'
+  issue: '2'
+  pages: 161-194
+  publisher: ''
+  doi: 10.24197/mcreilq.2.2025.161-194
+  url: ''
+  lang: es
+  members:
+  - emma-machado-de-souza
+- id: doi:10.3390/languages10100259
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: Loureda
+    given: Óscar
+  title: 'Language Processing in Spanish Heritage Speakers: An Introduction to the Special Issue'
+  container: Languages
+  volume: '10'
+  issue: '10'
+  pages: '259'
+  publisher: ''
+  doi: 10.3390/languages10100259
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova
+- id: doi:10.25115/ibal.v9i9.11085
+  type: review
+  year: 2025
+  status: published
+  authors:
+  - family: García Piñuela
+    given: Elena
+  title: 'Review of Grammar in Action: Building comprehensive grammars of talk-in-interaction'
+  container: SABIR. International Bulletin of Applied Linguistics
+  volume: '9'
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: 10.25115/ibal.v9i9.11085
+  url: ''
+  lang: en
+  members:
+  - elena-garcia-pinuela
+- id: manual:rangel-vicente-2025-sustainability-of-place-names
+  type: article
+  year: 2025
+  status: published
+  authors:
+  - family: Rangel Vicente
+    given: Montserrat
+  title: 'Sustainability of place names: A challenge in the morphological description from a synchronic perspective'
+  container: Onomastica Uralica
+  volume: '20'
+  issue: ''
+  pages: 113-127
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-05442579v1
+  lang: en
+  members:
+  - montserrat-rangel-vicente
+- id: manual:hernandez-munoz-2025-toponimos-disponibles
+  type: presentation
+  year: 2025
+  status: published
+  authors:
+  - family: Hernández Muñoz
+    given: Natividad
+  - family: Rangel Vicente
+    given: Montserrat
+  title: Topónimos disponibles
+  container: IV Jornadas Científicas sobre la Investigación en Disponibilidad Léxica
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: ''
+  doi: ''
+  url: https://lilloa.hal.science/hal-05308583v1
+  lang: es
+  members:
+  - montserrat-rangel-vicente
+- id: doi:10.14201/0aq0367
+  type: chapter
+  year: 2024
+  status: published
+  authors:
+  - family: García Piñuela
+    given: Elena
+  - family: Martín Vegas
+    given: R. A.
+  editors:
+  - family: López Esteban
+    given: Carmen
+  title: 'Conectando con el mundo laboral: análisis del paro juvenil a partir de la interrelación de textos'
+  container: 'La internacionalización a través de los Objetivos de Desarrollo Sostenible: del Máster Universitario en Profesor de Educación Secundaria Obligatoria y Bachillerato, Formación Profesional y Enseñanzas de Idiomas (MUPES)'
+  volume: ''
+  issue: ''
+  pages: 223-237
+  publisher: Ediciones Universidad de Salamanca
+  doi: 10.14201/0aq0367
+  url: https://eusal.es/omp/eusal/catalog/view/2615/6496/9705
+  lang: es
+  members:
+  - elena-garcia-pinuela
+- id: manual:ivanova-2024-el-sustrato-neurocognitivo-del
+  type: chapter
+  year: 2024
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  editors:
+  - family: Álvarez García
+    given: Esther
+  title: El sustrato neurocognitivo del bilingüismo individual
+  container: 'Dos lenguas, un cerebro: el procesamiento lingüístico en hablantes bilingües'
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: Peter Lang
+  doi: ''
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: manual:ivanova-2024-lexico-disponible-y-su
+  type: chapter
+  year: 2024
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: Bartol Hernández
+    given: José Antonio
+  editors:
+  - family: Ávila Muñoz
+    given: Antonio Manuel
+  - family: Santos Díaz
+    given: Inmaculada Clotilde
+  title: 'Léxico disponible y su disponibilidad combinatoria: un estudio con sustantivos'
+  container: 'Avances y desarrollo de los estudios sobre el léxico disponible: una aproximación desde la variación léxica'
+  volume: ''
+  issue: ''
+  pages: 121-141
+  publisher: Peter Lang
+  doi: ''
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: manual:ivanova-2024-palabras-para-ucrania-un
+  type: edited-book
+  year: 2024
+  status: published
+  authors: []
+  editors:
+  - family: Ivanova
+    given: Olga
+  - family: Pérez López
+    given: María Ángeles
+  title: 'Palabras para Ucrania: un poema, un sinfín de lenguas'
+  container: ''
+  volume: ''
+  issue: ''
+  pages: ''
+  publisher: Ediciones Universidad de Salamanca
+  doi: ''
+  url: ''
+  lang: es
+  members:
+  - olga-ivanova
+- id: doi:10.4324/9781003380276-14
+  type: chapter
+  year: 2024
+  status: published
+  authors:
+  - family: Ivanova
+    given: Olga
+  - family: Kressova-Iordanishvili
+    given: Nina
+  title: Russian as a Heritage Language in Spain
+  container: Russian as a Heritage Language
+  volume: ''
+  issue: ''
+  pages: 221-236
+  publisher: Routledge
+  doi: 10.4324/9781003380276-14
+  url: ''
+  lang: en
+  members:
+  - olga-ivanova
